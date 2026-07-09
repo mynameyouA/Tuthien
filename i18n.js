@@ -79,6 +79,15 @@ const translations = {
         "video_1_title": "Tái Sinh Rác Thải Hàng Không",
         "video_2_title": "Năng Lượng Sạch Cho Bản Làng",
 
+        "join_label": "Tham gia cùng chúng tôi",
+        "join_title": "Hành Động Vì Tương Lai Bền Vững",
+        "join_vol_title": "Trở thành Tình nguyện viên",
+        "join_vol_desc": "Đóng góp thời gian và kỹ năng của bạn để hỗ trợ các cộng đồng yếu thế tại thực địa.",
+        "join_partner_title": "Trở thành Đối tác",
+        "join_partner_desc": "Cùng SHF kiến tạo các dự án năng lượng và môi trường mang tính đột phá.",
+        
+        "whatsapp_support": "Hỗ trợ nhanh qua WhatsApp",
+
         "footer_desc": "The Sustainable Humanity Foundation là tổ chức phi lợi nhuận hoạt động vì môi trường và sinh kế bền vững.",
         "footer_copyright": "© 2026 The Sustainable Humanity Foundation (SHF). Tất cả các quyền được bảo hộ."
     },
@@ -161,6 +170,15 @@ const translations = {
         "video_section_title": "Our Journey in Motion",
         "video_1_title": "Reborn from Aviation Waste",
         "video_2_title": "Clean Energy for Remote Villages",
+
+        "join_label": "Join Us",
+        "join_title": "Action for a Sustainable Future",
+        "join_vol_title": "Become a Volunteer",
+        "join_vol_desc": "Contribute your time and skills to support vulnerable communities in the field.",
+        "join_partner_title": "Become a Partner",
+        "join_partner_desc": "Collaborate with SHF to create breakthrough energy and environmental projects.",
+
+        "whatsapp_support": "Fast support via WhatsApp",
 
         "footer_desc": "The Sustainable Humanity Foundation is a non-profit organization working for the environment and sustainable livelihoods.",
         "footer_copyright": "© 2026 The Sustainable Humanity Foundation (SHF). All rights reserved."
