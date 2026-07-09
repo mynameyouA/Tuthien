@@ -42,50 +42,52 @@
         </div>
     </header>
 
-    <section class="page-hero fade-in" style="background-image: url('join_us_hero.jpg'); padding: 120px 0;">
+    <section class="page-hero fade-in" style="background-image: url('join_us_hero.jpg'); padding: 160px 0 120px;">
         <div class="container">
-            <span class="section-label" style="color: #fff; background: rgba(0,0,0,0.5); padding: 4px 12px; border-radius: 20px;">Join Us</span>
-            <h1>Together, We Change The World</h1>
-            <p>Contribute your skills and time to support vulnerable communities directly in the field.</p>
+            <span class="section-label" style="color: #fff; background: rgba(0,0,0,0.5); padding: 6px 16px; border-radius: 20px; letter-spacing: 2px;">Join The Movement</span>
+            <h1 style="font-size: 4rem;">Action, Not Just Words</h1>
+            <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto;">We rely on a global network of dedicated scientists, engineers, corporate partners, and volunteers to deploy our technologies worldwide.</p>
         </div>
     </section>
 
     <section class="section">
         <div class="container fade-in">
-            <div class="grid-2">
-                <div class="card text-center" style="padding: 60px 40px;">
-                    <div style="width: 100px; height: 100px; background: rgba(0, 208, 132, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; font-size: 3rem; color: var(--color-secondary);"><i class="fa-solid fa-hands-holding-child"></i></div>
-                    <h2 style="margin-bottom: 16px;">Become a Volunteer</h2>
-                    <p style="color: var(--color-text-light); margin-bottom: 40px;">Join our field teams to install solar panels, build aquaponics systems, and educate local communities.</p>
-                    <button onclick="openGenericModal('volunteerModal')" class="btn btn-navy">Apply to Volunteer</button>
+            <div class="grid-2" style="gap: 40px;">
+                <div class="card text-center" style="padding: 60px 40px; border-top: 5px solid var(--color-secondary);">
+                    <div style="width: 100px; height: 100px; background: rgba(0, 208, 132, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; font-size: 3rem; color: var(--color-secondary);"><i class="fa-solid fa-hard-hat"></i></div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 16px;">Field Volunteers</h2>
+                    <p style="color: var(--color-text-light); font-size: 1.1rem; line-height: 1.7; margin-bottom: 40px; min-height: 120px;">Are you an engineer, agronomist, or logistics expert? We need skilled professionals to travel to our deployment zones. Help us install solar panels, set up water filtration units, and train local communities.</p>
+                    <button onclick="openGenericModal('volunteerModal')" class="btn btn-navy" style="font-size: 1.1rem; padding: 16px 40px;">Apply for Field Deployment</button>
                 </div>
-                <div class="card text-center" style="padding: 60px 40px;">
+                <div class="card text-center" style="padding: 60px 40px; border-top: 5px solid var(--color-primary);">
                     <div style="width: 100px; height: 100px; background: rgba(10, 37, 64, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 32px; font-size: 3rem; color: var(--color-primary);"><i class="fa-solid fa-handshake"></i></div>
-                    <h2 style="margin-bottom: 16px;">Become a Partner</h2>
-                    <p style="color: var(--color-text-light); margin-bottom: 40px;">Are you a corporation or research institute? Collaborate with SHF to fund or build breakthrough environmental projects.</p>
-                    <button onclick="openGenericModal('partnerModal')" class="btn btn-outline">Propose a Partnership</button>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 16px;">Corporate Partners</h2>
+                    <p style="color: var(--color-text-light); font-size: 1.1rem; line-height: 1.7; margin-bottom: 40px; min-height: 120px;">We collaborate with ESG-focused corporations, hardware manufacturers, and research universities. Co-fund a specific project or donate advanced technological hardware to accelerate our mission.</p>
+                    <button onclick="openGenericModal('partnerModal')" class="btn btn-outline" style="font-size: 1.1rem; padding: 16px 40px;">Propose a Partnership</button>
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 100px; margin-bottom: 60px;">
-                <span class="section-label">The Process</span>
-                <h2>Volunteer Journey</h2>
-            </div>
-            <div class="grid-3 text-center">
-                <div>
-                    <div style="width: 60px; height: 60px; background: var(--color-primary); color: white; border-radius: 50%; line-height: 60px; font-size: 1.5rem; font-weight: 700; margin: 0 auto 24px;">1</div>
-                    <h4 style="margin-bottom: 12px;">Apply</h4>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Submit your profile and share your motivation to join the SHF foundation.</p>
+            <div style="margin-top: 100px; padding-top: 80px; border-top: 1px solid var(--color-border);">
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <span class="section-label">Common Questions</span>
+                    <h2 style="font-size: 2.5rem;">Volunteer FAQ</h2>
                 </div>
-                <div>
-                    <div style="width: 60px; height: 60px; background: var(--color-secondary); color: white; border-radius: 50%; line-height: 60px; font-size: 1.5rem; font-weight: 700; margin: 0 auto 24px;">2</div>
-                    <h4 style="margin-bottom: 12px;">Train</h4>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Participate in safety and technical training before deployment.</p>
-                </div>
-                <div>
-                    <div style="width: 60px; height: 60px; background: var(--color-bg-light); color: var(--color-primary); border: 2px solid var(--color-primary); border-radius: 50%; line-height: 56px; font-size: 1.5rem; font-weight: 700; margin: 0 auto 24px;">3</div>
-                    <h4 style="margin-bottom: 12px;">Deploy</h4>
-                    <p style="color: var(--color-text-light); font-size: 0.95rem;">Travel to vulnerable regions and make a direct, lasting impact.</p>
+                
+                <div class="grid-2" style="gap: 40px;">
+                    <div>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--color-primary);"><i class="fa-solid fa-circle-question" style="color: var(--color-secondary); margin-right: 8px;"></i> Do I need technical experience?</h4>
+                        <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 30px;">While technical skills (engineering, medical, agricultural) are highly prioritized for our field deployments, we also require logistics, translation, and administrative volunteers for our headquarters operations.</p>
+
+                        <h4 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--color-primary);"><i class="fa-solid fa-circle-question" style="color: var(--color-secondary); margin-right: 8px;"></i> Does SHF cover travel costs?</h4>
+                        <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 30px;">For highly specialized technical deployments (e.g., senior electrical engineers), SHF may subsidize travel and lodging. General volunteers are required to self-fund their flights, though we provide secure housing and food on-site.</p>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--color-primary);"><i class="fa-solid fa-circle-question" style="color: var(--color-secondary); margin-right: 8px;"></i> How long is a deployment?</h4>
+                        <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 30px;">Project installations usually take between 2 to 6 weeks depending on the complexity (e.g., a large aquaponics facility takes longer than a microgrid). We ask for a minimum commitment of 3 weeks.</p>
+                        
+                        <h4 style="font-size: 1.2rem; margin-bottom: 12px; color: var(--color-primary);"><i class="fa-solid fa-circle-question" style="color: var(--color-secondary); margin-right: 8px;"></i> Is it safe?</h4>
+                        <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 30px;">Safety is our absolute priority. We perform rigorous risk assessments for all deployment zones. However, volunteers must be prepared to work in rugged, off-grid environments with limited modern amenities.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -94,16 +96,23 @@
     <!-- Volunteer Modal -->
     <div id="volunteerModal" class="modal">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content" style="max-width: 700px;">
                 <button onclick="closeGenericModal('volunteerModal')" style="position: absolute; right: 24px; top: 24px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-text-light);"><i class="fa-solid fa-xmark"></i></button>
-                <h3 style="margin-bottom: 24px;">Volunteer Application</h3>
+                <h3 style="font-size: 2rem; margin-bottom: 10px;">Volunteer Application</h3>
+                <p style="color: var(--color-text-light); margin-bottom: 30px;">Fill out your technical profile below. Our HR team will contact you if your skills match an upcoming project.</p>
                 <form action="https://formsubmit.co/contact@sh.fund" method="POST">
                     <input type="hidden" name="_subject" value="New Volunteer Application">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                    <input type="text" name="profession" class="form-control" placeholder="Profession / Skills" required>
-                    <textarea name="message" class="form-control" rows="4" placeholder="Why do you want to join SHF?" required></textarea>
-                    <button type="submit" class="btn btn-navy" style="width: 100%;">Submit Application</button>
+                    <div class="grid-2" style="gap: 16px; margin-bottom: 16px;">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" style="margin: 0;" required>
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" style="margin: 0;" required>
+                    </div>
+                    <div class="grid-2" style="gap: 16px; margin-bottom: 16px;">
+                        <input type="text" name="profession" class="form-control" placeholder="Primary Profession / Degree" style="margin: 0;" required>
+                        <input type="text" name="country" class="form-control" placeholder="Country of Residence" style="margin: 0;" required>
+                    </div>
+                    <textarea name="experience" class="form-control" rows="3" placeholder="Briefly describe your technical or field experience..." required></textarea>
+                    <textarea name="motivation" class="form-control" rows="3" placeholder="Why do you want to join SHF deployments?" required></textarea>
+                    <button type="submit" class="btn btn-navy" style="width: 100%; font-size: 1.1rem; padding: 14px;">Submit Application</button>
                 </form>
             </div>
         </div>
@@ -112,16 +121,28 @@
     <!-- Partner Modal -->
     <div id="partnerModal" class="modal">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content" style="max-width: 700px;">
                 <button onclick="closeGenericModal('partnerModal')" style="position: absolute; right: 24px; top: 24px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-text-light);"><i class="fa-solid fa-xmark"></i></button>
-                <h3 style="margin-bottom: 24px;">Partnership Proposal</h3>
+                <h3 style="font-size: 2rem; margin-bottom: 10px;">Institutional Partnership</h3>
+                <p style="color: var(--color-text-light); margin-bottom: 30px;">Submit a high-level proposal. Our Director of Operations will review it.</p>
                 <form action="https://formsubmit.co/contact@sh.fund" method="POST">
                     <input type="hidden" name="_subject" value="New Partnership Proposal">
-                    <input type="text" name="org_name" class="form-control" placeholder="Organization Name" required>
-                    <input type="text" name="contact_person" class="form-control" placeholder="Contact Person" required>
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
-                    <textarea name="message" class="form-control" rows="4" placeholder="Proposal Details" required></textarea>
-                    <button type="submit" class="btn btn-navy" style="width: 100%;">Submit Proposal</button>
+                    <div class="grid-2" style="gap: 16px; margin-bottom: 16px;">
+                        <input type="text" name="org_name" class="form-control" placeholder="Organization / Company Name" style="margin: 0;" required>
+                        <input type="text" name="org_website" class="form-control" placeholder="Organization Website" style="margin: 0;">
+                    </div>
+                    <div class="grid-2" style="gap: 16px; margin-bottom: 16px;">
+                        <input type="text" name="contact_person" class="form-control" placeholder="Your Name & Title" style="margin: 0;" required>
+                        <input type="email" name="email" class="form-control" placeholder="Corporate Email Address" style="margin: 0;" required>
+                    </div>
+                    <select name="partnership_type" class="form-control" required style="cursor: pointer;">
+                        <option value="" disabled selected>Select Partnership Type...</option>
+                        <option value="Financial Grant">Financial Grant / ESG Funding</option>
+                        <option value="Hardware Donation">Technology / Hardware Donation</option>
+                        <option value="Research Collaboration">Academic / Research Collaboration</option>
+                    </select>
+                    <textarea name="message" class="form-control" rows="5" placeholder="Please outline the goals of the proposed partnership..." required></textarea>
+                    <button type="submit" class="btn btn-navy" style="width: 100%; font-size: 1.1rem; padding: 14px;">Submit Proposal</button>
                 </form>
             </div>
         </div>
