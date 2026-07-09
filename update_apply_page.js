@@ -1,47 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply - Sustainable Humanity Foundation</title>
-    <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+const fs = require('fs');
 
-    <!-- Header -->
-    <header class="main-header">
-        <div class="top-bar">
-            <div class="container">
-                US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards
-            </div>
-        </div>
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <i class="fa-solid fa-leaf"></i>
-                <div class="logo-text">
-                    <span class="logo-title">Sustainable Humanity</span>
-                    <span class="logo-subtitle">Foundation</span>
-                </div>
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="about.html">About SHF</a></li>
-                    <li><a href="projects.html">Key Projects</a></li>
-                    <li><a href="financials.html">Financials</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="join-us.html">Join Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="donate.html" class="btn btn-primary">Donate Now</a>
-            </div>
-        </div>
-    </header>
+let content = fs.readFileSync('rebuild_site_modern2.js', 'utf8');
 
+// Regex to replace the entire applyContent block
+const applyRegex = /\/\/ Apply Page\s+const applyContent = `[\s\S]*?`;/m;
+
+const newApplyLogic = `// Apply Page
+const applyContent = \`
     <section class="page-hero fade-in" style="background-image: url('join_us_hero.jpg'); padding: 120px 0;">
         <div class="container">
             <span class="section-label" style="color: #fff; background: rgba(0,0,0,0.5); padding: 6px 16px; border-radius: 20px; letter-spacing: 2px;">Field Deployment Program</span>
@@ -98,47 +63,9 @@
             </div>
         </div>
     </section>
+\`;`;
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="grid-4">
-                <div>
-                    <h4>Sustainable Humanity Foundation</h4>
-                    <p style="font-size: 0.95rem; margin-top: 16px;">Bringing breakthrough scientific solutions to solve pollution, provide clean energy, and develop sustainable livelihoods for vulnerable communities.</p>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul style="list-style:none; line-height: 2.2;">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="projects.html">Key Projects</a></li>
-                        <li><a href="financials.html">Financials & Transparency</a></li>
-                        <li><a href="news.html">News & Updates</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact Us</h4>
-                    <ul style="list-style:none; line-height: 2.2; font-size: 0.95rem;">
-                        <li><i class="fa-solid fa-location-dot" style="margin-right:8px; color:var(--color-secondary)"></i> Thu Duc City, HCMC, VN</li>
-                        <li><i class="fa-solid fa-phone" style="margin-right:8px; color:var(--color-secondary)"></i> +84 975 709 643</li>
-                        <li><i class="fa-solid fa-envelope" style="margin-right:8px; color:var(--color-secondary)"></i> contact@sh.fund</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Newsletter</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 16px;">Subscribe to receive our latest impact reports.</p>
-                    <form action="https://formsubmit.co/contact@sh.fund" method="POST">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email Address" style="margin-bottom: 12px; border:none;" required>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 The Sustainable Humanity Foundation. All rights reserved. 501(c)(3) Nonprofit.</p>
-            </div>
-        </div>
-    </footer>
+content = content.replace(applyRegex, newApplyLogic);
 
-    <!-- Scripts -->
-    <script src="script.js?v=2"></script>
-</body>
-</html>
+fs.writeFileSync('rebuild_site_modern2.js', content);
+console.log('Successfully updated apply page logic.');
