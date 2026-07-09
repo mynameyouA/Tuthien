@@ -1,42 +1,82 @@
 [
     {
-        "id": "5",
-        "title": "SHF Finalizes Audited Financial Statements for Q1 2026",
-        "date": "July 01, 2026",
-        "excerpt": "In our unwavering commitment to absolute financial transparency, the Sustainable Humanity Foundation has published its audited financial statements for the first quarter of 2026.",
-        "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
-        "content": "<p>In our unwavering commitment to absolute financial transparency, the Sustainable Humanity Foundation (SHF) has published its audited financial statements for the first quarter of 2026. The audit, conducted by an independent top-tier accounting firm, confirms that <strong>93.4% of all public contributions</strong> were allocated directly to field operations and technological research, setting a new benchmark for NGO efficiency.</p><p>Chief Financial Officer Michael Chen stated: <em>\"Our donors are not just writing checks; they are investing in highly engineered solutions to existential crises. They deserve to know exactly how every cent is deployed. By keeping administrative costs below 4% and fundraising costs below 3%, we guarantee maximum impact on the ground.\"</em></p><p>The Q1 report details the capital expenditure required to finalize the engineering schematics for our containerized Reverse Osmosis (RO) desalination plants, as well as the logistical costs associated with deploying the RIDES microbiological agent to three new toxic waste sites in Southeast Asia.</p><br/><h4>Key Financial Highlights (Q1 2026):</h4><ul><li style='margin-bottom:8px;'><strong>Total Revenue:</strong> $1.2M (Primarily institutional grants and high-net-worth individual contributions)</li><li style='margin-bottom:8px;'><strong>Program Expenses:</strong> $1.12M (93.4%)</li><li style='margin-bottom:8px;'><strong>Administrative & Legal:</strong> $45,000 (3.8%)</li><li style='margin-bottom:8px;'><strong>Fundraising:</strong> $35,000 (2.8%)</li></ul><p>The full 45-page audited report, complete with line-item breakdowns, is available for public download in the <a href='financials.html' style='color:var(--color-primary); text-decoration:underline;'>Financials section</a>.</p>"
+        "id": "africa-solar-microgrid",
+        "title": "SHF Deploys 500kW Solar Microgrid in Sub-Saharan Africa",
+        "date": "2026-07-02",
+        "thumbnail": "https://images.unsplash.com/photo-1509391366360-1e97d526188e?w=800&q=80",
+        "description": "Our latest engineering deployment has brought uninterrupted clean energy to three remote medical clinics, securing the cold chain for vital vaccines.",
+        "body": "# Empowering Remote Healthcare with Clean Energy\n\nIn a landmark achievement for the Sustainable Humanity Foundation (SHF), our field engineering teams have successfully completed the installation of a 500kW solar microgrid across three rural districts in Sub-Saharan Africa. \n\n## Securing the Cold Chain\n\nThe primary objective of this mission was to provide uninterrupted power to remote medical facilities. Previously reliant on expensive and highly polluting diesel generators, these clinics can now maintain strict temperature controls for vital vaccines and medications.\n\n* **Capacity:** 500kW total generation\n* **Storage:** 1.2MWh Lithium-Ion Battery Banks\n* **Impact:** Serving over 15,000 residents\n\n### Future Expansion\n\nFollowing the success of this deployment, SHF has signed an MOU with local health ministries to expand the microgrid architecture to an additional 12 clinics by Q4 2026. We thank our corporate ESG partners for their unwavering support."
     },
     {
-        "id": "4",
-        "title": "Breakthrough in Waste Oil Remediation: RIDES Tech Achieves 99% Efficacy",
-        "date": "June 15, 2026",
-        "excerpt": "Field tests of the proprietary RIDES microbiological process have successfully neutralized 99% of toxic hydrocarbon radicals in industrial waste oil within 72 hours.",
-        "image": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80",
-        "content": "<p>Following 18 months of rigorous laboratory testing and controlled field trials, the Sustainable Humanity Foundation is proud to announce a monumental breakthrough in hazardous waste treatment. The <strong>RIDES microbiological process</strong> has successfully neutralized 99.2% of complex, toxic hydrocarbon radicals found in illegally dumped industrial waste oil within a 72-hour timeframe.</p><p>Traditional methods of handling waste oil—such as incineration—release highly carcinogenic furans and dioxins into the atmosphere. The RIDES process entirely circumvents this by utilizing a proprietary consortium of engineered bacteria that biologically metabolize the oil.</p><br/><h4>The Science Behind RIDES</h4><p>Prof. Dr. Duong Van Sinh, President of SHF and lead researcher on the project, explains the mechanism: <em>\"We have isolated specific strains of bacteria that utilize long-chain hydrocarbons as their primary energy source. When introduced to a contaminated site under specific aerobic conditions, these bacteria rapidly multiply, breaking the toxic chemical bonds and reducing the waste oil to harmless organic compounds—primarily water and trace carbon dioxide.\"</em></p><p>The recent field test in a heavily polluted industrial zone near Ho Chi Minh City successfully processed over 50,000 liters of toxic sludge. The formerly toxic soil is now biologically active and safe for reforestation efforts. SHF plans to scale the deployment of RIDES to 12 additional critical sites by the end of the year.</p>"
+        "id": "rides-bacterial-culture-success",
+        "title": "Breakthrough in Bioremediation: RIDES Culture Clears Coastal Oil Spill",
+        "date": "2026-06-25",
+        "thumbnail": "https://images.unsplash.com/photo-1621451537084-482c73073e0f?w=800&q=80",
+        "description": "Our proprietary biological agent successfully neutralized over 50,000 liters of crude oil in a sensitive mangrove ecosystem.",
+        "body": "# Healing the Coastline\n\nLast month, a ruptured transport vessel spilled thousands of liters of crude oil into a protected mangrove ecosystem. The SHF Rapid Response Team deployed our proprietary RIDES bacterial culture to initiate immediate bioremediation.\n\n## The Science of Bioremediation\n\nRIDES (Rapid Hydrocarbon Degrading System) is an engineered consortium of naturally occurring bacteria that metabolize complex hydrocarbons into harmless byproducts (water and trace CO2). \n\nWithin 14 days of application, over 85% of the surface slick was neutralized, preventing catastrophic damage to the local fishery and preserving the primary livelihood of the coastal community.\n\n### Next Steps\n\nOur scientists are currently gathering water and soil samples to monitor the long-term recovery of the benthic zone. Early indicators suggest a full ecological recovery within 6 months."
     },
     {
-        "id": "3",
-        "title": "Sun of the Village: 450kW Solar Microgrid Commissioned in Rural Vietnam",
-        "date": "May 22, 2026",
-        "excerpt": "SHF engineering teams have completed the installation of a resilient, off-grid solar photovoltaic system, electrifying a community of 3,000 people.",
-        "image": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
-        "content": "<p>The \"Sun of the Village\" initiative reached a major milestone this week with the successful commissioning of a 450kW solar photovoltaic (PV) microgrid in a remote, mountainous region of central Vietnam. This installation brings stable, 24/7 electricity to a community of 3,000 residents who previously relied entirely on hazardous kerosene lamps and diesel generators.</p><p>The engineering challenge was immense. The village's isolation meant that connecting to the national grid was economically unfeasible for the government. SHF stepped in to design a decentralized solution.</p><br/><h4>Engineering for Resilience</h4><p>Assoc. Prof. Elena Rodriguez, Director of Operations, oversaw the deployment: <em>\"We didn't just install commercial solar panels. We engineered a robust microgrid utilizing advanced LiFePO4 (Lithium Iron Phosphate) battery storage, capable of sustaining the village's power needs through 3 days of heavy monsoon cloud cover. The inverters are militarized against extreme humidity and heat.\"</em></p><p>The immediate impact is profound. The local primary school can now operate computers, and the medical clinic has established a cold chain for vaccines. Furthermore, SHF engineers spent two weeks training a local cooperative of technicians to maintain the system, ensuring absolute community sovereignty over their new power source.</p>"
+        "id": "global-water-filtration-initiative",
+        "title": "Launching the Global Clean Water Initiative",
+        "date": "2026-06-10",
+        "thumbnail": "https://images.unsplash.com/photo-1541888087525-0720448e89f8?w=800&q=80",
+        "description": "SHF announces a $10M commitment to deploy advanced reverse-osmosis filtration systems in drought-stricken regions.",
+        "body": "# Clean Water as a Human Right\n\nWater scarcity continues to be one of the most pressing challenges of the 21st century. Today, SHF is proud to announce a $10 million initial commitment to the Global Clean Water Initiative.\n\n## Technological Approach\n\nInstead of relying on fragile, complex systems, we are deploying decentralized, modular Reverse-Osmosis (RO) units powered entirely by off-grid solar arrays. These units are capable of desalinating brackish groundwater, producing up to 10,000 liters of potable water per day.\n\n* **Phase 1:** Deployment of 50 units across Southeast Asia.\n* **Phase 2:** Expansion into arid regions of South America.\n\nWe are actively recruiting field engineers to assist with the Phase 1 rollout."
     },
     {
-        "id": "2",
-        "title": "Circular Agriculture: Launching the Largest Cooperative Aquaponics Facility",
-        "date": "April 10, 2026",
-        "excerpt": "Combating drought and chemical soil degradation through the launch of a high-yield, closed-loop aquaponics farming model.",
-        "image": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
-        "content": "<p>In response to prolonged droughts exacerbated by climate change, SHF has funded and overseen the construction of a commercial-scale aquaponics facility, providing a sustainable livelihood for over 50 farming families.</p><p>Traditional agriculture in the region had become untenable due to the heavy reliance on chemical fertilizers, which destroyed soil biomes, and the sheer lack of freshwater. The new SHF-designed aquaponics facility solves both issues simultaneously.</p><br/><h4>A Symbiotic Closed-Loop System</h4><p>The facility operates on a closed-loop principle. High-density fish tanks produce nutrient-rich water. Instead of discarding this wastewater (which causes algae blooms in local rivers), it is pumped directly into hydroponic grow beds. The plants absorb the organic nutrients, effectively filtering the water, which is then recirculated back to the fish tanks.</p><ul><li style='margin-bottom:8px;'><strong>Water Efficiency:</strong> The system uses 90% less water than traditional soil-based farming.</li><li style='margin-bottom:8px;'><strong>Zero Chemicals:</strong> Synthetic fertilizers and pesticides are strictly prohibited, as they would kill the fish.</li><li style='margin-bottom:8px;'><strong>Dual Income:</strong> Farmers harvest both premium organic vegetables and fish, doubling their revenue streams.</li></ul><p>By treating agriculture as an engineered biological system, SHF is proving that economic prosperity and environmental conservation are not mutually exclusive.</p>"
+        "id": "q2-financial-transparency-report",
+        "title": "Q2 2026 Financial Transparency Report Released",
+        "date": "2026-06-01",
+        "thumbnail": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+        "description": "In line with our commitment to absolute transparency, SHF has published the Q2 financial audit.",
+        "body": "# Maintaining Absolute Trust\n\nTransparency is the cornerstone of the Sustainable Humanity Foundation. We believe that every donor, whether they contribute $10 or $1,000,000, has the right to see exactly how their capital is deployed.\n\n## Q2 Highlights\n\n* **Total Funds Raised:** $12.4M\n* **Field Deployment Expenditure:** 84%\n* **R&D and Hardware Manufacturing:** 11%\n* **Administrative Overhead:** 5%\n\nOur open-ledger system, verified by our global auditing partners, ensures that we bypass traditional bureaucratic waste. View the full interactive report on our Financials page."
     },
     {
-        "id": "1",
-        "title": "SHF Advances to Phase 2 Testing for Solar Desalination Units",
-        "date": "March 05, 2026",
-        "excerpt": "Prototyping containerized Reverse Osmosis (RO) plants to combat severe saltwater intrusion in the Mekong Delta.",
-        "image": "https://images.unsplash.com/photo-1541888081628-98e945c55455?w=800&q=80",
-        "content": "<p>The Sustainable Humanity Foundation has officially moved into Phase 2 prototype testing for its highly anticipated Solar-Powered Reverse Osmosis (RO) Desalination units. This project aims to address the catastrophic freshwater shortages occurring in the Mekong Delta due to rising sea levels and deep saltwater intrusion into historically safe aquifers.</p><p>The engineering objective is to create a fully containerized, modular RO plant that can be transported via standard shipping truck and deployed within 24 hours in disaster zones. The critical innovation lies in its power source: the unit is designed to run entirely off a rapidly deployable solar array, eliminating the need for a diesel supply line.</p><br/><h4>The Technical Challenge</h4><p>Reverse Osmosis requires immense pressure to force brackish water through semi-permeable membranes. Historically, this meant requiring heavy, grid-tied industrial power. SHF's R&D team has partnered with leading fluid dynamics engineers to design ultra-efficient high-pressure pumps that can operate variably based on the solar energy input throughout the day.</p><p><em>\"If Phase 2 yields the flow rates we mathematically predict, this technology will be a paradigm shift for coastal disaster relief,\"</em> noted Prof. Dr. Duong Van Sinh. <em>\"We are looking at providing 10,000 liters of WHO-standard drinking water per day, using nothing but sunlight and seawater.\"</em></p><p>Final manufacturing schematics are expected by Q4 2026, followed by the first real-world deployments.</p>"
+        "id": "tech-partnership-hardware-donation",
+        "title": "Major Tech Firm Donates 10,000 IoT Sensors for Climate Tracking",
+        "date": "2026-05-20",
+        "thumbnail": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80",
+        "description": "A historic corporate partnership will allow SHF to monitor real-time ecological recovery across our deployment zones.",
+        "body": "# Data-Driven Conservation\n\nIn our largest hardware partnership to date, a leading global technology firm has donated 10,000 industrial-grade IoT (Internet of Things) environmental sensors.\n\n## What This Means for SHF\n\nThese sensors will be deployed alongside our microgrids and water filtration units. They will monitor:\n* Real-time air and water quality\n* Soil moisture and temperature\n* Microgrid power generation efficiency\n\nBy leveraging this vast data network, our scientists can optimize deployment strategies and provide quantifiable ESG impact reports to our partners."
+    },
+    {
+        "id": "volunteer-spotlight-sarah-chen",
+        "title": "Volunteer Spotlight: Engineering Hope with Sarah Chen",
+        "date": "2026-05-05",
+        "thumbnail": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+        "description": "Meet the lead electrical engineer behind our latest off-grid hospital electrification project.",
+        "body": "# From Silicon Valley to the Frontlines\n\nSarah Chen left a lucrative career at a top tech firm to join SHF as a Lead Field Engineer. Over the past six months, she has spearheaded the electrification of four rural hospitals.\n\n## The Drive to Serve\n\n\"Building software is great, but building infrastructure that literally keeps premature babies alive in incubators? That's a different level of fulfillment,\" Sarah says.\n\nThrough her leadership, SHF has reduced the average installation time of our modular solar grids by 30%. We are incredibly proud of Sarah and the hundreds of other volunteers who put their skills to work for humanity."
+    },
+    {
+        "id": "sustainable-agriculture-yields",
+        "title": "New Hydroponic Arrays Increase Crop Yields by 300%",
+        "date": "2026-04-18",
+        "thumbnail": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800&q=80",
+        "description": "Our experimental sustainable agriculture tech is proving that high yields don't require high water consumption.",
+        "body": "# Revolutionizing Food Security\n\nIn regions devastated by prolonged droughts, traditional agriculture is failing. SHF's response is the deployment of closed-loop hydroponic and aquaponic systems.\n\n## Doing More with Less\n\nOur latest pilot program utilized 90% less water than traditional soil farming while increasing the yield of nutrient-dense crops by 300%.\n\n* **Water Efficiency:** Closed-loop recycling prevents evaporation and runoff.\n* **Energy:** Powered entirely by integrated solar roofs.\n* **Community:** Local farmers are trained to manage and expand the systems.\n\nThis technology represents a scalable solution to the impending global food crisis."
+    },
+    {
+        "id": "un-recognition-climate-action",
+        "title": "SHF Receives UN Recognition for Climate Adaptation Efforts",
+        "date": "2026-03-30",
+        "thumbnail": "https://images.unsplash.com/photo-1572949645841-094f3a9c4c94?w=800&q=80",
+        "description": "The United Nations Environment Programme (UNEP) has officially recognized SHF's innovative deployment model.",
+        "body": "# A Milestone for Open-Source Technology\n\nWe are honored to announce that SHF has been recognized by the UN Environment Programme for our rapid-deployment model of climate adaptation technology.\n\n## Disrupting Traditional Aid\n\nThe award highlights our unique approach: bypassing heavy bureaucracy by utilizing crypto-treasuries, open-source blueprints, and direct volunteer deployment. \n\n\"SHF demonstrates that when you combine high technology with grassroots mobilization, the speed of impact is unprecedented,\" noted the UNEP committee.\n\nThis recognition will help us forge stronger alliances with global governments to bypass customs delays for our emergency relief hardware."
+    },
+    {
+        "id": "expanding-to-south-america",
+        "title": "Operations Expanding: New Logistics Hub in South America",
+        "date": "2026-03-12",
+        "thumbnail": "https://images.unsplash.com/photo-1498623116890-37e912163d5d?w=800&q=80",
+        "description": "To facilitate faster deployment in the Amazon basin and Andes regions, SHF is opening a new regional headquarters.",
+        "body": "# Bridging the Logistics Gap\n\nSpeed is critical in crisis response. To better serve communities in South America facing deforestation impacts and water scarcity, SHF is proud to announce the opening of a new logistics and manufacturing hub.\n\n## Local Manufacturing\n\nInstead of shipping heavy equipment across oceans, this new hub will manufacture our modular solar frames and water filtration units locally. This not only drastically reduces our carbon footprint but also creates high-skill green jobs for the local economy.\n\nWe are currently accepting applications for local engineers and supply chain managers to staff this new facility."
+    },
+    {
+        "id": "2026-vision-and-goals",
+        "title": "Vision 2026: Scaling Our Impact Tenfold",
+        "date": "2026-01-05",
+        "thumbnail": "https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?w=800&q=80",
+        "description": "A message from our Director of Operations outlining the ambitious goals for the coming year.",
+        "body": "# The Decade of Action\n\nAs we enter 2026, the urgency of the climate crisis has never been clearer. But neither has our capacity to solve it. \n\n## Our Goals for This Year\n\n* **100 Megawatts:** Deploy 100MW of decentralized solar power globally.\n* **1 Million Liters:** Achieve a daily clean water production capacity of 1M liters via our RO units.\n* **10,000 Volunteers:** Expand our global field operative network to ten thousand active members.\n\nThese goals are ambitious, but with the continued support of our donors, corporate partners, and brilliant volunteers, they are entirely achievable. Let's get to work."
     }
 ]
