@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Article - Sustainable Humanity Foundation</title>
+    <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -14,11 +15,10 @@
     <header class="main-header">
         <div class="top-bar">
             <div class="container">
-                <small>US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards</small>
-                <div id="google_translate_element"></div>
+                US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards
             </div>
         </div>
-        <div class="container header-container" style="padding-top: 20px; padding-bottom: 20px;">
+        <div class="container header-container">
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-leaf"></i>
                 <div class="logo-text">
@@ -37,13 +37,13 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="btn btn-primary" onclick="openGenericModal('donateModal')">Donate</button>
+                <button class="btn btn-primary" onclick="openGenericModal('donateModal')">Donate Now</button>
             </div>
         </div>
     </header>
 
     <section class="section">
-        <div class="container" style="max-width: 800px;">
+        <div class="container fade-in" style="max-width: 800px;">
             <div id="news-detail-container">
                 <!-- Filled by script.js -->
                 <p>Loading article...</p>
@@ -52,36 +52,36 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="grid-4">
                 <div>
                     <h4>Sustainable Humanity Foundation</h4>
-                    <p style="font-size: 0.85rem; margin-top: 10px;">Bringing breakthrough scientific solutions to solve pollution, provide clean energy, and develop sustainable livelihoods for vulnerable communities.</p>
+                    <p style="font-size: 0.95rem; margin-top: 16px;">Bringing breakthrough scientific solutions to solve pollution, provide clean energy, and develop sustainable livelihoods for vulnerable communities.</p>
                 </div>
                 <div>
                     <h4>Quick Links</h4>
-                    <ul style="list-style:none; line-height: 2;">
+                    <ul style="list-style:none; line-height: 2.2;">
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="financials.html">Financials</a></li>
-                        <li><a href="news.html">News</a></li>
+                        <li><a href="projects.html">Key Projects</a></li>
+                        <li><a href="financials.html">Financials & Transparency</a></li>
+                        <li><a href="news.html">News & Updates</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4>Contact</h4>
-                    <ul style="list-style:none; line-height: 2; font-size: 0.9rem;">
-                        <li><i class="fa-solid fa-location-dot"></i> Thu Duc City, HCMC, Vietnam</li>
-                        <li><i class="fa-solid fa-phone"></i> +84 975 709 643</li>
-                        <li><i class="fa-solid fa-envelope"></i> contact@sh.fund</li>
+                    <h4>Contact Us</h4>
+                    <ul style="list-style:none; line-height: 2.2; font-size: 0.95rem;">
+                        <li><i class="fa-solid fa-location-dot" style="margin-right:8px; color:var(--color-secondary)"></i> Thu Duc City, HCMC, VN</li>
+                        <li><i class="fa-solid fa-phone" style="margin-right:8px; color:var(--color-secondary)"></i> +84 975 709 643</li>
+                        <li><i class="fa-solid fa-envelope" style="margin-right:8px; color:var(--color-secondary)"></i> contact@sh.fund</li>
                     </ul>
                 </div>
                 <div>
                     <h4>Newsletter</h4>
-                    <form action="https://formsubmit.co/contact@sh.fund" method="POST" style="display:flex; margin-top: 10px;">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email" style="margin:0; border-radius: 2px 0 0 2px;" required>
-                        <button type="submit" class="btn btn-primary" style="border-radius: 0 2px 2px 0;">Subscribe</button>
+                    <p style="font-size: 0.9rem; margin-bottom: 16px;">Subscribe to receive our latest impact reports.</p>
+                    <form action="https://formsubmit.co/contact@sh.fund" method="POST">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email Address" style="margin-bottom: 12px; border:none;" required>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
                     </form>
                 </div>
             </div>
@@ -95,27 +95,20 @@
     <div id="donateModal" class="modal">
         <div class="modal-dialog">
             <div class="modal-content" style="text-align: center;">
-                <button onclick="closeGenericModal('donateModal')" style="position: absolute; right: 20px; top: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <button onclick="closeGenericModal('donateModal')" style="position: absolute; right: 24px; top: 24px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-text-light);"><i class="fa-solid fa-xmark"></i></button>
                 <h2>Make a Donation</h2>
-                <p style="color: var(--color-text-light); margin-bottom: 20px;">Your contribution helps us implement clean energy and treat pollution globally.</p>
+                <p style="color: var(--color-text-light); margin-bottom: 24px;">Your contribution directly funds clean energy and pollution treatment projects.</p>
                 
-                <h4 style="margin-top: 20px; margin-bottom: 10px;">Crypto Contribution (Polygon USDT)</h4>
-                <div style="background: var(--color-bg-light); padding: 20px; border: 1px solid var(--color-border); border-radius: 4px;">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="margin-bottom: 15px;">
-                    <p style="font-family: monospace; font-size: 0.9rem; background: #fff; padding: 10px; border: 1px solid #ccc;">0x52b4483e30243a65212adb16d993627534e61d6d</p>
+                <h4 style="margin-top: 24px; margin-bottom: 16px; color: var(--color-primary);">Crypto Contribution (Polygon USDT)</h4>
+                <div style="background: var(--color-bg-light); padding: 24px; border: 1px solid var(--color-border); border-radius: var(--radius);">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="margin-bottom: 16px; border-radius: 8px;">
+                    <p style="font-family: monospace; font-size: 0.95rem; background: #fff; padding: 12px; border: 1px solid var(--color-border); border-radius: 4px; word-break: break-all;">0x52b4483e30243a65212adb16d993627534e61d6d</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-        }
-        function openGenericModal(id) { document.getElementById(id).style.display = 'block'; }
-        function closeGenericModal(id) { document.getElementById(id).style.display = 'none'; }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <!-- Scripts -->
     <script src="script.js"></script>
 </body>
 </html>
