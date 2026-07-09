@@ -214,12 +214,12 @@ const indexContent = `
     <section class="section" style="padding: 60px 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
         <div class="container text-center fade-in">
             <h4 style="color: var(--color-text-light); font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px;">Institutional Partners & Global Auditors</h4>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; opacity: 0.6; filter: grayscale(100%); transition: filter 0.3s, opacity 0.3s;">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/USAID-Identity.svg/1200px-USAID-Identity.svg.png" height="40" alt="USAID">
-                <img src="https://www.thegef.org/sites/default/files/gef_logo_0.png" height="40" alt="GEF">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/UN_Environment_Programme_logo.svg/1200px-UN_Environment_Programme_logo.svg.png" height="40" alt="UNEP">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/The_World_Bank_logo.svg/1200px-The_World_Bank_logo.svg.png" height="35" alt="World Bank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/World_Health_Organization_Logo.svg/1200px-World_Health_Organization_Logo.svg.png" height="40" alt="WHO">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 60px; flex-wrap: wrap; opacity: 0.6; transition: opacity 0.3s;">
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.5rem; font-family: var(--font-heading); color: var(--color-primary);"><i class="fa-solid fa-hand-holding-hand" style="font-size: 1.8rem;"></i> USAID</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.5rem; font-family: var(--font-heading); color: var(--color-primary);"><i class="fa-solid fa-leaf" style="font-size: 1.8rem;"></i> GEF</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.5rem; font-family: var(--font-heading); color: var(--color-primary);"><i class="fa-solid fa-globe" style="font-size: 1.8rem;"></i> UNEP</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.5rem; font-family: var(--font-heading); color: var(--color-primary);"><i class="fa-solid fa-building-columns" style="font-size: 1.8rem;"></i> World Bank</div>
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.5rem; font-family: var(--font-heading); color: var(--color-primary);"><i class="fa-solid fa-staff-snake" style="font-size: 1.8rem;"></i> WHO</div>
             </div>
         </div>
     </section>
