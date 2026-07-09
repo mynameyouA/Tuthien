@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sustainable Humanity Foundation (SHF) | Empowering Communities</title>
-    <meta name="description" content="Giải Pháp Khoa Học Môi Trường Kéo Giảm Rủi Ro Khí Hậu & Phát Triển Sinh Kế Bền Vững Cho Người Yếu Thế (2026 - 2030)">
+    <title>The Sustainable Humanity Foundation (SHF) | Năng Lượng Xanh & Sinh Kế Bền Vững</title>
+    <meta name="description" content="Quỹ từ thiện SHF ứng dụng khoa học kỹ thuật để giải quyết ô nhiễm, cung cấp năng lượng sạch và phát triển sinh kế bền vững (2026-2030).">
+    
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="The Sustainable Humanity Foundation (SHF)">
+    <meta property="og:description" content="Giải Pháp Khoa Học Môi Trường & Phát Triển Sinh Kế Bền Vững Cho Người Yếu Thế.">
+    <meta property="og:image" content="https://tuthien-eight.vercel.app/shf_hero_1783587711643.jpg">
+    <meta property="og:url" content="https://tuthien-eight.vercel.app/">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon (Sử dụng icon hệ thống tạm) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -136,12 +146,18 @@
                 <!-- Form Góp ý -->
                 <div class="contact-form-wrapper" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
                     <h3 class="mb-4" style="color: var(--primary-color);">Gửi tin nhắn / Góp ý</h3>
-                    <form action="mailto:contact@sh.fund" method="POST" enctype="text/plain">
+                    <form action="https://formsubmit.co/contact@sh.fund" method="POST">
+                        <!-- Cấu hình FormSubmit chống Spam & UX -->
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="[SHF] Tin nhắn liên hệ mới từ Website!">
+                        <input type="hidden" name="_template" value="table">
+                        
                         <div style="margin-bottom: 15px;">
-                            <input type="text" name="name" class="form-control" placeholder="Họ và tên" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                            <input type="text" name="name" class="form-control" placeholder="Họ và tên" required autocomplete="name" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                         </div>
                         <div style="margin-bottom: 15px;">
-                            <input type="email" name="email" class="form-control" placeholder="Email của bạn" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                            <input type="email" name="email" class="form-control" placeholder="Email của bạn" required autocomplete="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
                         </div>
                         <div style="margin-bottom: 15px;">
                             <textarea name="message" class="form-control" rows="5" placeholder="Nội dung tin nhắn / Góp ý của bạn..." required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
