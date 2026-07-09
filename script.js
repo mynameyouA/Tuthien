@@ -93,3 +93,37 @@ function processDonation() {
         }, 2500);
     }, 2000);
 }
+
+// Internationalization (i18n) Logic
+let currentLang = localStorage.getItem('shf_lang') || 'vi';
+
+function updateLanguageUI(lang) {
+    // Update active button
+    document.getElementById('btn-en').classList.remove('active');
+    document.getElementById('btn-vi').classList.remove('active');
+    document.getElementById(`btn-${lang}`).classList.add('active');
+
+    // Update texts
+    const elements = document.querySelectorAll('[data-i18n]');
+    elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+            if (el.tagName.toLowerCase() === 'input' && el.type === 'text') {
+                el.placeholder = translations[lang][key];
+            } else {
+                el.innerHTML = translations[lang][key];
+            }
+        }
+    });
+}
+
+window.changeLanguage = function(lang) {
+    currentLang = lang;
+    localStorage.setItem('shf_lang', lang);
+    updateLanguageUI(lang);
+};
+
+// Initialize language on load
+document.addEventListener('DOMContentLoaded', () => {
+    updateLanguageUI(currentLang);
+});
