@@ -37,7 +37,7 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="btn btn-primary" onclick="openGenericModal('donateModal')">Donate Now</button>
+                <a href="donate.html" class="btn btn-primary">Donate Now</a>
             </div>
         </div>
     </header>
@@ -190,23 +190,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Donate Modal -->
-    <div id="donateModal" class="modal">
-        <div class="modal-dialog">
-            <div class="modal-content" style="text-align: center;">
-                <button onclick="closeGenericModal('donateModal')" style="position: absolute; right: 24px; top: 24px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer; color: var(--color-text-light);"><i class="fa-solid fa-xmark"></i></button>
-                <h2>Make a Donation</h2>
-                <p style="color: var(--color-text-light); margin-bottom: 24px;">Your contribution directly funds clean energy and pollution treatment projects.</p>
-                
-                <h4 style="margin-top: 24px; margin-bottom: 16px; color: var(--color-primary);">Crypto Contribution (Polygon USDT)</h4>
-                <div style="background: var(--color-bg-light); padding: 24px; border: 1px solid var(--color-border); border-radius: var(--radius);">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="margin-bottom: 16px; border-radius: 8px;">
-                    <p style="font-family: monospace; font-size: 0.95rem; background: #fff; padding: 12px; border: 1px solid var(--color-border); border-radius: 4px; word-break: break-all;">0x52b4483e30243a65212adb16d993627534e61d6d</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="script.js?v=2"></script>
