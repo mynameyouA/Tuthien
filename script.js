@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newsDetailContainer = document.getElementById('news-detail-container');
     
     if (newsContainer || newsDetailContainer) {
-        fetch('news-data.json')
+        fetch('news-data.json?v=' + new Date().getTime())
             .then(res => res.json())
             .then(data => {
                 if (newsContainer) {
@@ -55,9 +55,12 @@ function renderNewsList(articles) {
         const item = document.createElement('div');
         item.className = 'news-item';
         item.innerHTML = `
-            <h2><a href="news-detail.html?id=\${article.id}">\${article.title}</a></h2>
-            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 10px;">\${new Date(article.date).toLocaleDateString()}</p>
-            <p>\${article.description}</p>
+            <a href="news-detail.html?id=${article.id}" style="display: block; overflow: hidden; border-radius: var(--radius);"><img src="${article.thumbnail}" alt="${article.title}" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
+            <div>
+                <h2 style="font-size: 1.5rem; margin-bottom: 8px; line-height: 1.4;"><a href="news-detail.html?id=${article.id}" style="color: var(--color-primary); text-decoration: none;">${article.title}</a></h2>
+                <p style="color: var(--color-text-light); font-size: 0.95rem; margin-bottom: 12px;"><i class="fa-regular fa-calendar" style="color: var(--color-secondary); margin-right: 6px;"></i> ${new Date(article.date).toLocaleDateString()}</p>
+                <p style="line-height: 1.7; color: #4a5568;">${article.description}</p>
+            </div>
         `;
         container.appendChild(item);
     });
