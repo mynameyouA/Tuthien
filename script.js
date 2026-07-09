@@ -90,3 +90,20 @@ function renderNewsDetail(articles) {
         container.innerHTML = '<p>Article not found.</p>';
     }
 }
+
+function openGenericModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeGenericModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+    }
+}
+
