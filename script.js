@@ -30,12 +30,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Close modal when clicking outside
     window.onclick = function(event) {
-        const modal = document.getElementById('donateModal');
-        if (event.target == modal) {
-            closeDonateModal();
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = 'none';
+            document.body.style.overflow = 'auto';
         }
     }
 });
+
+// Generic Modal Functions
+function openGenericModal(id) {
+    document.getElementById(id).style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeGenericModal(id) {
+    document.getElementById(id).style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
 
 // Donation Modal Functions
 function openDonateModal() {
