@@ -1,16 +1,19 @@
-<!DOCTYPE html>
+const fs = require('fs');
+
+const head = (title) => `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Sustainable Humanity Foundation</title>
-    <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
+    <title>${title} - Sustainable Humanity Foundation</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+`;
 
+const header = `
     <!-- Header -->
     <header class="main-header">
         <div class="top-bar">
@@ -42,45 +45,12 @@
             </div>
         </div>
     </header>
+`;
 
-    <section class="section">
-        <div class="container">
-            <h1>About The Foundation</h1>
-            <p class="lead" style="font-size: 1.2rem; margin-bottom: 30px;">Humanity is not just about emergency relief. It is about equipping the vulnerable with the foundations for autonomous development.</p>
-            
-            <div class="grid-2">
-                <div>
-                    <h2>Our Mission</h2>
-                    <p>The Sustainable Humanity Foundation (SHF) believes that providing scientific and technological solutions is the only way to permanently break the cycle of poverty and environmental disaster. We partner with leading research institutes to bring theoretical science into practical, life-saving field applications.</p>
-                    <p>Founded in response to the growing climate crisis, we act as a bridge between high-tech environmental solutions and the communities that need them the most.</p>
-                </div>
-                <div class="card" style="background: var(--color-bg-light); border: none; padding: 30px;">
-                    <blockquote style="font-family: var(--font-serif); font-size: 1.3rem; font-style: italic; margin-bottom: 20px; border-left: 4px solid var(--color-accent); padding-left: 20px;">
-                        "Scientific solutions are the only path to resolving the cycle of poverty and environmental disasters."
-                    </blockquote>
-                    <strong>Prof. Dr. Duong Van Sinh</strong><br>
-                    <span style="color: var(--color-text-light);">President, SHF</span>
-                </div>
-            </div>
+const footer = fs.readFileSync('index.html', 'utf8').split('<!-- Footer -->')[1]; // Wait, I already overwrote index.html in the previous script? NO, I haven't run it yet.
+// Actually, I can just copy the footer from the previous string.
 
-            <h2 style="margin-top: 60px;">Our Leadership Team</h2>
-            <div class="grid-3" style="margin-top: 30px;">
-                <div class="card text-center">
-                    <h4>Prof. Dr. Duong Van Sinh</h4>
-                    <p style="color: var(--color-text-light);">President</p>
-                </div>
-                <div class="card text-center">
-                    <h4>Assoc. Prof. Elena Rodriguez</h4>
-                    <p style="color: var(--color-text-light);">Director of Environmental Science</p>
-                </div>
-                <div class="card text-center">
-                    <h4>Michael Chen, CPA</h4>
-                    <p style="color: var(--color-text-light);">Chief Financial Officer</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+const footerHtml = `
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
@@ -137,27 +107,77 @@
         </div>
     </div>
 
-    <!-- Scripts -->
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
         }
-        function openGenericModal(id) {
-            document.getElementById(id).style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-        function closeGenericModal(id) {
-            document.getElementById(id).style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        window.onclick = function(event) {
-            if (event.target.classList.contains('modal')) {
-                event.target.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        }
+        function openGenericModal(id) { document.getElementById(id).style.display = 'block'; }
+        function closeGenericModal(id) { document.getElementById(id).style.display = 'none'; }
     </script>
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 </html>
+`;
+
+// Projects Page
+const projectsContent = `
+    <section class="section">
+        <div class="container">
+            <h1>Key Projects</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Our active technological initiatives deployed across developing regions.</p>
+
+            <div class="grid-2">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80" alt="Waste Oil" class="card-img">
+                    <h2>Industrial Waste Oil Treatment</h2>
+                    <p>Utilizing RIDES microbiological technology to safely degrade toxic hydrocarbon radicals in industrial waste oil.</p>
+                    <a href="#" class="btn btn-outline" style="margin-top: 10px;">View Report</a>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Solar" class="card-img">
+                    <h2>Sun of the Village (Solar Energy)</h2>
+                    <p>Installing off-grid solar power systems in remote areas, providing stable electricity to schools and clinics.</p>
+                    <a href="#" class="btn btn-outline" style="margin-top: 10px;">View Report</a>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Agriculture" class="card-img">
+                    <h2>Circular Agriculture (Aquaponics)</h2>
+                    <p>Funding sustainable farming models that reuse water and eliminate chemical fertilizers to support poor farmers.</p>
+                    <a href="#" class="btn btn-outline" style="margin-top: 10px;">View Report</a>
+                </div>
+            </div>
+        </div>
+    </section>
+`;
+fs.writeFileSync('projects.html', head('Key Projects') + header + projectsContent + footerHtml);
+
+// News List Page
+const newsContent = `
+    <section class="section">
+        <div class="container">
+            <h1>Foundation News</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Updates, press releases, and field reports from SHF.</p>
+            <div id="news-container">
+                <!-- Filled by script.js -->
+            </div>
+        </div>
+    </section>
+`;
+fs.writeFileSync('news.html', head('News') + header + newsContent + footerHtml);
+
+// News Detail Page
+const newsDetailContent = `
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <div id="news-detail-container">
+                <!-- Filled by script.js -->
+                <p>Loading article...</p>
+            </div>
+            <a href="news.html" class="btn btn-outline" style="margin-top: 40px;">&larr; Back to News</a>
+        </div>
+    </section>
+`;
+fs.writeFileSync('news-detail.html', head('Article') + header + newsDetailContent + footerHtml);
+
+console.log('Projects and News pages rebuilt.');

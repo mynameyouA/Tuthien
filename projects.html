@@ -1,190 +1,70 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sustainable Humanity Foundation (SHF) | Empowering Communities</title>
-    <meta name="description" content="Giải Pháp Khoa Học Môi Trường Kéo Giảm Rủi Ro Khí Hậu & Phát Triển Sinh Kế Bền Vững Cho Người Yếu Thế (2026 - 2030)">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Key Projects - Sustainable Humanity Foundation</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Announcement Bar -->
-    <div class="top-bar">
-        <div class="container d-flex-between">
-            <small data-i18n="top_bar_trust">Tổ chức đề xuất (Pháp nhân Hoa Kỳ) - Kiểm toán độc lập theo tiêu chuẩn USAID/GEF</small>
-            <div class="lang-switcher">
-                <button onclick="changeLanguage('en')" id="btn-en">EN</button>
-                <span>|</span>
-                <button onclick="changeLanguage('vi')" id="btn-vi" class="active">VI</button>
-            </div>
-        </div>
-    </div>
 
     <!-- Header -->
     <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-mark"><i class="fa-solid fa-leaf"></i></div>
+        <div class="top-bar">
+            <div class="container">
+                <small>US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards</small>
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+        <div class="container header-container" style="padding-top: 20px; padding-bottom: 20px;">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
                 <div class="logo-text">
                     <span class="logo-title">Sustainable Humanity</span>
                     <span class="logo-subtitle">Foundation</span>
                 </div>
-            </div>
+            </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="about.html" data-i18n="nav_about">Về quỹ SHF</a></li>
-                    <li><a href="projects.html" data-i18n="nav_projects">Dự án trọng điểm</a></li>
-                    <li><a href="financials.html" data-i18n="nav_transparency">Minh bạch</a></li>
-                    <li><a href="news.html" data-i18n="nav_news">Tin tức</a></li>
-                    <li><a href="join-us.html" data-i18n="join_label">Tham gia</a></li>
-                    <li><a href="contact.html" data-i18n="nav_contact">Liên hệ</a></li>
+                    <li><a href="about.html">About SHF</a></li>
+                    <li><a href="projects.html">Key Projects</a></li>
+                    <li><a href="financials.html">Financials</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="join-us.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="btn btn-donate" onclick="openDonateModal()" data-i18n="btn_donate">Quyên góp</button>
+                <button class="btn btn-primary" onclick="openGenericModal('donateModal')">Donate</button>
             </div>
         </div>
     </header>
 
-    <!-- Hero and About removed for subpage -->
-
-    <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
+    <section class="section">
         <div class="container">
-            <div class="section-header text-center fade-in">
-                <span class="section-label" data-i18n="projects_label">Mô hình triển khai</span>
-                <h2 data-i18n="projects_title">3 Dự Án Trọng Điểm (2026-2030)</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card reveal-up">
-                    <div class="card-image-placeholder bg-navy"><i class="fa-solid fa-plane-departure"></i></div>
-                    <div class="project-content">
-                        <span class="project-tag" data-i18n="proj_1_tag">Môi trường</span>
-                        <h3 data-i18n="proj_1_title">Xử lý Dầu thải Hàng không</h3>
-                        <p data-i18n="proj_1_desc">Thiết lập trạm thu gom và xử lý dầu thải sinh-hóa hiện đại. Đào tạo và tiếp nhận lao động yếu thế tham gia vào các khâu vận hành an toàn, bảo vệ nguồn nước ngầm.</p>
-                    </div>
-                </div>
-                <div class="project-card reveal-up delay-1">
-                    <div class="card-image-placeholder bg-green"><i class="fa-solid fa-seedling"></i></div>
-                    <div class="project-content">
-                        <span class="project-tag" data-i18n="proj_2_tag">Nông nghiệp</span>
-                        <h3 data-i18n="proj_2_title">Tổ hợp Nông nghiệp Tuần hoàn</h3>
-                        <p data-i18n="proj_2_desc">Quy hoạch khu thực nghiệm 30-50 Hécta ứng dụng Aquaponics và sinh khối. Tiếp nhận nông dân nghèo, chia sẻ lợi nhuận, đảm bảo Net Zero.</p>
-                    </div>
-                </div>
-                <div class="project-card reveal-up delay-2">
-                    <div class="card-image-placeholder bg-gold"><i class="fa-solid fa-bolt"></i></div>
-                    <div class="project-content">
-                        <span class="project-tag" data-i18n="proj_3_tag">Năng lượng</span>
-                        <h3 data-i18n="proj_3_title">Phát điện Bánh đà Thông minh</h3>
-                        <p data-i18n="proj_3_desc">Chế tạo hệ thống lưu trữ năng lượng cơ năng không dùng hóa chất. Cấp phát miễn phí tại các trạm y tế vùng bão lũ, bảo vệ sinh mạng 24/7.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <h1>Key Projects</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Our active technological initiatives deployed across developing regions.</p>
 
-    <!-- Transparency, Team, News removed from projects page -->
-
-    <!-- Video Documentaries Section -->
-    <section id="media" class="section bg-navy text-white">
-        <div class="container">
-            <div class="section-header text-center fade-in">
-                <span class="section-label text-gold" data-i18n="video_section_label">Thước phim tài liệu</span>
-                <h2 class="text-white" data-i18n="video_section_title">Hành Trình Kiến Tạo Tương Lai</h2>
-            </div>
-            
-            <div class="grid-2 mt-5">
-                <div class="video-card reveal-up tilt-card">
-                    <div class="video-wrapper">
-                        <!-- Using YouTube placeholder with green tech / environment -->
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/9h7P8gWpolQ?controls=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3 data-i18n="video_1_title">Tái Sinh Rác Thải Hàng Không</h3>
-                    </div>
+            <div class="grid-2">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80" alt="Waste Oil" class="card-img">
+                    <h2>Industrial Waste Oil Treatment</h2>
+                    <p>Utilizing RIDES microbiological technology to safely degrade toxic hydrocarbon radicals in industrial waste oil.</p>
+                    <a href="#" class="btn btn-outline" style="margin-top: 10px;">View Report</a>
                 </div>
-                
-                <div class="video-card reveal-up delay-1 tilt-card">
-                    <div class="video-wrapper">
-                        <!-- Using YouTube placeholder with green tech / environment -->
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/VvKjF1Xk8iI?controls=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-info">
-                        <h3 data-i18n="video_2_title">Năng Lượng Sạch Cho Bản Làng</h3>
-                    </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80" alt="Solar" class="card-img">
+                    <h2>Sun of the Village (Solar Energy)</h2>
+                    <p>Installing off-grid solar power systems in remote areas, providing stable electricity to schools and clinics.</p>
+                    <a href="#" class="btn btn-outline" style="margin-top: 10px;">View Report</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Join Us Section -->
-    <section id="join" class="section">
-        <div class="container">
-            <div class="section-header text-center fade-in">
-                <span class="section-label" data-i18n="join_label">Tham gia cùng chúng tôi</span>
-                <h2 data-i18n="join_title">Hành Động Vì Tương Lai Bền Vững</h2>
-            </div>
-            <div class="grid-2 mt-5">
-                <div class="join-card reveal-up tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
-                    <h3 data-i18n="join_vol_title">Trở thành Tình nguyện viên</h3>
-                    <p data-i18n="join_vol_desc">Đóng góp thời gian và kỹ năng của bạn để hỗ trợ các cộng đồng yếu thế tại thực địa.</p>
-                    <a href="contact.html" class="btn btn-outline-navy mt-3">Đăng ký ngay</a>
-                </div>
-                <div class="join-card reveal-up delay-1 tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 data-i18n="join_partner_title">Trở thành Đối tác</h3>
-                    <p data-i18n="join_partner_desc">Cùng SHF kiến tạo các dự án năng lượng và môi trường mang tính đột phá.</p>
-                    <a href="contact.html" class="btn btn-outline-navy mt-3">Liên hệ hợp tác</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section id="partners" class="section bg-light text-center">
-        <div class="container">
-            <span class="section-label" data-i18n="partners_label">Đồng hành cùng SHF</span>
-            <h2 data-i18n="partners_title">Mạng Lưới Đối Tác Quốc Tế</h2>
-            <div class="partners-grid mt-5 fade-in">
-                <div class="partner-logo">USAID</div>
-                <div class="partner-logo">GEF</div>
-                <div class="partner-logo">RIDES</div>
-                <div class="partner-logo">UNEP</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="donation-promo-card text-center reveal-up">
-                <h2 class="mb-2 text-white" data-i18n="contact_title">Trao sinh kế, xây tương lai</h2>
-                <p class="lead mb-4 text-white" data-i18n="contact_desc">Mọi sự đóng góp của bạn, dù nhỏ nhất, đều góp phần kiến tạo một tương lai bền vững.</p>
-                <button class="btn btn-primary btn-lg px-5" onclick="openDonateModal()" data-i18n="contact_btn">ĐÓNG GÓP NGAY</button>
-            </div>
-            
-            <div class="contact-details-grid mt-5 reveal-up delay-1">
-                <div class="contact-card">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h4 data-i18n="contact_hq">Trụ sở điều hành</h4>
-                    <p>Phường Tăng Nhơn Phú, TP. Thủ Đức,<br>TP. Hồ Chí Minh, Việt Nam</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-phone"></i>
-                    <h4 data-i18n="contact_phone">Đường dây nóng</h4>
-                    <p>0975 709 643</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h4 data-i18n="contact_email">Email</h4>
-                    <p>contact@sh.fund</p>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80" alt="Agriculture" class="card-img">
+                    <h2>Circular Agriculture (Aquaponics)</h2>
+                    <p>Funding sustainable farming models that reuse water and eliminate chemical fertilizers to support poor farmers.</p>
+                    <a href="#" class="btn btn-outline" style="margin-top: 10px;">View Report</a>
                 </div>
             </div>
         </div>
@@ -193,74 +73,67 @@
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-top grid-2">
+            <div class="grid-4">
                 <div>
-                    <div class="logo-mark d-inline-block mb-3" style="background: transparent; border: 2px solid #fff;">
-                        <i class="fa-solid fa-leaf"></i>
-                    </div>
-                    <h3 class="text-white mb-2">SHF</h3>
-                    <p class="text-gray" data-i18n="footer_desc">The Sustainable Humanity Foundation là tổ chức phi lợi nhuận hoạt động vì môi trường và sinh kế bền vững.</p>
+                    <h4>Sustainable Humanity Foundation</h4>
+                    <p style="font-size: 0.85rem; margin-top: 10px;">Bringing breakthrough scientific solutions to solve pollution, provide clean energy, and develop sustainable livelihoods for vulnerable communities.</p>
                 </div>
-                <div class="text-right">
-                    <div class="trust-badges mb-3">
-                        <i class="fa-brands fa-cc-visa fa-2x mx-1"></i>
-                        <i class="fa-brands fa-cc-mastercard fa-2x mx-1"></i>
-                        <i class="fa-brands fa-cc-paypal fa-2x mx-1"></i>
-                    </div>
-                    <p class="text-gray"><i class="fa-solid fa-lock text-gold"></i> SSL Secure Website</p>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style:none; line-height: 2;">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="financials.html">Financials</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul style="list-style:none; line-height: 2; font-size: 0.9rem;">
+                        <li><i class="fa-solid fa-location-dot"></i> Thu Duc City, HCMC, Vietnam</li>
+                        <li><i class="fa-solid fa-phone"></i> +84 975 709 643</li>
+                        <li><i class="fa-solid fa-envelope"></i> contact@sh.fund</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Newsletter</h4>
+                    <form action="https://formsubmit.co/contact@sh.fund" method="POST" style="display:flex; margin-top: 10px;">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" style="margin:0; border-radius: 2px 0 0 2px;" required>
+                        <button type="submit" class="btn btn-primary" style="border-radius: 0 2px 2px 0;">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer_copyright">&copy; 2026 The Sustainable Humanity Foundation (SHF). Tất cả các quyền được bảo hộ.</p>
+                <p>&copy; 2026 The Sustainable Humanity Foundation. All rights reserved. 501(c)(3) Nonprofit.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Premium Donation Modal (Omitted inner translations for brevity but fully styled) -->
+    <!-- Donate Modal -->
     <div id="donateModal" class="modal">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <button class="modal-close" onclick="closeDonateModal()"><i class="fa-solid fa-xmark"></i></button>
-                <div class="modal-left bg-navy text-white">
-                    <div class="modal-info">
-                        <div class="logo-mark mb-4"><i class="fa-solid fa-leaf"></i></div>
-                        <h2>Đóng góp của bạn</h2>
-                        <p class="opacity-80">Sẽ giúp SHF triển khai năng lượng sạch và xử lý ô nhiễm, trực tiếp cứu trợ các cộng đồng yếu thế.</p>
-                    </div>
-                </div>
-                <div class="modal-right">
-                    <div class="checkout-form">
-                        <div class="secure-checkout-header">
-                            <h3><i class="fa-solid fa-lock"></i> Thanh toán bảo mật</h3>
-                            <div class="payment-icons">
-                                <i class="fa-brands fa-cc-visa"></i>
-                                <i class="fa-brands fa-cc-paypal"></i>
-                            </div>
-                        </div>
-                        <div class="form-section">
-                            <div class="amount-grid mt-3">
-                                <button class="amount-btn active" onclick="selectAmount(this, 50)">$50</button>
-                                <button class="amount-btn" onclick="selectAmount(this, 100)">$100</button>
-                                <button class="amount-btn custom" onclick="selectAmount(this, 'custom')">Khác</button>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary btn-block btn-lg mt-4 payment-btn" onclick="processDonation()">
-                            Xác nhận thanh toán
-                        </button>
-                    </div>
+            <div class="modal-content" style="text-align: center;">
+                <button onclick="closeGenericModal('donateModal')" style="position: absolute; right: 20px; top: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Make a Donation</h2>
+                <p style="color: var(--color-text-light); margin-bottom: 20px;">Your contribution helps us implement clean energy and treat pollution globally.</p>
+                
+                <h4 style="margin-top: 20px; margin-bottom: 10px;">Crypto Contribution (Polygon USDT)</h4>
+                <div style="background: var(--color-bg-light); padding: 20px; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="margin-bottom: 15px;">
+                    <p style="font-family: monospace; font-size: 0.9rem; background: #fff; padding: 10px; border: 1px solid #ccc;">0x52b4483e30243a65212adb16d993627534e61d6d</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/84975709643" target="_blank" class="whatsapp-float" title="Hỗ trợ nhanh qua WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span class="whatsapp-tooltip" data-i18n="whatsapp_support">Hỗ trợ nhanh qua WhatsApp</span>
-    </a>
-
-    <!-- Scripts -->
-    <script src="i18n.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        function openGenericModal(id) { document.getElementById(id).style.display = 'block'; }
+        function closeGenericModal(id) { document.getElementById(id).style.display = 'none'; }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 </html>

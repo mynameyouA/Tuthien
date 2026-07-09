@@ -1,283 +1,159 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sustainable Humanity Foundation (SHF) | Năng Lượng Xanh & Sinh Kế Bền Vững</title>
-    <meta name="description" content="Quỹ từ thiện SHF ứng dụng khoa học kỹ thuật để giải quyết ô nhiễm, cung cấp năng lượng sạch và phát triển sinh kế bền vững (2026-2030).">
-    
-    <!-- SEO & Open Graph -->
-    <meta property="og:title" content="The Sustainable Humanity Foundation (SHF)">
-    <meta property="og:description" content="Giải Pháp Khoa Học Môi Trường & Phát Triển Sinh Kế Bền Vững Cho Người Yếu Thế.">
-    <meta property="og:image" content="https://tuthien-eight.vercel.app/shf_hero_1783587711643.jpg">
-    <meta property="og:url" content="https://tuthien-eight.vercel.app/">
-    <meta property="og:type" content="website">
-    
-    <!-- Favicon (Sử dụng icon hệ thống tạm) -->
+    <title>Home - Sustainable Humanity Foundation</title>
+    <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Announcement Bar -->
-    <div class="top-bar">
-        <div class="container d-flex-between">
-            <small data-i18n="top_bar_trust">Tổ chức đề xuất (Pháp nhân Hoa Kỳ) - Kiểm toán độc lập theo tiêu chuẩn USAID/GEF</small>
-            <div class="lang-switcher">
-                <button onclick="changeLanguage('en')" id="btn-en">EN</button>
-                <span>|</span>
-                <button onclick="changeLanguage('vi')" id="btn-vi" class="active">VI</button>
-            </div>
-        </div>
-    </div>
 
     <!-- Header -->
     <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-mark"><i class="fa-solid fa-leaf"></i></div>
+        <div class="top-bar">
+            <div class="container">
+                <small>US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards</small>
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+        <div class="container header-container" style="padding-top: 20px; padding-bottom: 20px;">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
                 <div class="logo-text">
                     <span class="logo-title">Sustainable Humanity</span>
                     <span class="logo-subtitle">Foundation</span>
                 </div>
-            </div>
+            </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="about.html" data-i18n="nav_about">Về quỹ SHF</a></li>
-                    <li><a href="projects.html" data-i18n="nav_projects">Dự án trọng điểm</a></li>
-                    <li><a href="financials.html" data-i18n="nav_transparency">Minh bạch</a></li>
-                    <li><a href="news.html" data-i18n="nav_news">Tin tức</a></li>
-                    <li><a href="join-us.html" data-i18n="join_label">Tham gia</a></li>
-                    <li><a href="contact.html" data-i18n="nav_contact">Liên hệ</a></li>
+                    <li><a href="about.html">About SHF</a></li>
+                    <li><a href="projects.html">Key Projects</a></li>
+                    <li><a href="financials.html">Financials</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="join-us.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="btn btn-donate" onclick="openDonateModal()" data-i18n="btn_donate">Quyên góp</button>
+                <button class="btn btn-primary" onclick="openGenericModal('donateModal')">Donate</button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <video class="hero-video-bg" autoplay loop muted playsinline>
-            <!-- Using a high-quality environmental stock video placeholder -->
-            <source src="https://cdn.pixabay.com/video/2020/05/25/40141-424845012_large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content relative-z">
-            <div class="badge-trust fade-in-up" data-i18n="hero_badge">Tổ chức Phi lợi nhuận 501(c)(3)</div>
-            <h1 class="fade-in-up delay-1" data-i18n="hero_title">Kiến Tạo Tương Lai Bền Vững Cho Người Yếu Thế</h1>
-            <p class="hero-subtitle fade-in-up delay-2" data-i18n="hero_subtitle">Chúng tôi ứng dụng khoa học kỹ thuật tiên tiến để giải quyết triệt để rác thải công nghiệp, cung cấp năng lượng sạch và phát triển sinh kế cho cộng đồng (2026 - 2030).</p>
-            <div class="hero-buttons fade-in-up delay-3">
-                <button class="btn btn-primary btn-lg" onclick="openDonateModal()"><i class="fa-solid fa-heart"></i> <span data-i18n="hero_btn_donate">Chung tay ngay hôm nay</span></button>
-                <a href="#about" class="btn btn-outline btn-lg" data-i18n="hero_btn_learn">Tìm hiểu thêm</a>
+    <section class="section">
+        <div class="container text-center" style="padding: 80px 0;">
+            <h1 style="font-size: 3.5rem; border: none; margin-bottom: 10px;">Empowering Humanity Through Science</h1>
+            <p style="font-size: 1.2rem; color: var(--color-text-light); max-width: 700px; margin: 0 auto 30px;">We leverage breakthrough environmental technologies to mitigate climate risks and develop sustainable livelihoods for vulnerable communities globally.</p>
+            <div>
+                <a href="projects.html" class="btn btn-primary" style="margin-right: 10px;">Explore Our Work</a>
+                <a href="about.html" class="btn btn-outline">Read Our Story</a>
             </div>
         </div>
     </section>
 
-    <!-- Trust Banner -->
-    <div class="trust-banner fade-in">
+    <section class="section bg-light">
         <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span data-i18n="trust_secure">Tài trợ an toàn</span></div>
-                <div class="trust-item"><i class="fa-solid fa-file-contract"></i><span data-i18n="trust_audit">Kiểm toán bởi USAID/GEF</span></div>
-                <div class="trust-item"><i class="fa-solid fa-globe"></i><span data-i18n="trust_global">Mạng lưới toàn cầu</span></div>
-                    </div>
-                    <div class="video-info">
-                        <h3 data-i18n="video_2_title">Năng Lượng Sạch Cho Bản Làng</h3>
-                    </div>
+            <h2 style="text-align: center; border: none; margin-bottom: 40px;">Core Focus Areas</h2>
+            <div class="grid-3">
+                <div class="card text-center">
+                    <i class="fa-solid fa-leaf" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h3>Environmental Restoration</h3>
+                    <p>Deploying bio-technologies to safely process industrial waste and restore polluted ecosystems.</p>
+                </div>
+                <div class="card text-center">
+                    <i class="fa-solid fa-solar-panel" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h3>Renewable Energy</h3>
+                    <p>Installing off-grid solar solutions for remote villages lacking basic power infrastructure.</p>
+                </div>
+                <div class="card text-center">
+                    <i class="fa-solid fa-seedling" style="font-size: 2.5rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h3>Sustainable Livelihoods</h3>
+                    <p>Funding circular agriculture cooperatives to ensure long-term food security and income.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
-
-    <!-- Partners Section -->
-    <section id="partners" class="section bg-light text-center">
+    <!-- Footer -->
+    <footer class="main-footer">
         <div class="container">
-            <span class="section-label" data-i18n="partners_label">Đồng hành cùng SHF</span>
-            <h2 data-i18n="partners_title">Mạng Lưới Đối Tác Quốc Tế</h2>
-            <div class="partners-grid mt-5 fade-in">
-                <div class="partner-logo">USAID</div>
-                <div class="partner-logo">GEF</div>
-                <div class="partner-logo">RIDES</div>
-                <div class="partner-logo">UNEP</div>
-            </div>
-        </div>
-    </section>
-
-    
-
-    <!-- Professional NGO Footer -->
-    <footer class="main-footer" style="background-color: var(--color-navy); padding-top: 60px; color: #fff;">
-        <div class="container">
-            <div class="grid-4" style="display: grid; grid-template-columns: 2fr 1fr 1.5fr 1.5fr; gap: 40px; margin-bottom: 40px;">
-                <!-- Brand & Description -->
+            <div class="grid-4">
                 <div>
-                    <div class="logo-mark d-inline-block mb-3" style="background: transparent; border: 2px solid #fff; color: #fff; width: 40px; height: 40px; line-height: 36px; border-radius: 50%; text-align: center; font-size: 1.2rem;">
-                        <i class="fa-solid fa-leaf"></i>
-                    </div>
-                    <h3 class="text-white mb-3">The Sustainable Humanity Foundation</h3>
-                    <p class="text-gray" style="line-height: 1.6; font-size: 0.95rem;">Mang lại những giải pháp khoa học đột phá để giải quyết ô nhiễm, cung cấp năng lượng sạch và phát triển sinh kế bền vững cho cộng đồng yếu thế.</p>
-                    <div class="social-links mt-4" style="display: flex; gap: 15px;">
-                        <a href="#" style="color: #fff; font-size: 1.2rem; transition: color 0.3s;"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" style="color: #fff; font-size: 1.2rem; transition: color 0.3s;"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" style="color: #fff; font-size: 1.2rem; transition: color 0.3s;"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" style="color: #fff; font-size: 1.2rem; transition: color 0.3s;"><i class="fa-brands fa-youtube"></i></a>
-                    </div>
+                    <h4>Sustainable Humanity Foundation</h4>
+                    <p style="font-size: 0.85rem; margin-top: 10px;">Bringing breakthrough scientific solutions to solve pollution, provide clean energy, and develop sustainable livelihoods for vulnerable communities.</p>
                 </div>
-
-                <!-- Quick Links -->
                 <div>
-                    <h4 class="text-white mb-3" style="font-size: 1.1rem;">Liên kết nhanh</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
-                        <li><a href="about.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Về quỹ SHF</a></li>
-                        <li><a href="projects.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Dự án trọng điểm</a></li>
-                        <li><a href="news.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Tin tức & Báo cáo</a></li>
-                        <li><a href="financials.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Minh bạch tài chính</a></li>
-                        <li><a href="contact.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Liên hệ</a></li>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style:none; line-height: 2;">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="financials.html">Financials</a></li>
+                        <li><a href="news.html">News</a></li>
                     </ul>
                 </div>
-
-                <!-- Contact Info -->
                 <div>
-                    <h4 class="text-white mb-3" style="font-size: 1.1rem;">Thông tin liên hệ</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 15px; color: #ccc;">
-                        <li style="display: flex; gap: 10px; align-items: flex-start;">
-                            <i class="fa-solid fa-location-dot mt-1"></i>
-                            <span>Phường Tăng Nhơn Phú, TP. Thủ Đức, TP. Hồ Chí Minh, Việt Nam</span>
-                        </li>
-                        <li style="display: flex; gap: 10px; align-items: center;">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>0975 709 643</span>
-                        </li>
-                        <li style="display: flex; gap: 10px; align-items: center;">
-                            <i class="fa-solid fa-envelope"></i>
-                            <span>contact@sh.fund</span>
-                        </li>
+                    <h4>Contact</h4>
+                    <ul style="list-style:none; line-height: 2; font-size: 0.9rem;">
+                        <li><i class="fa-solid fa-location-dot"></i> Thu Duc City, HCMC, Vietnam</li>
+                        <li><i class="fa-solid fa-phone"></i> +84 975 709 643</li>
+                        <li><i class="fa-solid fa-envelope"></i> contact@sh.fund</li>
                     </ul>
                 </div>
-
-                <!-- Newsletter -->
                 <div>
-                    <h4 class="text-white mb-3" style="font-size: 1.1rem;">Đăng ký nhận bản tin</h4>
-                    <p class="text-gray mb-3" style="font-size: 0.9rem;">Cập nhật các dự án và báo cáo tài chính mới nhất hàng tháng.</p>
-                    <form action="https://formsubmit.co/contact@sh.fund" method="POST" style="display: flex; gap: 0;">
-                        <input type="email" name="newsletter_email" placeholder="Email của bạn" required style="padding: 10px 15px; border: none; border-radius: 4px 0 0 4px; width: 100%; outline: none;">
-                        <button type="submit" style="padding: 10px 15px; background: var(--color-primary); color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer; font-weight: bold;"><i class="fa-solid fa-paper-plane"></i></button>
+                    <h4>Newsletter</h4>
+                    <form action="https://formsubmit.co/contact@sh.fund" method="POST" style="display:flex; margin-top: 10px;">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" style="margin:0; border-radius: 2px 0 0 2px;" required>
+                        <button type="submit" class="btn btn-primary" style="border-radius: 0 2px 2px 0;">Subscribe</button>
                     </form>
                 </div>
             </div>
-
-            <!-- Footer Bottom -->
-            <div class="footer-bottom" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                <p style="color: #999; font-size: 0.9rem; margin: 0;">&copy; 2026 The Sustainable Humanity Foundation (SHF). 501(c)(3) Nonprofit.</p>
-                <div class="trust-badges" style="display: flex; gap: 15px; align-items: center;">
-                    <span style="color: #999; font-size: 0.85rem;"><i class="fa-solid fa-lock text-gold"></i> Cổng thanh toán bảo mật 256-bit</span>
-                    <i class="fa-brands fa-cc-visa fa-2x text-gray"></i>
-                    <i class="fa-brands fa-cc-mastercard fa-2x text-gray"></i>
-                    <i class="fa-brands fa-ethereum fa-2x text-gray"></i>
-                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Sustainable Humanity Foundation. All rights reserved. 501(c)(3) Nonprofit.</p>
             </div>
         </div>
     </footer>
 
-    
-
-    
-
-    <!-- Premium Donation Modal (Omitted inner translations for brevity but fully styled) -->
+    <!-- Donate Modal -->
     <div id="donateModal" class="modal">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <button class="modal-close" onclick="closeDonateModal()"><i class="fa-solid fa-xmark"></i></button>
-                <div class="modal-left bg-navy text-white">
-                    <div class="modal-info">
-                        <div class="logo-mark mb-4"><i class="fa-solid fa-leaf"></i></div>
-                        <h2>Đóng góp của bạn</h2>
-                        <p class="opacity-80">Sẽ giúp SHF triển khai năng lượng sạch và xử lý ô nhiễm, trực tiếp cứu trợ các cộng đồng yếu thế.</p>
-                    </div>
-                </div>
-                <div class="modal-right">
-                    <div class="checkout-form">
-                        <div class="secure-checkout-header">
-                            <h3><i class="fa-solid fa-lock"></i> Thanh toán bảo mật</h3>
-                            <div class="payment-icons">
-                                <i class="fa-brands fa-cc-visa"></i>
-                                <i class="fa-brands fa-cc-paypal"></i>
-                                <i class="fa-brands fa-ethereum"></i>
-                            </div>
-                        </div>
-                        
-                        <!-- Tabs -->
-                        <div class="payment-tabs mt-3 d-flex" style="gap: 10px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
-                            <button class="btn btn-outline-navy flex-1 active" id="tab-fiat" onclick="switchPaymentTab('fiat')"><i class="fa-solid fa-credit-card"></i> Thẻ / PayPal</button>
-                            <button class="btn btn-outline-navy flex-1" id="tab-crypto" onclick="switchPaymentTab('crypto')"><img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=025" width="16" style="vertical-align: middle;"> USDT (Polygon)</button>
-                        </div>
-
-                        <div class="form-section">
-                            <div class="amount-grid mt-3">
-                                <button class="amount-btn active" onclick="selectAmount(this, 50)">$50</button>
-                                <button class="amount-btn" onclick="selectAmount(this, 100)">$100</button>
-                                <button class="amount-btn" onclick="selectAmount(this, 500)">$500</button>
-                                <button class="amount-btn" onclick="selectAmount(this, 1000)">$1000</button>
-                                <button class="amount-btn custom" onclick="selectAmount(this, 'custom')">Khác</button>
-                            </div>
-                            <div id="customAmountWrapper" style="display: none; margin-top: 15px;">
-                                <input type="number" id="customAmount" class="form-control" placeholder="Nhập số tiền ($)" min="1" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
-                            </div>
-                            <div class="text-center mt-3"><h2 id="btnAmount">$50</h2></div>
-                        </div>
-                        
-                        <!-- Fiat Button -->
-                        <button id="btn-pay-fiat" class="btn btn-primary btn-block btn-lg mt-4 payment-btn" onclick="processDonation()">
-                            Xác nhận thanh toán
-                        </button>
-
-                        <!-- Crypto Button -->
-                        <div id="crypto-panel" style="display: none; margin-top: 20px;">
-                            <!-- QR Code Section -->
-                            <div class="crypto-qr text-center mb-4 p-3" style="background: #f8f9fa; border-radius: 12px; border: 1px dashed #ccc;">
-                                <p class="mb-2 text-muted" style="font-size: 0.85rem;"><i class="fa-solid fa-qrcode"></i> Quét mã QR để chuyển USDT (Polygon)</p>
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="Ví Polygon" class="mb-2" style="border-radius: 8px;">
-                                <div class="d-flex" style="background: #e9ecef; border-radius: 6px; overflow: hidden; align-items: center;">
-                                    <input type="text" value="0x52b4483e30243a65212adb16d993627534e61d6d" readonly style="border: none; background: transparent; padding: 8px 10px; width: 100%; font-size: 0.75rem; outline: none; color: #555;" id="wallet-address-input">
-                                    <button onclick="navigator.clipboard.writeText('0x52b4483e30243a65212adb16d993627534e61d6d'); alert('Đã copy địa chỉ ví!');" style="border: none; background: #8247E5; color: white; padding: 8px 15px; cursor: pointer; height: 100%;" title="Copy địa chỉ"><i class="fa-solid fa-copy"></i></button>
-                                </div>
-                            </div>
-
-                            <div class="text-center mb-3">
-                                <span style="background: #e9ecef; padding: 3px 15px; border-radius: 20px; font-size: 0.8rem; color: #777;">Hoặc kết nối ví trực tiếp</span>
-                            </div>
-
-                            <button id="btn-connect-wallet" class="btn btn-block btn-lg mb-2" style="background: #8247E5; color: white;" onclick="connectWallet()">
-                                <i class="fa-solid fa-wallet"></i> Kết nối ví MetaMask
-                            </button>
-                            <button id="btn-pay-crypto" class="btn btn-block btn-lg" style="background: #26A17B; color: white; display: none;" onclick="processCryptoDonation()">
-                                <i class="fa-solid fa-paper-plane"></i> Chuyển USDT
-                            </button>
-                            <div id="crypto-status" class="text-center mt-2 text-sm" style="font-size: 0.85rem;"></div>
-                        </div>
-                    </div>
+            <div class="modal-content" style="text-align: center;">
+                <button onclick="closeGenericModal('donateModal')" style="position: absolute; right: 20px; top: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Make a Donation</h2>
+                <p style="color: var(--color-text-light); margin-bottom: 20px;">Your contribution helps us implement clean energy and treat pollution globally.</p>
+                
+                <h4 style="margin-top: 20px; margin-bottom: 10px;">Crypto Contribution (Polygon USDT)</h4>
+                <div style="background: var(--color-bg-light); padding: 20px; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="margin-bottom: 15px;">
+                    <p style="font-family: monospace; font-size: 0.9rem; background: #fff; padding: 10px; border: 1px solid #ccc;">0x52b4483e30243a65212adb16d993627534e61d6d</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/84975709643" target="_blank" class="whatsapp-float" title="Hỗ trợ nhanh qua WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span class="whatsapp-tooltip" data-i18n="whatsapp_support">Hỗ trợ nhanh qua WhatsApp</span>
-    </a>
-
     <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
-    <script src="i18n.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        function openGenericModal(id) {
+            document.getElementById(id).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGenericModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 </html>

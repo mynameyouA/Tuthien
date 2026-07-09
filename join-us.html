@@ -1,369 +1,183 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Sustainable Humanity Foundation (SHF) | Empowering Communities</title>
-    <meta name="description" content="Giải Pháp Khoa Học Môi Trường Kéo Giảm Rủi Ro Khí Hậu & Phát Triển Sinh Kế Bền Vững Cho Người Yếu Thế (2026 - 2030)">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Join Us - Sustainable Humanity Foundation</title>
+    <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Top Announcement Bar -->
-    <div class="top-bar">
-        <div class="container d-flex-between">
-            <small data-i18n="top_bar_trust">Tổ chức đề xuất (Pháp nhân Hoa Kỳ) - Kiểm toán độc lập theo tiêu chuẩn USAID/GEF</small>
-            <div class="lang-switcher">
-                <button onclick="changeLanguage('en')" id="btn-en">EN</button>
-                <span>|</span>
-                <button onclick="changeLanguage('vi')" id="btn-vi" class="active">VI</button>
-            </div>
-        </div>
-    </div>
 
     <!-- Header -->
     <header class="main-header">
-        <div class="container header-container">
-            <div class="logo">
-                <div class="logo-mark"><i class="fa-solid fa-leaf"></i></div>
+        <div class="top-bar">
+            <div class="container">
+                <small>US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards</small>
+                <div id="google_translate_element"></div>
+            </div>
+        </div>
+        <div class="container header-container" style="padding-top: 20px; padding-bottom: 20px;">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf"></i>
                 <div class="logo-text">
                     <span class="logo-title">Sustainable Humanity</span>
                     <span class="logo-subtitle">Foundation</span>
                 </div>
-            </div>
+            </a>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="about.html" data-i18n="nav_about">Về quỹ SHF</a></li>
-                    <li><a href="projects.html" data-i18n="nav_projects">Dự án trọng điểm</a></li>
-                    <li><a href="financials.html" data-i18n="nav_transparency">Minh bạch</a></li>
-                    <li><a href="news.html" data-i18n="nav_news">Tin tức</a></li>
-                    <li><a href="join-us.html" data-i18n="join_label">Tham gia</a></li>
-                    <li><a href="contact.html" data-i18n="nav_contact">Liên hệ</a></li>
+                    <li><a href="about.html">About SHF</a></li>
+                    <li><a href="projects.html">Key Projects</a></li>
+                    <li><a href="financials.html">Financials</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="join-us.html">Join Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="btn btn-donate" onclick="openDonateModal()" data-i18n="btn_donate">Quyên góp</button>
+                <button class="btn btn-primary" onclick="openGenericModal('donateModal')">Donate</button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="page-hero" style="background: linear-gradient(rgba(10, 37, 64, 0.7), rgba(10, 37, 64, 0.7)), url('join_us_hero.jpg') center/cover; padding: 150px 0 100px; text-align: center; color: white;">
-        <div class="container fade-in">
-            <span class="text-gold mb-3" style="display: block; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Tham Gia Cùng SHF</span>
-            <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Cùng Nhau, Chúng Ta Thay Đổi Thế Giới</h1>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; opacity: 0.9;">Góp sức mình vào những dự án mang tính bước ngoặt, từ xử lý ô nhiễm công nghiệp đến mang năng lượng sạch cho bản làng.</p>
-        </div>
-    </section>
-
-    <!-- Volunteer Timeline -->
-    <section class="section bg-light">
+    <section class="section">
         <div class="container">
-            <div class="section-header text-center fade-in">
-                <h2 data-i18n="join_timeline_title">Hành Trình Tham Gia</h2>
-            </div>
-            <div class="grid-3 mt-5 text-center">
-                <div class="timeline-step reveal-up">
-                    <div style="width: 80px; height: 80px; background: var(--color-primary); color: white; border-radius: 50%; line-height: 80px; font-size: 2rem; margin: 0 auto 20px;">1</div>
-                    <h4>Đăng Ký</h4>
-                    <p>Điền thông tin và chia sẻ mong muốn đóng góp của bạn với SHF.</p>
+            <h1>Join Our Mission</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Whether you are an individual looking to volunteer your time, or an organization seeking to partner with us, your contribution is vital.</p>
+
+            <div class="grid-2">
+                <div class="card text-center">
+                    <i class="fa-solid fa-hands-holding-child" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h2>Become a Volunteer</h2>
+                    <p style="margin-bottom: 30px;">Contribute your skills and time to support vulnerable communities directly in the field.</p>
+                    <button onclick="openGenericModal('volunteerModal')" class="btn btn-outline">Apply to Volunteer</button>
                 </div>
-                <div class="timeline-step reveal-up delay-1">
-                    <div style="width: 80px; height: 80px; background: var(--color-gold); color: white; border-radius: 50%; line-height: 80px; font-size: 2rem; margin: 0 auto 20px;">2</div>
-                    <h4>Phỏng Vấn & Đào Tạo</h4>
-                    <p>Tham gia khóa huấn luyện về an toàn và kỹ năng thực địa cốt lõi.</p>
-                </div>
-                <div class="timeline-step reveal-up delay-2">
-                    <div style="width: 80px; height: 80px; background: var(--color-navy); color: white; border-radius: 50%; line-height: 80px; font-size: 2rem; margin: 0 auto 20px;">3</div>
-                    <h4>Hành Động</h4>
-                    <p>Triển khai dự án tại các khu vực đang chịu ảnh hưởng nặng nề nhất.</p>
+                <div class="card text-center">
+                    <i class="fa-solid fa-handshake" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+                    <h2>Become a Partner</h2>
+                    <p style="margin-bottom: 30px;">Collaborate with SHF to build breakthrough energy and environmental projects.</p>
+                    <button onclick="openGenericModal('partnerModal')" class="btn btn-outline">Propose a Partnership</button>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- Hero section removed for subpage -->
-
-    <!-- Trust Banner -->
-    <div class="trust-banner fade-in">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span data-i18n="trust_secure">Tài trợ an toàn</span></div>
-                <div class="trust-item"><i class="fa-solid fa-file-contract"></i><span data-i18n="trust_audit">Kiểm toán bởi USAID/GEF</span></div>
-                <div class="trust-item"><i class="fa-solid fa-globe"></i><span data-i18n="trust_global">Mạng lưới toàn cầu</span></div>
-                <div class="trust-item"><i class="fa-solid fa-handshake-angle"></i><span data-i18n="trust_partner">Đối tác RIDES Việt Nam</span></div>
+    <!-- Volunteer Modal -->
+    <div id="volunteerModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button onclick="closeGenericModal('volunteerModal')" style="position: absolute; right: 20px; top: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Volunteer Application</h2>
+                <form action="https://formsubmit.co/contact@sh.fund" method="POST" style="margin-top: 20px;">
+                    <input type="hidden" name="_subject" value="New Volunteer Application">
+                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    <input type="text" name="profession" class="form-control" placeholder="Profession / Skills" required>
+                    <textarea name="message" class="form-control" rows="4" placeholder="Why do you want to join SHF?" required></textarea>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
             </div>
         </div>
     </div>
 
-    <!-- About Section -->
-    
-
-    <!-- Projects removed from about -->
-
-    <!-- Financial Transparency Section -->
-    
-
-    <!-- Team Section -->
-    <section id="join" class="section">
-        <div class="container">
-            <div class="section-header text-center fade-in">
-                <span class="section-label" data-i18n="join_label">Tham gia cùng chúng tôi</span>
-                <h2 data-i18n="join_title">Hành Động Vì Tương Lai Bền Vững</h2>
-            </div>
-            <div class="grid-2 mt-5">
-                <div class="join-card reveal-up tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
-                    <h3 data-i18n="join_vol_title">Trở thành Tình nguyện viên</h3>
-                    <p data-i18n="join_vol_desc">Đóng góp thời gian và kỹ năng của bạn để hỗ trợ các cộng đồng yếu thế tại thực địa.</p>
-                    <button onclick="openGenericModal('volunteerModal')" class="btn btn-outline-navy mt-3">Đăng ký ngay</button>
-                </div>
-                <div class="join-card reveal-up delay-1 tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 data-i18n="join_partner_title">Trở thành Đối tác</h3>
-                    <p data-i18n="join_partner_desc">Cùng SHF kiến tạo các dự án năng lượng và môi trường mang tính đột phá.</p>
-                    <button onclick="openGenericModal('partnerModal')" class="btn btn-outline-navy mt-3">Liên hệ hợp tác</button>
-                </div>
+    <!-- Partner Modal -->
+    <div id="partnerModal" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <button onclick="closeGenericModal('partnerModal')" style="position: absolute; right: 20px; top: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Partnership Proposal</h2>
+                <form action="https://formsubmit.co/contact@sh.fund" method="POST" style="margin-top: 20px;">
+                    <input type="hidden" name="_subject" value="New Partnership Proposal">
+                    <input type="text" name="org_name" class="form-control" placeholder="Organization Name" required>
+                    <input type="text" name="contact_person" class="form-control" placeholder="Contact Person" required>
+                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    <textarea name="message" class="form-control" rows="4" placeholder="Proposal Details" required></textarea>
+                    <button type="submit" class="btn btn-primary">Submit Proposal</button>
+                </form>
             </div>
         </div>
-    </section>
-
-    <!-- News Section -->
-    <section id="news" class="section">
-        <div class="container">
-            <div class="section-header text-center fade-in">
-                <span class="section-label" data-i18n="news_label">Tin tức & Tác động</span>
-                <h2 data-i18n="news_title">Câu chuyện từ Thực địa</h2>
-            </div>
-            <div class="news-grid mt-5">
-                <div class="news-card reveal-up">
-                    <div class="news-img bg-green"><i class="fa-solid fa-industry"></i></div>
-                    <div class="news-content">
-                        <small class="news-date" data-i18n="news_1_date">Tháng 5, 2026</small>
-                        <h4 data-i18n="news_1_title">Khởi công Trạm xử lý dầu thải sinh học đầu tiên</h4>
-                    </div>
-                </div>
-                <div class="news-card reveal-up delay-1">
-                    <div class="news-img bg-navy"><i class="fa-solid fa-hospital"></i></div>
-                    <div class="news-content">
-                        <small class="news-date" data-i18n="news_2_date">Tháng 4, 2026</small>
-                        <h4 data-i18n="news_2_title">Hệ thống Bánh đà duy trì điện cho bệnh viện dã chiến trong bão</h4>
-                    </div>
-                </div>
-                <div class="news-card reveal-up delay-2">
-                    <div class="news-img bg-gold"><i class="fa-solid fa-leaf"></i></div>
-                    <div class="news-content">
-                        <small class="news-date" data-i18n="news_3_date">Tháng 3, 2026</small>
-                        <h4 data-i18n="news_3_title">500 hộ nông dân tham gia Hợp tác xã Aquaponics</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Media and Join Us removed from about page -->
-
-    <!-- Partners Section -->
-    <section id="partners" class="section bg-light text-center">
-        <div class="container">
-            <span class="section-label" data-i18n="partners_label">Đồng hành cùng SHF</span>
-            <h2 data-i18n="partners_title">Mạng Lưới Đối Tác Quốc Tế</h2>
-            <div class="partners-grid mt-5 fade-in">
-                <div class="partner-logo">USAID</div>
-                <div class="partner-logo">GEF</div>
-                <div class="partner-logo">RIDES</div>
-                <div class="partner-logo">UNEP</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="donation-promo-card text-center reveal-up">
-                <h2 class="mb-2 text-white" data-i18n="contact_title">Trao sinh kế, xây tương lai</h2>
-                <p class="lead mb-4 text-white" data-i18n="contact_desc">Mọi sự đóng góp của bạn, dù nhỏ nhất, đều góp phần kiến tạo một tương lai bền vững.</p>
-                <button class="btn btn-primary btn-lg px-5" onclick="openDonateModal()" data-i18n="contact_btn">ĐÓNG GÓP NGAY</button>
-            </div>
-            
-            <div class="contact-details-grid mt-5 reveal-up delay-1">
-                <div class="contact-card">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h4 data-i18n="contact_hq">Trụ sở điều hành</h4>
-                    <p>Phường Tăng Nhơn Phú, TP. Thủ Đức,<br>TP. Hồ Chí Minh, Việt Nam</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-phone"></i>
-                    <h4 data-i18n="contact_phone">Đường dây nóng</h4>
-                    <p>0975 709 643</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h4 data-i18n="contact_email">Email</h4>
-                    <p>contact@sh.fund</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
-            <div class="footer-top grid-2">
+            <div class="grid-4">
                 <div>
-                    <div class="logo-mark d-inline-block mb-3" style="background: transparent; border: 2px solid #fff;">
-                        <i class="fa-solid fa-leaf"></i>
-                    </div>
-                    <h3 class="text-white mb-2">SHF</h3>
-                    <p class="text-gray" data-i18n="footer_desc">The Sustainable Humanity Foundation là tổ chức phi lợi nhuận hoạt động vì môi trường và sinh kế bền vững.</p>
+                    <h4>Sustainable Humanity Foundation</h4>
+                    <p style="font-size: 0.85rem; margin-top: 10px;">Bringing breakthrough scientific solutions to solve pollution, provide clean energy, and develop sustainable livelihoods for vulnerable communities.</p>
                 </div>
-                <div class="text-right">
-                    <div class="trust-badges mb-3">
-                        <i class="fa-brands fa-cc-visa fa-2x mx-1"></i>
-                        <i class="fa-brands fa-cc-mastercard fa-2x mx-1"></i>
-                        <i class="fa-brands fa-cc-paypal fa-2x mx-1"></i>
-                    </div>
-                    <p class="text-gray"><i class="fa-solid fa-lock text-gold"></i> SSL Secure Website</p>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style:none; line-height: 2;">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="financials.html">Financials</a></li>
+                        <li><a href="news.html">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul style="list-style:none; line-height: 2; font-size: 0.9rem;">
+                        <li><i class="fa-solid fa-location-dot"></i> Thu Duc City, HCMC, Vietnam</li>
+                        <li><i class="fa-solid fa-phone"></i> +84 975 709 643</li>
+                        <li><i class="fa-solid fa-envelope"></i> contact@sh.fund</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Newsletter</h4>
+                    <form action="https://formsubmit.co/contact@sh.fund" method="POST" style="display:flex; margin-top: 10px;">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" style="margin:0; border-radius: 2px 0 0 2px;" required>
+                        <button type="submit" class="btn btn-primary" style="border-radius: 0 2px 2px 0;">Subscribe</button>
+                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer_copyright">&copy; 2026 The Sustainable Humanity Foundation (SHF). Tất cả các quyền được bảo hộ.</p>
+                <p>&copy; 2026 The Sustainable Humanity Foundation. All rights reserved. 501(c)(3) Nonprofit.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Volunteer Modal -->
-    <div id="volunteerModal" class="modal">
-        <div class="modal-dialog" style="max-width: 500px;">
-            <div class="modal-content" style="padding: 30px;">
-                <button class="modal-close" onclick="closeGenericModal('volunteerModal')" style="position: absolute; right: 20px; top: 20px; border: none; background: transparent; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
-                <div class="text-center mb-4">
-                    <h3 style="color: var(--color-primary);"><i class="fa-solid fa-hands-holding-child"></i> Đăng Ký Tình Nguyện Viên</h3>
-                    <p class="text-muted" style="font-size: 0.9rem;">Cùng SHF tạo nên sự khác biệt cho cộng đồng.</p>
-                </div>
-                <form action="https://formsubmit.co/contact@sh.fund" method="POST">
-                    <input type="hidden" name="_subject" value="[SHF] Đăng ký Tình Nguyện Viên Mới!">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://tuthien-eight.vercel.app/">
-                    
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="name" class="form-control" placeholder="Họ và tên của bạn" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="email" name="email" class="form-control" placeholder="Email liên hệ" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="tel" name="phone" class="form-control" placeholder="Số điện thoại" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="profession" class="form-control" placeholder="Nghề nghiệp / Chuyên môn của bạn" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <textarea name="message" class="form-control" rows="4" placeholder="Vì sao bạn muốn tham gia SHF?" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" style="width: 100%;">Gửi đăng ký</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-<!-- Partner Modal -->
-    <div id="partnerModal" class="modal">
-        <div class="modal-dialog" style="max-width: 500px;">
-            <div class="modal-content" style="padding: 30px;">
-                <button class="modal-close" onclick="closeGenericModal('partnerModal')" style="position: absolute; right: 20px; top: 20px; border: none; background: transparent; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
-                <div class="text-center mb-4">
-                    <h3 style="color: var(--color-primary);"><i class="fa-solid fa-handshake"></i> Liên Hệ Hợp Tác</h3>
-                    <p class="text-muted" style="font-size: 0.9rem;">Cùng kiến tạo những dự án mang tính đột phá toàn cầu.</p>
-                </div>
-                <form action="https://formsubmit.co/contact@sh.fund" method="POST">
-                    <input type="hidden" name="_subject" value="[SHF] Đề xuất Hợp tác Mới!">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://tuthien-eight.vercel.app/">
-                    
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="org_name" class="form-control" placeholder="Tên Tổ chức / Doanh nghiệp" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="contact_person" class="form-control" placeholder="Người đại diện" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; gap: 10px;">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required style="width: 50%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                            <input type="tel" name="phone" class="form-control" placeholder="Số ĐT" required style="width: 50%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <select name="partnership_type" class="form-control" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; background: white;">
-                            <option value="" disabled selected>Lĩnh vực muốn hợp tác</option>
-                            <option value="Tài trợ Dự án">Tài trợ Dự án</option>
-                            <option value="Nghiên cứu Khoa học">Nghiên cứu Khoa học / Công nghệ</option>
-                            <option value="Truyền thông">Truyền thông / Báo chí</option>
-                            <option value="Khác">Lĩnh vực khác</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <textarea name="message" class="form-control" rows="4" placeholder="Nội dung đề xuất hợp tác..." required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" style="width: 100%;">Gửi đề xuất</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-<!-- Premium Donation Modal (Omitted inner translations for brevity but fully styled) -->
+    <!-- Donate Modal -->
     <div id="donateModal" class="modal">
         <div class="modal-dialog">
-            <div class="modal-content">
-                <button class="modal-close" onclick="closeDonateModal()"><i class="fa-solid fa-xmark"></i></button>
-                <div class="modal-left bg-navy text-white">
-                    <div class="modal-info">
-                        <div class="logo-mark mb-4"><i class="fa-solid fa-leaf"></i></div>
-                        <h2>Đóng góp của bạn</h2>
-                        <p class="opacity-80">Sẽ giúp SHF triển khai năng lượng sạch và xử lý ô nhiễm, trực tiếp cứu trợ các cộng đồng yếu thế.</p>
-                    </div>
-                </div>
-                <div class="modal-right">
-                    <div class="checkout-form">
-                        <div class="secure-checkout-header">
-                            <h3><i class="fa-solid fa-lock"></i> Thanh toán bảo mật</h3>
-                            <div class="payment-icons">
-                                <i class="fa-brands fa-cc-visa"></i>
-                                <i class="fa-brands fa-cc-paypal"></i>
-                            </div>
-                        </div>
-                        <div class="form-section">
-                            <div class="amount-grid mt-3">
-                                <button class="amount-btn active" onclick="selectAmount(this, 50)">$50</button>
-                                <button class="amount-btn" onclick="selectAmount(this, 100)">$100</button>
-                                <button class="amount-btn custom" onclick="selectAmount(this, 'custom')">Khác</button>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary btn-block btn-lg mt-4 payment-btn" onclick="processDonation()">
-                            Xác nhận thanh toán
-                        </button>
-                    </div>
+            <div class="modal-content" style="text-align: center;">
+                <button onclick="closeGenericModal('donateModal')" style="position: absolute; right: 20px; top: 20px; background: transparent; border: none; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+                <h2>Make a Donation</h2>
+                <p style="color: var(--color-text-light); margin-bottom: 20px;">Your contribution helps us implement clean energy and treat pollution globally.</p>
+                
+                <h4 style="margin-top: 20px; margin-bottom: 10px;">Crypto Contribution (Polygon USDT)</h4>
+                <div style="background: var(--color-bg-light); padding: 20px; border: 1px solid var(--color-border); border-radius: 4px;">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="margin-bottom: 15px;">
+                    <p style="font-family: monospace; font-size: 0.9rem; background: #fff; padding: 10px; border: 1px solid #ccc;">0x52b4483e30243a65212adb16d993627534e61d6d</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/84975709643" target="_blank" class="whatsapp-float" title="Hỗ trợ nhanh qua WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span class="whatsapp-tooltip" data-i18n="whatsapp_support">Hỗ trợ nhanh qua WhatsApp</span>
-    </a>
-
     <!-- Scripts -->
-    <script src="i18n.js"></script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        function openGenericModal(id) {
+            document.getElementById(id).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeGenericModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="script.js"></script>
 </body>
 </html>
