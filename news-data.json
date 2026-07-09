@@ -1,20 +1,44 @@
 {
   "articles": [
     {
-      "id": "khoi-cong-tram-dau",
-      "title": "Khởi công Trạm xử lý dầu thải sinh học đầu tiên",
-      "date": "2026-05-10T00:00:00.000Z",
-      "thumbnail": "",
-      "description": "Dự án đã chính thức khởi công, đánh dấu bước ngoặt trong việc xử lý rác thải công nghiệp.",
-      "body": "Nội dung chi tiết về lễ khởi công và tác động môi trường của trạm xử lý dầu thải... Đây là cột mốc quan trọng của SHF."
+      "id": "su-menh-va-tam-nhin-shf-2030",
+      "title": "Sứ mệnh của SHF: Tầm nhìn chiến lược 2026 - 2030",
+      "date": "2026-07-09T08:00:00.000Z",
+      "thumbnail": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80",
+      "description": "Tìm hiểu về mục tiêu cốt lõi của The Sustainable Humanity Foundation trong nỗ lực giải cứu trái đất và hỗ trợ cộng đồng yếu thế.",
+      "body": "## Tầm Nhìn Chiến Lược 2026 - 2030\n\nThe Sustainable Humanity Foundation (SHF) được thành lập với mục tiêu duy nhất: kiến tạo một tương lai nơi con người và thiên nhiên cùng phát triển bền vững. Đứng trước thách thức biến đổi khí hậu ngày càng nghiêm trọng, SHF cam kết mang lại những giải pháp khoa học công nghệ vượt trội.\n\n### 1. Giải pháp Xanh Toàn Diện\n\nTừ năm 2026 đến 2030, SHF sẽ tập trung vào ba trụ cột chính:\n\n*   **Môi trường:** Đẩy lùi ô nhiễm công nghiệp bằng các công nghệ phân hủy sinh học.\n*   **Năng lượng:** Cung cấp nguồn năng lượng sạch, giá rẻ cho các khu vực vùng sâu, vùng xa.\n*   **Sinh kế:** Hỗ trợ mô hình kinh tế tuần hoàn, giúp người nông dân có thu nhập ổn định lâu dài.\n\n### 2. Sự Hợp Tác Toàn Cầu\n\nSHF tự hào là tổ chức phi lợi nhuận 501(c)(3) tại Hoa Kỳ, được kiểm toán độc lập theo tiêu chuẩn khắt khe nhất của USAID/GEF. Chúng tôi kết nối với các đối tác như RIDES, UNEP để đảm bảo mỗi đồng tiền quyên góp đều được chuyển hóa thành các giá trị thực tế nhất.\n\nHãy cùng chúng tôi xây dựng một thế giới xanh sạch hơn!"
     },
     {
-      "id": "hop-tac-xa-aquaponics",
-      "title": "500 hộ nông dân tham gia Hợp tác xã Aquaponics",
-      "date": "2026-03-15T00:00:00.000Z",
-      "thumbnail": "",
-      "description": "Mô hình nông nghiệp tuần hoàn đã thu hút hàng trăm hộ nông dân tham gia.",
-      "body": "Chương trình nông nghiệp tuần hoàn đã mang lại sinh kế ổn định cho 500 hộ dân nghèo..."
+      "id": "cong-nghe-xu-ly-dau-thai",
+      "title": "Đột phá công nghệ: Xử lý dầu thải công nghiệp triệt để",
+      "date": "2026-07-05T09:30:00.000Z",
+      "thumbnail": "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80",
+      "description": "Viện nghiên cứu RIDES và SHF ứng dụng công nghệ vi sinh vào xử lý hàng tấn dầu nhớt công nghiệp bị thải ra môi trường.",
+      "body": "## Cuộc Khủng Hoảng Dầu Thải\n\nMỗi ngày, hàng nghìn tấn dầu nhớt thải công nghiệp bị đổ ra sông ngòi, gây ô nhiễm nguồn nước ngầm nghiêm trọng. Đây là một trong những nguyên nhân hàng đầu gây phá hủy hệ sinh thái.\n\n### Giải Pháp Của SHF\n\nCùng với viện nghiên cứu RIDES tại Việt Nam, SHF đã triển khai ứng dụng công nghệ vi sinh độc quyền để phân hủy các gốc hydrocarbon độc hại trong dầu thải, chuyển hóa chúng thành các hợp chất hữu cơ an toàn cho đất.\n\n**Hiệu quả đạt được:**\n*   Xử lý triệt để 99% dầu thải độc hại.\n*   Giảm 80% chi phí so với phương pháp đốt truyền thống.\n*   Không phát thải khí nhà kính (Zero Emission).\n\nCông nghệ này hiện đang được thí điểm tại 5 khu công nghiệp lớn và chuẩn bị nhân rộng trên phạm vi toàn quốc."
+    },
+    {
+      "id": "ho-tro-sinh-ke-nguoi-yeu-the",
+      "title": "Trách nhiệm cộng đồng: Thay đổi cuộc đời những người yếu thế",
+      "date": "2026-06-20T14:15:00.000Z",
+      "thumbnail": "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&q=80",
+      "description": "Hàng nghìn hộ nông dân đã thoát nghèo nhờ mô hình nông nghiệp tuần hoàn do Quỹ SHF tài trợ.",
+      "body": "## Hơn Cả Một Quỹ Từ Thiện\n\nSHF tin rằng, cách tốt nhất để giúp đỡ người nghèo không phải là cho họ cá, mà là trao cho họ cần câu và hướng dẫn họ cách câu cá. \n\n### Mô Hình Nông Nghiệp Tuần Hoàn\n\nTại các vùng nông thôn nghèo, SHF đã tài trợ 100% vốn để xây dựng các mô hình Hợp Tác Xã Nông Nghiệp Tuần Hoàn (Aquaponics). \n*   Hệ thống trồng rau nuôi cá kết hợp không sử dụng phân bón hóa học.\n*   Nguồn nước được tái sử dụng liên tục.\n*   Năng suất tăng gấp 3 lần so với canh tác truyền thống.\n\nĐến nay, hơn 500 hộ gia đình tại Đồng bằng sông Cửu Long và khu vực Nam Trung Bộ đã được hưởng lợi, có thu nhập ổn định và vươn lên thoát nghèo bền vững."
+    },
+    {
+      "id": "nang-luong-tai-tao-shf",
+      "title": "Năng lượng xanh: Thắp sáng những bản làng xa xôi",
+      "date": "2026-06-10T10:00:00.000Z",
+      "thumbnail": "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&q=80",
+      "description": "Lắp đặt hàng trăm hệ thống năng lượng mặt trời áp mái tại các khu vực chưa có điện lưới quốc gia.",
+      "body": "## Mang Ánh Sáng Đến Vùng Sâu Vùng Xa\n\nNhiều khu vực hẻo lánh hiện nay vẫn phải sinh hoạt trong điều kiện thiếu điện, ảnh hưởng trực tiếp đến việc học tập của trẻ em và sự phát triển kinh tế địa phương.\n\n### Dự Án \"Mặt Trời Của Bản\"\n\nSHF đã khởi xướng chiến dịch \"Mặt Trời Của Bản\", kêu gọi sự quyên góp từ cộng đồng quốc tế để lắp đặt miễn phí các trạm điện năng lượng mặt trời mini. \n\n*   **Giai đoạn 1:** Lắp đặt thành công 200 tấm pin năng lượng mặt trời tại các trường học vùng cao.\n*   **Giai đoạn 2 (Đang diễn ra):** Mở rộng tới các trạm y tế xã, cung cấp nguồn điện ổn định để bảo quản vắc-xin và thuốc men.\n\nSự đóng góp của bạn dù nhỏ nhất, cũng có thể thắp sáng cả một tương lai!"
+    },
+    {
+      "id": "minh-bach-tai-chinh-shf",
+      "title": "Minh bạch tài chính: Cam kết của SHF với nhà tài trợ",
+      "date": "2026-05-25T11:45:00.000Z",
+      "thumbnail": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
+      "description": "Tại SHF, 100% số tiền quyên góp của bạn đều được kiểm toán độc lập và công khai minh bạch.",
+      "body": "## Niềm Tin Là Nền Tảng\n\nChúng tôi hiểu rằng, mỗi đồng tiền bạn đóng góp cho SHF là một niềm tin lớn lao. Vì thế, minh bạch tài chính luôn là kim chỉ nam trong mọi hoạt động của quỹ.\n\n### Chứng Nhận Pháp Lý\n\n*   **Tư cách pháp nhân:** SHF là tổ chức Phi lợi nhuận được cấp phép hoạt động theo điều luật 501(c)(3) tại Hoa Kỳ. Nhà tài trợ cá nhân hoặc doanh nghiệp tại Mỹ đều được khấu trừ thuế khi đóng góp.\n*   **Kiểm toán độc lập:** Toàn bộ báo cáo tài chính hàng năm của SHF đều được kiểm toán bởi các tổ chức uy tín toàn cầu theo chuẩn của USAID và Quỹ Môi Trường Toàn Cầu (GEF).\n\n### Báo Cáo Giải Ngân Rõ Ràng\n\nMọi hóa đơn mua sắm trang thiết bị, chi phí vận hành, và giải ngân dự án đều được cập nhật thường xuyên trên website. Chúng tôi tự hào cam kết rằng **hơn 90% ngân sách** được chuyển thẳng tới các hoạt động thực địa, trong khi chi phí vận hành bộ máy được tối ưu ở mức thấp nhất."
     }
   ]
 }
