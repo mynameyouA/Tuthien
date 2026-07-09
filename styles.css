@@ -90,12 +90,14 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    gap: 32px;
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
 }
 
 .logo i {
@@ -120,10 +122,19 @@ a:hover {
     font-weight: 600;
 }
 
+.main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 32px;
+}
+
 .main-nav ul {
     list-style: none;
     display: flex;
-    gap: 32px;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main-nav a {
@@ -132,10 +143,15 @@ a:hover {
     font-size: 0.95rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 .main-nav a:hover {
     color: var(--color-secondary);
+}
+
+.header-actions {
+    flex-shrink: 0;
 }
 
 /* Buttons */
