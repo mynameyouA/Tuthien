@@ -74,6 +74,11 @@ const translations = {
         "contact_phone": "Đường dây nóng",
         "contact_email": "Email",
 
+        "video_section_label": "Thước phim tài liệu",
+        "video_section_title": "Hành Trình Kiến Tạo Tương Lai",
+        "video_1_title": "Tái Sinh Rác Thải Hàng Không",
+        "video_2_title": "Năng Lượng Sạch Cho Bản Làng",
+
         "footer_desc": "The Sustainable Humanity Foundation là tổ chức phi lợi nhuận hoạt động vì môi trường và sinh kế bền vững.",
         "footer_copyright": "© 2026 The Sustainable Humanity Foundation (SHF). Tất cả các quyền được bảo hộ."
     },
@@ -151,6 +156,11 @@ const translations = {
         "contact_hq": "Headquarters",
         "contact_phone": "Hotline",
         "contact_email": "Email",
+
+        "video_section_label": "Documentaries",
+        "video_section_title": "Our Journey in Motion",
+        "video_1_title": "Reborn from Aviation Waste",
+        "video_2_title": "Clean Energy for Remote Villages",
 
         "footer_desc": "The Sustainable Humanity Foundation is a non-profit organization working for the environment and sustainable livelihoods.",
         "footer_copyright": "© 2026 The Sustainable Humanity Foundation (SHF). All rights reserved."
