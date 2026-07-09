@@ -49,10 +49,10 @@
                 <ul>
                     <li><a href="about.html" data-i18n="nav_about">Về quỹ SHF</a></li>
                     <li><a href="projects.html" data-i18n="nav_projects">Dự án trọng điểm</a></li>
-                    <li><a href="about.html#transparency" data-i18n="nav_transparency">Minh bạch</a></li>
+                    <li><a href="financials.html" data-i18n="nav_transparency">Minh bạch</a></li>
                     <li><a href="news.html" data-i18n="nav_news">Tin tức</a></li>
-                    <li><a href="index.html#join" data-i18n="join_label">Tham gia</a></li>
-                    <li><a href="index.html#contact" data-i18n="nav_contact">Liên hệ</a></li>
+                    <li><a href="join-us.html" data-i18n="join_label">Tham gia</a></li>
+                    <li><a href="contact.html" data-i18n="nav_contact">Liên hệ</a></li>
                 </ul>
             </nav>
             <div class="header-actions">
@@ -95,29 +95,7 @@
         </div>
     </section>
 
-    <!-- Join Us Section -->
-    <section id="join" class="section">
-        <div class="container">
-            <div class="section-header text-center fade-in">
-                <span class="section-label" data-i18n="join_label">Tham gia cùng chúng tôi</span>
-                <h2 data-i18n="join_title">Hành Động Vì Tương Lai Bền Vững</h2>
-            </div>
-            <div class="grid-2 mt-5">
-                <div class="join-card reveal-up tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
-                    <h3 data-i18n="join_vol_title">Trở thành Tình nguyện viên</h3>
-                    <p data-i18n="join_vol_desc">Đóng góp thời gian và kỹ năng của bạn để hỗ trợ các cộng đồng yếu thế tại thực địa.</p>
-                    <button onclick="openGenericModal('volunteerModal')" class="btn btn-outline-navy mt-3">Đăng ký ngay</button>
-                </div>
-                <div class="join-card reveal-up delay-1 tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 data-i18n="join_partner_title">Trở thành Đối tác</h3>
-                    <p data-i18n="join_partner_desc">Cùng SHF kiến tạo các dự án năng lượng và môi trường mang tính đột phá.</p>
-                    <button onclick="openGenericModal('partnerModal')" class="btn btn-outline-navy mt-3">Liên hệ hợp tác</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Partners Section -->
     <section id="partners" class="section bg-light text-center">
@@ -133,66 +111,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container">
-            <div class="donation-promo-card text-center reveal-up">
-                <h2 class="mb-2 text-white" data-i18n="contact_title">Trao sinh kế, xây tương lai</h2>
-                <p class="lead mb-4 text-white" data-i18n="contact_desc">Mọi sự đóng góp của bạn, dù nhỏ nhất, đều góp phần kiến tạo một tương lai bền vững.</p>
-                <button class="btn btn-primary btn-lg px-5" onclick="openDonateModal()" data-i18n="contact_btn">ĐÓNG GÓP NGAY</button>
-            </div>
-            
-            <div class="grid-2 mt-5 reveal-up delay-1" style="gap: 40px; align-items: start;">
-                <!-- Form Góp ý -->
-                <div class="contact-form-wrapper" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-                    <h3 class="mb-4" style="color: var(--primary-color);">Gửi tin nhắn / Góp ý</h3>
-                    <form action="https://formsubmit.co/contact@sh.fund" method="POST">
-                        <!-- Cấu hình FormSubmit chống Spam & UX -->
-                        <input type="text" name="_honey" style="display:none">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_subject" value="[SHF] Tin nhắn liên hệ mới từ Website!">
-                        <input type="hidden" name="_template" value="table">
-                        
-                        <div style="margin-bottom: 15px;">
-                            <input type="text" name="name" class="form-control" placeholder="Họ và tên" required autocomplete="name" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <input type="email" name="email" class="form-control" placeholder="Email của bạn" required autocomplete="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
-                        <div style="margin-bottom: 15px;">
-                            <textarea name="message" class="form-control" rows="5" placeholder="Nội dung tin nhắn / Góp ý của bạn..." required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-outline-navy btn-block" style="width: 100%;">Gửi tin nhắn <i class="fa-solid fa-paper-plane"></i></button>
-                    </form>
-                </div>
-                
-                <!-- Thông tin liên hệ -->
-                <div class="contact-details-list" style="display: flex; flex-direction: column; gap: 20px;">
-                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
-                        <i class="fa-solid fa-location-dot" style="margin: 0; font-size: 2rem;"></i>
-                        <div>
-                            <h4 data-i18n="contact_hq" style="margin-bottom: 5px;">Trụ sở điều hành</h4>
-                            <p style="margin: 0;">Phường Tăng Nhơn Phú, TP. Thủ Đức,<br>TP. Hồ Chí Minh, Việt Nam</p>
-                        </div>
-                    </div>
-                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
-                        <i class="fa-solid fa-phone" style="margin: 0; font-size: 2rem;"></i>
-                        <div>
-                            <h4 data-i18n="contact_phone" style="margin-bottom: 5px;">Đường dây nóng</h4>
-                            <p style="margin: 0;">0975 709 643</p>
-                        </div>
-                    </div>
-                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
-                        <i class="fa-solid fa-envelope" style="margin: 0; font-size: 2rem;"></i>
-                        <div>
-                            <h4 data-i18n="contact_email" style="margin-bottom: 5px;">Email</h4>
-                            <p style="margin: 0;">contact@sh.fund</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Professional NGO Footer -->
     <footer class="main-footer" style="background-color: var(--color-navy); padding-top: 60px; color: #fff;">
@@ -220,8 +139,8 @@
                         <li><a href="about.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Về quỹ SHF</a></li>
                         <li><a href="projects.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Dự án trọng điểm</a></li>
                         <li><a href="news.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Tin tức & Báo cáo</a></li>
-                        <li><a href="about.html#transparency" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Minh bạch tài chính</a></li>
-                        <li><a href="#contact" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Liên hệ</a></li>
+                        <li><a href="financials.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Minh bạch tài chính</a></li>
+                        <li><a href="contact.html" style="color: #ccc; text-decoration: none; transition: color 0.3s;">Liên hệ</a></li>
                     </ul>
                 </div>
 
@@ -268,86 +187,9 @@
         </div>
     </footer>
 
-    <!-- Volunteer Modal -->
-    <div id="volunteerModal" class="modal">
-        <div class="modal-dialog" style="max-width: 500px;">
-            <div class="modal-content" style="padding: 30px;">
-                <button class="modal-close" onclick="closeGenericModal('volunteerModal')" style="position: absolute; right: 20px; top: 20px; border: none; background: transparent; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
-                <div class="text-center mb-4">
-                    <h3 style="color: var(--color-primary);"><i class="fa-solid fa-hands-holding-child"></i> Đăng Ký Tình Nguyện Viên</h3>
-                    <p class="text-muted" style="font-size: 0.9rem;">Cùng SHF tạo nên sự khác biệt cho cộng đồng.</p>
-                </div>
-                <form action="https://formsubmit.co/contact@sh.fund" method="POST">
-                    <input type="hidden" name="_subject" value="[SHF] Đăng ký Tình Nguyện Viên Mới!">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://tuthien-eight.vercel.app/">
-                    
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="name" class="form-control" placeholder="Họ và tên của bạn" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="email" name="email" class="form-control" placeholder="Email liên hệ" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="tel" name="phone" class="form-control" placeholder="Số điện thoại" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="profession" class="form-control" placeholder="Nghề nghiệp / Chuyên môn của bạn" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <textarea name="message" class="form-control" rows="4" placeholder="Vì sao bạn muốn tham gia SHF?" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" style="width: 100%;">Gửi đăng ký</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    
 
-    <!-- Partner Modal -->
-    <div id="partnerModal" class="modal">
-        <div class="modal-dialog" style="max-width: 500px;">
-            <div class="modal-content" style="padding: 30px;">
-                <button class="modal-close" onclick="closeGenericModal('partnerModal')" style="position: absolute; right: 20px; top: 20px; border: none; background: transparent; font-size: 1.5rem; cursor: pointer; color: #555;"><i class="fa-solid fa-xmark"></i></button>
-                <div class="text-center mb-4">
-                    <h3 style="color: var(--color-primary);"><i class="fa-solid fa-handshake"></i> Liên Hệ Hợp Tác</h3>
-                    <p class="text-muted" style="font-size: 0.9rem;">Cùng kiến tạo những dự án mang tính đột phá toàn cầu.</p>
-                </div>
-                <form action="https://formsubmit.co/contact@sh.fund" method="POST">
-                    <input type="hidden" name="_subject" value="[SHF] Đề xuất Hợp tác Mới!">
-                    <input type="text" name="_honey" style="display:none">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://tuthien-eight.vercel.app/">
-                    
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="org_name" class="form-control" placeholder="Tên Tổ chức / Doanh nghiệp" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="contact_person" class="form-control" placeholder="Người đại diện" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <div style="display: flex; gap: 10px;">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required style="width: 50%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                            <input type="tel" name="phone" class="form-control" placeholder="Số ĐT" required style="width: 50%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <select name="partnership_type" class="form-control" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; background: white;">
-                            <option value="" disabled selected>Lĩnh vực muốn hợp tác</option>
-                            <option value="Tài trợ Dự án">Tài trợ Dự án</option>
-                            <option value="Nghiên cứu Khoa học">Nghiên cứu Khoa học / Công nghệ</option>
-                            <option value="Truyền thông">Truyền thông / Báo chí</option>
-                            <option value="Khác">Lĩnh vực khác</option>
-                        </select>
-                    </div>
-                    <div style="margin-bottom: 20px;">
-                        <textarea name="message" class="form-control" rows="4" placeholder="Nội dung đề xuất hợp tác..." required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block" style="width: 100%;">Gửi đề xuất</button>
-                </form>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- Premium Donation Modal (Omitted inner translations for brevity but fully styled) -->
     <div id="donateModal" class="modal">

@@ -66,55 +66,69 @@
     </div>
 
     <!-- About Section -->
-    <section id="about" class="section about-section bg-light">
-        <div class="container">
-            <div class="grid-2 align-center">
-                <div class="about-text reveal-left">
-                    <span class="section-label" data-i18n="about_label">Tuyên bố sứ mệnh</span>
-                    <h2 data-i18n="about_title">Nhân đạo không chỉ là cứu trợ khẩn cấp</h2>
-                    <p class="lead" data-i18n="about_p1">The Sustainable Humanity Foundation (SHF) tin rằng việc trang bị cho người yếu thế những nền tảng phát triển tự chủ là chìa khóa của sự bền vững.</p>
-                    <p data-i18n="about_p2">Trong bối cảnh biến đổi khí hậu đang đe dọa sinh kế của hàng triệu người, SHF phối hợp cùng Viện Nghiên cứu RIDES đề xuất khoản tài trợ đặc biệt. Dự án sẽ tạo ra hàng nghìn việc làm ổn định, bảo vệ sức khỏe cộng đồng và thiết lập mạng lưới an sinh vững chắc trước thiên tai.</p>
-                    <div class="director-quote mt-4">
-                        <blockquote data-i18n="about_quote">"Giải pháp khoa học công nghệ là con đường duy nhất để giải quyết dứt điểm vòng lặp đói nghèo và thảm họa môi trường."</blockquote>
-                        <div class="quote-author">
-                            <strong data-i18n="about_author_name">Gs.Ts. Dương Văn Sinh</strong>
-                            <span data-i18n="about_author_title">Chủ tịch SHF / Viện trưởng RIDES</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats reveal-right">
-                    <img src="hero.jpg" alt="Hoạt động cộng đồng" class="rounded-image shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Projects removed from about -->
 
+    <!-- Financial Transparency Section -->
     
 
     <!-- Team Section -->
-    <section id="team" class="section bg-light">
+    <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header text-center fade-in">
-                <span class="section-label" data-i18n="team_label">Đội ngũ của chúng tôi</span>
-                <h2 data-i18n="team_title">Những Chuyên Gia Dẫn Dắt Sự Thay Đổi</h2>
+            <div class="donation-promo-card text-center reveal-up">
+                <h2 class="mb-2 text-white" data-i18n="contact_title">Trao sinh kế, xây tương lai</h2>
+                <p class="lead mb-4 text-white" data-i18n="contact_desc">Mọi sự đóng góp của bạn, dù nhỏ nhất, đều góp phần kiến tạo một tương lai bền vững.</p>
+                <button class="btn btn-primary btn-lg px-5" onclick="openDonateModal()" data-i18n="contact_btn">ĐÓNG GÓP NGAY</button>
             </div>
-            <div class="team-grid mt-5">
-                <div class="team-card reveal-up">
-                    <div class="team-avatar bg-navy text-white"><i class="fa-solid fa-user-tie"></i></div>
-                    <h4 data-i18n="team_1_name">Gs.Ts. Dương Văn Sinh</h4>
-                    <p class="text-gold" data-i18n="team_1_role">Chủ tịch SHF</p>
+            
+            <div class="grid-2 mt-5 reveal-up delay-1" style="gap: 40px; align-items: start;">
+                <!-- Form Góp ý -->
+                <div class="contact-form-wrapper" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 class="mb-4" style="color: var(--primary-color);">Gửi tin nhắn / Góp ý</h3>
+                    <form action="https://formsubmit.co/contact@sh.fund" method="POST">
+                        <!-- Cấu hình FormSubmit chống Spam & UX -->
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="[SHF] Tin nhắn liên hệ mới từ Website!">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" name="name" class="form-control" placeholder="Họ và tên" required autocomplete="name" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <input type="email" name="email" class="form-control" placeholder="Email của bạn" required autocomplete="email" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Nội dung tin nhắn / Góp ý của bạn..." required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-navy btn-block" style="width: 100%;">Gửi tin nhắn <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
                 </div>
-                <div class="team-card reveal-up delay-1">
-                    <div class="team-avatar bg-navy text-white"><i class="fa-solid fa-flask"></i></div>
-                    <h4 data-i18n="team_2_name">PGS.Ts. Elena Rodriguez</h4>
-                    <p class="text-gold" data-i18n="team_2_role">Giám đốc Khoa học Môi trường</p>
-                </div>
-                <div class="team-card reveal-up delay-2">
-                    <div class="team-avatar bg-navy text-white"><i class="fa-solid fa-chart-line"></i></div>
-                    <h4 data-i18n="team_3_name">David Chen, MBA</h4>
-                    <p class="text-gold" data-i18n="team_3_role">Giám đốc Tài chính & Minh bạch</p>
+                
+                <!-- Thông tin liên hệ -->
+                <div class="contact-details-list" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
+                        <i class="fa-solid fa-location-dot" style="margin: 0; font-size: 2rem;"></i>
+                        <div>
+                            <h4 data-i18n="contact_hq" style="margin-bottom: 5px;">Trụ sở điều hành</h4>
+                            <p style="margin: 0;">Phường Tăng Nhơn Phú, TP. Thủ Đức,<br>TP. Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
+                        <i class="fa-solid fa-phone" style="margin: 0; font-size: 2rem;"></i>
+                        <div>
+                            <h4 data-i18n="contact_phone" style="margin-bottom: 5px;">Đường dây nóng</h4>
+                            <p style="margin: 0;">0975 709 643</p>
+                        </div>
+                    </div>
+                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
+                        <i class="fa-solid fa-envelope" style="margin: 0; font-size: 2rem;"></i>
+                        <div>
+                            <h4 data-i18n="contact_email" style="margin-bottom: 5px;">Email</h4>
+                            <p style="margin: 0;">contact@sh.fund</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
