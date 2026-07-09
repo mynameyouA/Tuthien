@@ -163,3 +163,135 @@ function initTiltEffect() {
         });
     });
 }
+
+// ====== WEB3 / CRYPTO DONATION LOGIC ======
+let userWalletAddress = null;
+let web3Provider = null;
+let web3Signer = null;
+
+const RECEIVING_ADDRESS = "0x52b4483e30243a65212adb16d993627534e61d6d";
+const USDT_ADDRESS = "0xc2132D05D31c914a87C6611C10748AEb04B58e8F";
+const POLYGON_CHAIN_ID = "0x89"; // 137 in hex
+
+function switchPaymentTab(tab) {
+    document.getElementById('tab-fiat').classList.remove('active');
+    document.getElementById('tab-crypto').classList.remove('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+
+    if (tab === 'crypto') {
+        document.getElementById('btn-pay-fiat').style.display = 'none';
+        document.getElementById('crypto-panel').style.display = 'block';
+    } else {
+        document.getElementById('btn-pay-fiat').style.display = 'block';
+        document.getElementById('crypto-panel').style.display = 'none';
+    }
+}
+
+async function connectWallet() {
+    const statusEl = document.getElementById('crypto-status');
+    if (!window.ethereum) {
+        statusEl.innerHTML = '<span class="text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Vui lòng cài đặt ví MetaMask!</span>';
+        return;
+    }
+    try {
+        statusEl.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang kết nối...';
+        web3Provider = new ethers.providers.Web3Provider(window.ethereum);
+        await web3Provider.send("eth_requestAccounts", []);
+        web3Signer = web3Provider.getSigner();
+        userWalletAddress = await web3Signer.getAddress();
+        
+        // Check network
+        const network = await web3Provider.getNetwork();
+        if (network.chainId !== 137) {
+            statusEl.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Yêu cầu đổi mạng sang Polygon...';
+            try {
+                await window.ethereum.request({
+                    method: 'wallet_switchEthereumChain',
+                    params: [{ chainId: POLYGON_CHAIN_ID }],
+                });
+            } catch (switchError) {
+                if (switchError.code === 4902) {
+                    await window.ethereum.request({
+                        method: 'wallet_addEthereumChain',
+                        params: [{
+                            chainId: POLYGON_CHAIN_ID,
+                            chainName: 'Polygon Mainnet',
+                            nativeCurrency: { name: 'MATIC', symbol: 'MATIC', decimals: 18 },
+                            rpcUrls: ['https://polygon-rpc.com/'],
+                            blockExplorerUrls: ['https://polygonscan.com/']
+                        }]
+                    });
+                } else {
+                    throw switchError;
+                }
+            }
+            web3Provider = new ethers.providers.Web3Provider(window.ethereum);
+            web3Signer = web3Provider.getSigner();
+        }
+
+        document.getElementById('btn-connect-wallet').style.display = 'none';
+        document.getElementById('btn-pay-crypto').style.display = 'block';
+        statusEl.innerHTML = `<span style="color: #26A17B; font-weight: bold;"><i class="fa-solid fa-circle-check"></i> Đã kết nối: ${userWalletAddress.substring(0,6)}...${userWalletAddress.substring(userWalletAddress.length-4)}</span>`;
+    } catch (err) {
+        console.error(err);
+        statusEl.innerHTML = '<span class="text-danger"><i class="fa-solid fa-circle-xmark"></i> Lỗi kết nối ví.</span>';
+    }
+}
+
+async function processCryptoDonation() {
+    const statusEl = document.getElementById('crypto-status');
+    if (!web3Signer) {
+        statusEl.innerHTML = '<span class="text-danger">Vui lòng kết nối ví trước!</span>';
+        return;
+    }
+
+    let amount = 50;
+    const activeBtn = document.querySelector('.amount-btn.active');
+    if (activeBtn) {
+        if (activeBtn.classList.contains('custom')) {
+            amount = document.getElementById('customAmount').value;
+        } else {
+            amount = activeBtn.innerText.replace('$', '');
+        }
+    }
+    
+    if (!amount || isNaN(amount) || amount <= 0) {
+        statusEl.innerHTML = '<span class="text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Vui lòng nhập số tiền hợp lệ!</span>';
+        return;
+    }
+
+    try {
+        const btnPay = document.getElementById('btn-pay-crypto');
+        btnPay.disabled = true;
+        btnPay.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang chờ xác nhận ví...';
+        statusEl.innerHTML = '<span style="color:#f39c12">Vui lòng xác nhận giao dịch trên ví của bạn...</span>';
+
+        const usdtAbi = [
+            "function transfer(address to, uint256 amount) returns (bool)"
+        ];
+        
+        const usdtContract = new ethers.Contract(USDT_ADDRESS, usdtAbi, web3Signer);
+        const parsedAmount = ethers.utils.parseUnits(amount.toString(), 6);
+        
+        const tx = await usdtContract.transfer(RECEIVING_ADDRESS, parsedAmount);
+        
+        statusEl.innerHTML = '<span style="color:#3498db"><i class="fa-solid fa-spinner fa-spin"></i> Đang xử lý trên Blockchain Polygon...</span>';
+        btnPay.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Đang xử lý...';
+        
+        await tx.wait();
+        
+        statusEl.innerHTML = `<span style="color: #26A17B; font-weight: bold;"><i class="fa-solid fa-check"></i> Giao dịch thành công! Xin cảm ơn.</span>`;
+        btnPay.innerHTML = '<i class="fa-solid fa-check"></i> Hoàn tất';
+        
+        setTimeout(() => {
+            closeDonateModal();
+            btnPay.disabled = false;
+            btnPay.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Chuyển USDT';
+        }, 3000);
+    } catch (err) {
+        console.error(err);
+        document.getElementById('btn-pay-crypto').disabled = false;
+        document.getElementById('btn-pay-crypto').innerHTML = '<i class="fa-solid fa-paper-plane"></i> Chuyển USDT';
+        statusEl.innerHTML = '<span class="text-danger"><i class="fa-solid fa-circle-xmark"></i> Giao dịch bị hủy hoặc không đủ số dư USDT/MATIC.</span>';
+    }
+}

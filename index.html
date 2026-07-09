@@ -197,18 +197,43 @@
                             <div class="payment-icons">
                                 <i class="fa-brands fa-cc-visa"></i>
                                 <i class="fa-brands fa-cc-paypal"></i>
+                                <i class="fa-brands fa-ethereum"></i>
                             </div>
                         </div>
+                        
+                        <!-- Tabs -->
+                        <div class="payment-tabs mt-3 d-flex" style="gap: 10px; border-bottom: 1px solid #ddd; padding-bottom: 10px;">
+                            <button class="btn btn-outline-navy flex-1 active" id="tab-fiat" onclick="switchPaymentTab('fiat')"><i class="fa-solid fa-credit-card"></i> Thẻ / PayPal</button>
+                            <button class="btn btn-outline-navy flex-1" id="tab-crypto" onclick="switchPaymentTab('crypto')"><img src="https://cryptologos.cc/logos/tether-usdt-logo.png?v=025" width="16" style="vertical-align: middle;"> USDT (Polygon)</button>
+                        </div>
+
                         <div class="form-section">
                             <div class="amount-grid mt-3">
                                 <button class="amount-btn active" onclick="selectAmount(this, 50)">$50</button>
                                 <button class="amount-btn" onclick="selectAmount(this, 100)">$100</button>
                                 <button class="amount-btn custom" onclick="selectAmount(this, 'custom')">Khác</button>
                             </div>
+                            <div id="customAmountWrapper" style="display: none; margin-top: 15px;">
+                                <input type="number" id="customAmount" class="form-control" placeholder="Nhập số tiền ($)" min="1" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc;">
+                            </div>
+                            <div class="text-center mt-3"><h2 id="btnAmount">$50</h2></div>
                         </div>
-                        <button class="btn btn-primary btn-block btn-lg mt-4 payment-btn" onclick="processDonation()">
+                        
+                        <!-- Fiat Button -->
+                        <button id="btn-pay-fiat" class="btn btn-primary btn-block btn-lg mt-4 payment-btn" onclick="processDonation()">
                             Xác nhận thanh toán
                         </button>
+
+                        <!-- Crypto Button -->
+                        <div id="crypto-panel" style="display: none; margin-top: 20px;">
+                            <button id="btn-connect-wallet" class="btn btn-block btn-lg mb-2" style="background: #8247E5; color: white;" onclick="connectWallet()">
+                                <i class="fa-solid fa-wallet"></i> Kết nối ví MetaMask
+                            </button>
+                            <button id="btn-pay-crypto" class="btn btn-block btn-lg" style="background: #26A17B; color: white; display: none;" onclick="processCryptoDonation()">
+                                <i class="fa-solid fa-paper-plane"></i> Chuyển USDT
+                            </button>
+                            <div id="crypto-status" class="text-center mt-2 text-sm" style="font-size: 0.85rem;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -222,6 +247,7 @@
     </a>
 
     <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.7.2/ethers.umd.min.js"></script>
     <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
