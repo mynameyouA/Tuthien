@@ -226,6 +226,20 @@
 
                         <!-- Crypto Button -->
                         <div id="crypto-panel" style="display: none; margin-top: 20px;">
+                            <!-- QR Code Section -->
+                            <div class="crypto-qr text-center mb-4 p-3" style="background: #f8f9fa; border-radius: 12px; border: 1px dashed #ccc;">
+                                <p class="mb-2 text-muted" style="font-size: 0.85rem;"><i class="fa-solid fa-qrcode"></i> Quét mã QR để chuyển USDT (Polygon)</p>
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="Ví Polygon" class="mb-2" style="border-radius: 8px;">
+                                <div class="d-flex" style="background: #e9ecef; border-radius: 6px; overflow: hidden; align-items: center;">
+                                    <input type="text" value="0x52b4483e30243a65212adb16d993627534e61d6d" readonly style="border: none; background: transparent; padding: 8px 10px; width: 100%; font-size: 0.75rem; outline: none; color: #555;" id="wallet-address-input">
+                                    <button onclick="navigator.clipboard.writeText('0x52b4483e30243a65212adb16d993627534e61d6d'); alert('Đã copy địa chỉ ví!');" style="border: none; background: #8247E5; color: white; padding: 8px 15px; cursor: pointer; height: 100%;" title="Copy địa chỉ"><i class="fa-solid fa-copy"></i></button>
+                                </div>
+                            </div>
+
+                            <div class="text-center mb-3">
+                                <span style="background: #e9ecef; padding: 3px 15px; border-radius: 20px; font-size: 0.8rem; color: #777;">Hoặc kết nối ví trực tiếp</span>
+                            </div>
+
                             <button id="btn-connect-wallet" class="btn btn-block btn-lg mb-2" style="background: #8247E5; color: white;" onclick="connectWallet()">
                                 <i class="fa-solid fa-wallet"></i> Kết nối ví MetaMask
                             </button>
