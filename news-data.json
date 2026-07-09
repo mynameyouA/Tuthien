@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "id": "khoi-cong-tram-dau",
+      "title": "Khởi công Trạm xử lý dầu thải sinh học đầu tiên",
+      "date": "2026-05-10T00:00:00.000Z",
+      "thumbnail": "",
+      "description": "Dự án đã chính thức khởi công, đánh dấu bước ngoặt trong việc xử lý rác thải công nghiệp.",
+      "body": "Nội dung chi tiết về lễ khởi công và tác động môi trường của trạm xử lý dầu thải... Đây là cột mốc quan trọng của SHF."
+    },
+    {
+      "id": "hop-tac-xa-aquaponics",
+      "title": "500 hộ nông dân tham gia Hợp tác xã Aquaponics",
+      "date": "2026-03-15T00:00:00.000Z",
+      "thumbnail": "",
+      "description": "Mô hình nông nghiệp tuần hoàn đã thu hút hàng trăm hộ nông dân tham gia.",
+      "body": "Chương trình nông nghiệp tuần hoàn đã mang lại sinh kế ổn định cho 500 hộ dân nghèo..."
+    }
+  ]
+}

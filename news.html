@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức | The Sustainable Humanity Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container d-flex-between">
+            <small data-i18n="top_bar_trust">Tổ chức đề xuất (Pháp nhân Hoa Kỳ) - Kiểm toán độc lập theo tiêu chuẩn USAID/GEF</small>
+            <div class="lang-switcher">
+                <button onclick="changeLanguage('en')" id="btn-en">EN</button>
+                <span>|</span>
+                <button onclick="changeLanguage('vi')" id="btn-vi" class="active">VI</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-mark"><i class="fa-solid fa-leaf"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">Sustainable Humanity</span>
+                    <span class="logo-subtitle">Foundation</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#about" data-i18n="nav_about">Về quỹ SHF</a></li>
+                    <li><a href="index.html#projects" data-i18n="nav_projects">Dự án trọng điểm</a></li>
+                    <li><a href="index.html#transparency" data-i18n="nav_transparency">Minh bạch</a></li>
+                    <li><a href="news.html" data-i18n="nav_news" class="active" style="color: var(--color-primary); font-weight: bold;">Tin tức</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav_contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="index.html#donate" class="btn btn-donate" data-i18n="btn_donate">Quyên góp</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="section bg-light pt-5">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-label" data-i18n="news_label">Tin tức & Tác động</span>
+                <h2 data-i18n="news_title">Câu chuyện từ Thực địa</h2>
+            </div>
+            
+            <div class="news-grid mt-5" id="news-container">
+                <!-- News items will be loaded here via JS -->
+                <div class="text-center" style="grid-column: 1/-1;">
+                    <i class="fa-solid fa-spinner fa-spin fa-2x text-gold"></i> Đang tải dữ liệu...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-top grid-2">
+                <div>
+                    <div class="logo-mark d-inline-block mb-3" style="background: transparent; border: 2px solid #fff;">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-white mb-2">SHF</h3>
+                    <p class="text-gray" data-i18n="footer_desc">The Sustainable Humanity Foundation là tổ chức phi lợi nhuận hoạt động vì môi trường và sinh kế bền vững.</p>
+                </div>
+                <div class="text-right">
+                    <div class="trust-badges mb-3">
+                        <i class="fa-brands fa-cc-visa fa-2x mx-1"></i>
+                        <i class="fa-brands fa-cc-mastercard fa-2x mx-1"></i>
+                        <i class="fa-brands fa-cc-paypal fa-2x mx-1"></i>
+                    </div>
+                    <p class="text-gray"><i class="fa-solid fa-lock text-gold"></i> SSL Secure Website</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 The Sustainable Humanity Foundation (SHF). Tất cả các quyền được bảo hộ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('news-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('news-container');
+                    container.innerHTML = '';
+                    
+                    if(!data.articles || data.articles.length === 0) {
+                        container.innerHTML = '<p class="text-center">Chưa có bài viết nào.</p>';
+                        return;
+                    }
+                    
+                    data.articles.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(article => {
+                        const dateObj = new Date(article.date);
+                        const dateStr = dateObj.toLocaleDateString('vi-VN', {year: 'numeric', month: 'long', day: 'numeric'});
+                        
+                        const html = `
+                            <div class="news-card tilt-card" style="cursor: pointer;" onclick="window.location.href='news-detail.html?id=${article.id}'">
+                                <div class="news-img bg-navy">
+                                    ${article.thumbnail ? `<img src="${article.thumbnail}" style="width:100%; height:100%; object-fit:cover;">` : `<i class="fa-solid fa-newspaper"></i>`}
+                                </div>
+                                <div class="news-content">
+                                    <small class="news-date">${dateStr}</small>
+                                    <h4>${article.title}</h4>
+                                    <p class="mt-2 text-muted" style="font-size:0.9rem;">${article.description}</p>
+                                </div>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', html);
+                    });
+                    
+                    // Re-init tilt if exists
+                    if(typeof initTiltEffect === 'function') initTiltEffect();
+                })
+                .catch(err => {
+                    document.getElementById('news-container').innerHTML = '<p class="text-center text-danger">Lỗi tải dữ liệu.</p>';
+                });
+        });
+    </script>
+</body>
+</html>

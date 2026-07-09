@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: mynameyouA/Tuthien
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "news"
+    label: "Quản lý Tin Tức"
+    files:
+      - label: "Danh sách Bài viết"
+        name: "news_list"
+        file: "news-data.json"
+        fields:
+          - label: "Các bài viết"
+            name: "articles"
+            widget: "list"
+            fields:
+              - {label: "ID Bài viết (Viết liền không dấu, ví dụ: bai-viet-1)", name: "id", widget: "string"}
+              - {label: "Tiêu đề", name: "title", widget: "string"}
+              - {label: "Ngày đăng", name: "date", widget: "datetime"}
+              - {label: "Ảnh bìa", name: "thumbnail", widget: "image", required: false}
+              - {label: "Mô tả ngắn", name: "description", widget: "text"}
+              - {label: "Nội dung chi tiết", name: "body", widget: "markdown"}

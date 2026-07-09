@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Bài viết | SHF</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include Marked.js to parse markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .article-header { padding: 4rem 0 2rem; border-bottom: 1px solid #E9ECEF; margin-bottom: 2rem; }
+        .article-title { font-size: 2.5rem; margin-bottom: 1rem; }
+        .article-meta { color: var(--color-text-muted); font-weight: 600; text-transform: uppercase; font-size: 0.9rem; }
+        .article-body { font-size: 1.1rem; line-height: 1.8; color: #444; max-width: 800px; margin: 0 auto; }
+        .article-body h2 { margin-top: 2rem; }
+        .article-body img { max-width: 100%; border-radius: 8px; margin: 1.5rem 0; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <div class="logo-mark"><i class="fa-solid fa-leaf"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">Sustainable Humanity</span>
+                    <span class="logo-subtitle">Foundation</span>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html#about" data-i18n="nav_about">Về quỹ SHF</a></li>
+                    <li><a href="news.html" data-i18n="nav_news" class="active" style="color: var(--color-primary); font-weight: bold;">Tin tức</a></li>
+                    <li><a href="index.html#contact" data-i18n="nav_contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="index.html#donate" class="btn btn-donate" data-i18n="btn_donate">Quyên góp</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container pb-5 mb-5" style="min-height: 60vh;">
+        <div id="article-container">
+            <div class="text-center pt-5 mt-5">
+                <i class="fa-solid fa-spinner fa-spin fa-3x text-gold"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 The Sustainable Humanity Foundation (SHF). Tất cả các quyền được bảo hộ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const articleId = urlParams.get('id');
+            const container = document.getElementById('article-container');
+
+            if (!articleId) {
+                container.innerHTML = '<h2 class="text-center pt-5">Không tìm thấy bài viết.</h2><div class="text-center mt-3"><a href="news.html" class="btn btn-primary">Quay lại Tin tức</a></div>';
+                return;
+            }
+
+            fetch('news-data.json')
+                .then(res => res.json())
+                .then(data => {
+                    const article = data.articles.find(a => a.id === articleId);
+                    if (!article) {
+                        container.innerHTML = '<h2 class="text-center pt-5">Không tìm thấy bài viết.</h2><div class="text-center mt-3"><a href="news.html" class="btn btn-primary">Quay lại Tin tức</a></div>';
+                        return;
+                    }
+
+                    const dateObj = new Date(article.date);
+                    const dateStr = dateObj.toLocaleDateString('vi-VN', {year: 'numeric', month: 'long', day: 'numeric'});
+                    
+                    const parsedBody = marked.parse(article.body || '');
+
+                    container.innerHTML = `
+                        <div class="article-header text-center">
+                            <div class="article-meta mb-3">${dateStr}</div>
+                            <h1 class="article-title">${article.title}</h1>
+                        </div>
+                        ${article.thumbnail ? `<div class="text-center mb-5"><img src="${article.thumbnail}" style="max-width:100%; border-radius:12px; max-height: 500px; object-fit: cover;"></div>` : ''}
+                        <div class="article-body">
+                            ${parsedBody}
+                        </div>
+                        <div class="text-center mt-5 pt-5 border-top">
+                            <a href="news.html" class="btn btn-outline-navy"><i class="fa-solid fa-arrow-left"></i> Xem các tin khác</a>
+                        </div>
+                    `;
+                })
+                .catch(err => {
+                    container.innerHTML = '<p class="text-center pt-5 text-danger">Lỗi kết nối dữ liệu.</p>';
+                });
+        });
+    </script>
+</body>
+</html>

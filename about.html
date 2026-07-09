@@ -37,7 +37,7 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="about.html" data-i18n="nav_about">Về quỹ SHF</a></li>
+                    <li><a href="about.html" data-i18n="nav_about" class="active" style="color: var(--color-primary); font-weight: bold;">Về quỹ SHF</a></li>
                     <li><a href="projects.html" data-i18n="nav_projects">Dự án trọng điểm</a></li>
                     <li><a href="about.html#transparency" data-i18n="nav_transparency">Minh bạch</a></li>
                     <li><a href="news.html" data-i18n="nav_news">Tin tức</a></li>
@@ -51,23 +51,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <video class="hero-video-bg" autoplay loop muted playsinline>
-            <!-- Using a high-quality environmental stock video placeholder -->
-            <source src="https://cdn.pixabay.com/video/2020/05/25/40141-424845012_large.mp4" type="video/mp4">
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="container hero-content relative-z">
-            <div class="badge-trust fade-in-up" data-i18n="hero_badge">Tổ chức Phi lợi nhuận 501(c)(3)</div>
-            <h1 class="fade-in-up delay-1" data-i18n="hero_title">Kiến Tạo Tương Lai Bền Vững Cho Người Yếu Thế</h1>
-            <p class="hero-subtitle fade-in-up delay-2" data-i18n="hero_subtitle">Chúng tôi ứng dụng khoa học kỹ thuật tiên tiến để giải quyết triệt để rác thải công nghiệp, cung cấp năng lượng sạch và phát triển sinh kế cho cộng đồng (2026 - 2030).</p>
-            <div class="hero-buttons fade-in-up delay-3">
-                <button class="btn btn-primary btn-lg" onclick="openDonateModal()"><i class="fa-solid fa-heart"></i> <span data-i18n="hero_btn_donate">Chung tay ngay hôm nay</span></button>
-                <a href="#about" class="btn btn-outline btn-lg" data-i18n="hero_btn_learn">Tìm hiểu thêm</a>
-            </div>
-        </div>
-    </section>
+    <!-- Hero section removed for subpage -->
 
     <!-- Trust Banner -->
     <div class="trust-banner fade-in">
@@ -76,38 +60,125 @@
                 <div class="trust-item"><i class="fa-solid fa-shield-halved"></i><span data-i18n="trust_secure">Tài trợ an toàn</span></div>
                 <div class="trust-item"><i class="fa-solid fa-file-contract"></i><span data-i18n="trust_audit">Kiểm toán bởi USAID/GEF</span></div>
                 <div class="trust-item"><i class="fa-solid fa-globe"></i><span data-i18n="trust_global">Mạng lưới toàn cầu</span></div>
+                <div class="trust-item"><i class="fa-solid fa-handshake-angle"></i><span data-i18n="trust_partner">Đối tác RIDES Việt Nam</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section bg-light">
+        <div class="container">
+            <div class="grid-2 align-center">
+                <div class="about-text reveal-left">
+                    <span class="section-label" data-i18n="about_label">Tuyên bố sứ mệnh</span>
+                    <h2 data-i18n="about_title">Nhân đạo không chỉ là cứu trợ khẩn cấp</h2>
+                    <p class="lead" data-i18n="about_p1">The Sustainable Humanity Foundation (SHF) tin rằng việc trang bị cho người yếu thế những nền tảng phát triển tự chủ là chìa khóa của sự bền vững.</p>
+                    <p data-i18n="about_p2">Trong bối cảnh biến đổi khí hậu đang đe dọa sinh kế của hàng triệu người, SHF phối hợp cùng Viện Nghiên cứu RIDES đề xuất khoản tài trợ đặc biệt. Dự án sẽ tạo ra hàng nghìn việc làm ổn định, bảo vệ sức khỏe cộng đồng và thiết lập mạng lưới an sinh vững chắc trước thiên tai.</p>
+                    <div class="director-quote mt-4">
+                        <blockquote data-i18n="about_quote">"Giải pháp khoa học công nghệ là con đường duy nhất để giải quyết dứt điểm vòng lặp đói nghèo và thảm họa môi trường."</blockquote>
+                        <div class="quote-author">
+                            <strong data-i18n="about_author_name">Gs.Ts. Dương Văn Sinh</strong>
+                            <span data-i18n="about_author_title">Chủ tịch SHF / Viện trưởng RIDES</span>
+                        </div>
                     </div>
-                    <div class="video-info">
-                        <h3 data-i18n="video_2_title">Năng Lượng Sạch Cho Bản Làng</h3>
+                </div>
+                <div class="about-stats reveal-right">
+                    <img src="hero.jpg" alt="Hoạt động cộng đồng" class="rounded-image shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects removed from about -->
+
+    <!-- Financial Transparency Section -->
+    <section id="transparency" class="section bg-navy text-white">
+        <div class="container">
+            <div class="grid-2 align-center">
+                <div class="transparency-content reveal-left">
+                    <span class="section-label text-gold" data-i18n="finance_label">Minh bạch & Trách nhiệm</span>
+                    <h2 class="text-white" data-i18n="finance_title">Mọi khoản đóng góp đều tạo ra giá trị thực</h2>
+                    <p class="lead" data-i18n="finance_p1">SHF cam kết mức độ minh bạch tài chính cao nhất. Chúng tôi chịu sự kiểm toán thường niên của các đơn vị độc lập và tuân thủ chặt chẽ tiêu chuẩn quốc tế.</p>
+                </div>
+                <div class="transparency-chart reveal-right">
+                    <div class="chart-bar">
+                        <div class="bar bar-92" style="width: 92%;"></div>
+                        <span data-i18n="finance_chart_92">92% - Chương trình thực địa & Cứu trợ</span>
+                    </div>
+                    <div class="chart-bar mt-3">
+                        <div class="bar bar-5" style="width: 5%;"></div>
+                        <span data-i18n="finance_chart_5">5% - Vận hành & Quản lý</span>
+                    </div>
+                    <div class="chart-bar mt-3">
+                        <div class="bar bar-3" style="width: 3%;"></div>
+                        <span data-i18n="finance_chart_3">3% - Hoạt động Gây quỹ</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Join Us Section -->
-    <section id="join" class="section">
+    <!-- Team Section -->
+    <section id="team" class="section bg-light">
         <div class="container">
             <div class="section-header text-center fade-in">
-                <span class="section-label" data-i18n="join_label">Tham gia cùng chúng tôi</span>
-                <h2 data-i18n="join_title">Hành Động Vì Tương Lai Bền Vững</h2>
+                <span class="section-label" data-i18n="team_label">Đội ngũ của chúng tôi</span>
+                <h2 data-i18n="team_title">Những Chuyên Gia Dẫn Dắt Sự Thay Đổi</h2>
             </div>
-            <div class="grid-2 mt-5">
-                <div class="join-card reveal-up tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-hands-holding-child"></i></div>
-                    <h3 data-i18n="join_vol_title">Trở thành Tình nguyện viên</h3>
-                    <p data-i18n="join_vol_desc">Đóng góp thời gian và kỹ năng của bạn để hỗ trợ các cộng đồng yếu thế tại thực địa.</p>
-                    <a href="#contact" class="btn btn-outline-navy mt-3">Đăng ký ngay</a>
+            <div class="team-grid mt-5">
+                <div class="team-card reveal-up">
+                    <div class="team-avatar bg-navy text-white"><i class="fa-solid fa-user-tie"></i></div>
+                    <h4 data-i18n="team_1_name">Gs.Ts. Dương Văn Sinh</h4>
+                    <p class="text-gold" data-i18n="team_1_role">Chủ tịch SHF</p>
                 </div>
-                <div class="join-card reveal-up delay-1 tilt-card">
-                    <div class="join-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <h3 data-i18n="join_partner_title">Trở thành Đối tác</h3>
-                    <p data-i18n="join_partner_desc">Cùng SHF kiến tạo các dự án năng lượng và môi trường mang tính đột phá.</p>
-                    <a href="#contact" class="btn btn-outline-navy mt-3">Liên hệ hợp tác</a>
+                <div class="team-card reveal-up delay-1">
+                    <div class="team-avatar bg-navy text-white"><i class="fa-solid fa-flask"></i></div>
+                    <h4 data-i18n="team_2_name">PGS.Ts. Elena Rodriguez</h4>
+                    <p class="text-gold" data-i18n="team_2_role">Giám đốc Khoa học Môi trường</p>
+                </div>
+                <div class="team-card reveal-up delay-2">
+                    <div class="team-avatar bg-navy text-white"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4 data-i18n="team_3_name">David Chen, MBA</h4>
+                    <p class="text-gold" data-i18n="team_3_role">Giám đốc Tài chính & Minh bạch</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- News Section -->
+    <section id="news" class="section">
+        <div class="container">
+            <div class="section-header text-center fade-in">
+                <span class="section-label" data-i18n="news_label">Tin tức & Tác động</span>
+                <h2 data-i18n="news_title">Câu chuyện từ Thực địa</h2>
+            </div>
+            <div class="news-grid mt-5">
+                <div class="news-card reveal-up">
+                    <div class="news-img bg-green"><i class="fa-solid fa-industry"></i></div>
+                    <div class="news-content">
+                        <small class="news-date" data-i18n="news_1_date">Tháng 5, 2026</small>
+                        <h4 data-i18n="news_1_title">Khởi công Trạm xử lý dầu thải sinh học đầu tiên</h4>
+                    </div>
+                </div>
+                <div class="news-card reveal-up delay-1">
+                    <div class="news-img bg-navy"><i class="fa-solid fa-hospital"></i></div>
+                    <div class="news-content">
+                        <small class="news-date" data-i18n="news_2_date">Tháng 4, 2026</small>
+                        <h4 data-i18n="news_2_title">Hệ thống Bánh đà duy trì điện cho bệnh viện dã chiến trong bão</h4>
+                    </div>
+                </div>
+                <div class="news-card reveal-up delay-2">
+                    <div class="news-img bg-gold"><i class="fa-solid fa-leaf"></i></div>
+                    <div class="news-content">
+                        <small class="news-date" data-i18n="news_3_date">Tháng 3, 2026</small>
+                        <h4 data-i18n="news_3_title">500 hộ nông dân tham gia Hợp tác xã Aquaponics</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media and Join Us removed from about page -->
 
     <!-- Partners Section -->
     <section id="partners" class="section bg-light text-center">
