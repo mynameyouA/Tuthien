@@ -132,21 +132,47 @@
                 <button class="btn btn-primary btn-lg px-5" onclick="openDonateModal()" data-i18n="contact_btn">ĐÓNG GÓP NGAY</button>
             </div>
             
-            <div class="contact-details-grid mt-5 reveal-up delay-1">
-                <div class="contact-card">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <h4 data-i18n="contact_hq">Trụ sở điều hành</h4>
-                    <p>Phường Tăng Nhơn Phú, TP. Thủ Đức,<br>TP. Hồ Chí Minh, Việt Nam</p>
+            <div class="grid-2 mt-5 reveal-up delay-1" style="gap: 40px; align-items: start;">
+                <!-- Form Góp ý -->
+                <div class="contact-form-wrapper" style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 class="mb-4" style="color: var(--primary-color);">Gửi tin nhắn / Góp ý</h3>
+                    <form action="mailto:contact@sh.fund" method="POST" enctype="text/plain">
+                        <div style="margin-bottom: 15px;">
+                            <input type="text" name="name" class="form-control" placeholder="Họ và tên" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <input type="email" name="email" class="form-control" placeholder="Email của bạn" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px;">
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <textarea name="message" class="form-control" rows="5" placeholder="Nội dung tin nhắn / Góp ý của bạn..." required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-outline-navy btn-block" style="width: 100%;">Gửi tin nhắn <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
                 </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-phone"></i>
-                    <h4 data-i18n="contact_phone">Đường dây nóng</h4>
-                    <p>0975 709 643</p>
-                </div>
-                <div class="contact-card">
-                    <i class="fa-solid fa-envelope"></i>
-                    <h4 data-i18n="contact_email">Email</h4>
-                    <p>contact@sh.fund</p>
+                
+                <!-- Thông tin liên hệ -->
+                <div class="contact-details-list" style="display: flex; flex-direction: column; gap: 20px;">
+                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
+                        <i class="fa-solid fa-location-dot" style="margin: 0; font-size: 2rem;"></i>
+                        <div>
+                            <h4 data-i18n="contact_hq" style="margin-bottom: 5px;">Trụ sở điều hành</h4>
+                            <p style="margin: 0;">Phường Tăng Nhơn Phú, TP. Thủ Đức,<br>TP. Hồ Chí Minh, Việt Nam</p>
+                        </div>
+                    </div>
+                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
+                        <i class="fa-solid fa-phone" style="margin: 0; font-size: 2rem;"></i>
+                        <div>
+                            <h4 data-i18n="contact_phone" style="margin-bottom: 5px;">Đường dây nóng</h4>
+                            <p style="margin: 0;">0975 709 643</p>
+                        </div>
+                    </div>
+                    <div class="contact-card" style="margin: 0; text-align: left; display: flex; align-items: center; gap: 20px;">
+                        <i class="fa-solid fa-envelope" style="margin: 0; font-size: 2rem;"></i>
+                        <div>
+                            <h4 data-i18n="contact_email" style="margin-bottom: 5px;">Email</h4>
+                            <p style="margin: 0;">contact@sh.fund</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
