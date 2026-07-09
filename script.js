@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(res => res.json())
             .then(data => {
                 if (newsContainer) {
-                    renderNewsList(data.articles);
+                    renderNewsList(data);
                 }
                 if (newsDetailContainer) {
-                    renderNewsDetail(data.articles);
+                    renderNewsDetail(data);
                 }
             })
             .catch(err => console.error("Error loading news data:", err));
