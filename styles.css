@@ -429,10 +429,37 @@ a:hover {
 /* Responsive Mobile Fixes */
 @media (max-width: 992px) {
     .header-container {
-        flex-direction: column;
-        gap: 20px;
+        flex-wrap: wrap;
         height: auto;
-        padding: 20px 0;
+        padding: 15px 24px;
+        flex-direction: row;
+    }
+    .logo-and-toggle {
+        width: 100% !important;
+    }
+    .mobile-menu-toggle {
+        display: block !important;
+    }
+    .main-nav {
+        display: none; /* hidden by default on mobile */
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+    .main-nav.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .desktop-donate {
+        display: none !important;
+    }
+    .mobile-donate-li {
+        display: block !important;
+        margin-top: 10px;
     }
     .main-nav ul {
         flex-wrap: wrap;

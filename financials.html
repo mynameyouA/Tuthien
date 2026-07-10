@@ -7,7 +7,7 @@
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=14">
+    <link rel="stylesheet" href="styles.css?v=15">
 </head>
 <body>
 
@@ -15,14 +15,19 @@
     <header class="main-header">
         
         <div class="container header-container">
-            <a href="index.html" class="logo">
-                <i class="fa-solid fa-leaf"></i>
-                <div class="logo-text">
-                    <span class="logo-title">Sustainable Humanity</span>
-                    <span class="logo-subtitle">Foundation</span>
-                </div>
-            </a>
-            <nav class="main-nav">
+            <div class="logo-and-toggle" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="index.html" class="logo">
+                    <i class="fa-solid fa-leaf"></i>
+                    <div class="logo-text">
+                        <span class="logo-title">Sustainable Humanity</span>
+                        <span class="logo-subtitle">Foundation</span>
+                    </div>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Menu" style="display: none; background: none; border: none; font-size: 1.8rem; color: var(--color-primary); cursor: pointer;">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <nav class="main-nav" id="mainNav">
                 <ul>
                     <li><a href="about.html">About SHF</a></li>
                     <li><a href="projects.html">Key Projects</a></li>
@@ -30,9 +35,10 @@
                     <li><a href="news.html">News</a></li>
                     <li><a href="join-us.html">Join Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li class="mobile-donate-li" style="display: none;"><a href="donate.html" class="btn btn-primary btn-donate" style="padding: 10px 20px;">Donate Now</a></li>
                 </ul>
             </nav>
-            <div class="header-actions">
+            <div class="header-actions desktop-donate">
                 <a href="donate.html" class="btn btn-primary btn-donate">Donate Now</a>
             </div>
         </div>
@@ -179,6 +185,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js?v=14"></script>
+    <script src="script.js?v=15"></script>
 </body>
 </html>

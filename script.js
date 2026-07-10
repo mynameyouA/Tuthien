@@ -125,3 +125,13 @@ function closeGenericModal(id) {
     }
 }
 
+\n
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    if(mobileBtn && mainNav) {
+        mobileBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    }
+});
