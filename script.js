@@ -41,8 +41,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     renderNewsList(data);
                 }
                 if (newsDetailContainer) {
-                    renderNewsDetail(data);
-                }
+                renderNewsDetail(data);
+            }
+            // Trigger animation on newly added elements
+            setTimeout(() => {
+                const newAnimated = document.querySelectorAll('.fade-in:not(.visible)');
+                newAnimated.forEach(el => {
+                    const fallbackObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('visible');
+                                fallbackObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, { threshold: 0.1 });
+                    fallbackObserver.observe(el);
+                });
+            }, 100);
             })
             .catch(err => console.error("Error loading news data:", err));
     }
@@ -53,7 +68,7 @@ function renderNewsList(articles) {
     container.innerHTML = '';
     articles.forEach(article => {
         const item = document.createElement('div');
-        item.className = 'news-item';
+        item.className = 'news-item fade-in';
         item.innerHTML = `
             <a href="news-detail.html?id=${article.id}" style="display: block; overflow: hidden; border-radius: var(--radius);"><img src="${article.thumbnail}" alt="${article.title}" style="width: 100%; height: 180px; object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"></a>
             <div>
