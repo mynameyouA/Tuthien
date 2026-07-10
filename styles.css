@@ -431,6 +431,8 @@ a:hover {
     .header-container {
         flex-direction: column;
         gap: 20px;
+        height: auto;
+        padding: 20px 0;
     }
     .main-nav ul {
         flex-wrap: wrap;
