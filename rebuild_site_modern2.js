@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=11">
+    <link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
 `;
@@ -234,13 +234,7 @@ const contactContent = `
                         </div>
                     </div>
                     
-                    <div style="display: flex; gap: 20px; margin-bottom: 40px;">
-                        <div style="width: 60px; height: 60px; background: rgba(0, 208, 132, 0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--color-secondary); font-size: 1.5rem; flex-shrink: 0;"><i class="fa-solid fa-phone"></i></div>
-                        <div>
-                            <strong style="display: block; color: var(--color-primary); font-size: 1.2rem; margin-bottom: 4px;">Direct Line</strong>
-                            <span style="color: var(--color-text-light); font-size: 1.05rem;">+84 975 709 643</span>
-                        </div>
-                    </div>
+                    
 
                     <div style="border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-md); border: 1px solid var(--color-border); height: 300px;">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2966.86178877546!2d-104.8202462!3d41.1399814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876f38762e73ef93%3A0xb10a30418f96f0b2!2sCheyenne%2C%20WY%2C%20USA!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -374,7 +368,7 @@ const newsContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div id="news-container">
-                <!-- Filled by script.js?v=11 -->
+                <!-- Filled by script.js?v=12 -->
             </div>
         </div>
     </section>
@@ -388,7 +382,7 @@ const newsDetailContent = `
             <a href="news.html" style="font-weight: 500; color: var(--color-text-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px;"><i class="fa-solid fa-arrow-left"></i> Back to All Reports</a>
             
             <div id="news-detail-container" style="background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-                <!-- Filled by script.js?v=11 -->
+                <!-- Filled by script.js?v=12 -->
                 <p>Loading authoritative report...</p>
             </div>
         </div>
