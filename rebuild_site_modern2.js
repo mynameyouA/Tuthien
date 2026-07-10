@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=10">
+    <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
 `;
@@ -374,7 +374,7 @@ const newsContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div id="news-container">
-                <!-- Filled by script.js?v=10 -->
+                <!-- Filled by script.js?v=11 -->
             </div>
         </div>
     </section>
@@ -388,7 +388,7 @@ const newsDetailContent = `
             <a href="news.html" style="font-weight: 500; color: var(--color-text-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px;"><i class="fa-solid fa-arrow-left"></i> Back to All Reports</a>
             
             <div id="news-detail-container" style="background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-                <!-- Filled by script.js?v=10 -->
+                <!-- Filled by script.js?v=11 -->
                 <p>Loading authoritative report...</p>
             </div>
         </div>
