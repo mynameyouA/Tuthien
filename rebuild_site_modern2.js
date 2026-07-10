@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=8">
+    <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 `;
@@ -374,7 +374,7 @@ const newsContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div id="news-container">
-                <!-- Filled by script.js?v=8 -->
+                <!-- Filled by script.js?v=9 -->
             </div>
         </div>
     </section>
@@ -388,7 +388,7 @@ const newsDetailContent = `
             <a href="news.html" style="font-weight: 500; color: var(--color-text-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px;"><i class="fa-solid fa-arrow-left"></i> Back to All Reports</a>
             
             <div id="news-detail-container" style="background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-                <!-- Filled by script.js?v=8 -->
+                <!-- Filled by script.js?v=9 -->
                 <p>Loading authoritative report...</p>
             </div>
         </div>
@@ -424,8 +424,13 @@ const donateContent = `
                     </div>
 
                     <div style="background: white; padding: 24px; border-radius: var(--radius); border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm); margin-bottom: 24px;">
-                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">$500 = Empower a Rural Clinic</h4>
-                        <p style="color: var(--color-text-light); font-size: 0.95rem; margin: 0;">Purchases a 2kW solar expansion module, ensuring 24/7 refrigeration for vital vaccines and medicines.</p>
+                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">$500 = Clean Energy for Classrooms</h4>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem; margin: 0;">Installs an off-grid solar lighting and charging kit for a rural school, enabling evening education and digital connectivity.</p>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: var(--radius); border-left: 4px solid #f59e0b; box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">$3,000 = Empower a Rural Clinic</h4>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem; margin: 0;">Funds a full 2kW solar microgrid (panels, inverter, installation) ensuring 24/7 refrigeration for vital vaccines and medicines.</p>
                     </div>
 
                     <div style="background: white; padding: 24px; border-radius: var(--radius); border-left: 4px solid #A50064; box-shadow: var(--shadow-sm);">
