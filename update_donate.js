@@ -1,43 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donate - Sustainable Humanity Foundation</title>
-    <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=8">
-</head>
-<body>
+const fs = require('fs');
 
-    <!-- Header -->
-    <header class="main-header">
-        
-        <div class="container header-container">
-            <a href="index.html" class="logo">
-                <i class="fa-solid fa-leaf"></i>
-                <div class="logo-text">
-                    <span class="logo-title">Sustainable Humanity</span>
-                    <span class="logo-subtitle">Foundation</span>
-                </div>
-            </a>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="about.html">About SHF</a></li>
-                    <li><a href="projects.html">Key Projects</a></li>
-                    <li><a href="financials.html">Financials</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="join-us.html">Join Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-actions">
-                <a href="donate.html" class="btn btn-primary">Donate Now</a>
-            </div>
-        </div>
-    </header>
+// 1. UPDATE CSS
+let css = fs.readFileSync('styles.css', 'utf8');
+if (!css.includes('.donate-gateway-wrapper')) {
+    css += `
+/* Donate Gateway Styles */
+.donate-gateway-wrapper {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+.donate-type-toggle {
+    display: flex;
+    background: #f1f5f9;
+    padding: 8px;
+    border-bottom: 1px solid var(--color-border);
+}
+.donate-type-btn {
+    flex: 1;
+    padding: 14px;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: var(--color-text-light);
+}
+.donate-type-btn.active {
+    background: white;
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+.amount-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 16px;
+}
+.amount-btn {
+    border: 2px solid var(--color-border);
+    background: white;
+    padding: 16px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: var(--color-text);
+}
+.amount-btn:hover {
+    border-color: var(--color-primary);
+}
+.amount-btn.active {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(10,37,64,0.3);
+}
+.custom-amount {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    padding: 0 16px;
+    background: white;
+    transition: all 0.2s;
+}
+.custom-amount:focus-within {
+    border-color: var(--color-primary);
+}
+.custom-amount span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--color-text-light);
+}
+.custom-amount input {
+    border: none;
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    width: 100%;
+    outline: none;
+    background: transparent;
+}
+.payment-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--color-border);
+    margin-bottom: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.payment-tabs::-webkit-scrollbar { display: none; }
+.payment-tab {
+    padding: 16px 20px;
+    font-weight: 600;
+    color: var(--color-text-light);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+.payment-tab.active {
+    color: var(--color-secondary);
+    border-bottom-color: var(--color-secondary);
+}
+.payment-panel {
+    display: none;
+}
+.payment-panel.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-text);
+}
+.form-input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+.card-elements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.btn-submit-donate {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.2rem;
+    background: var(--color-secondary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.btn-submit-donate:hover {
+    background: #00b370;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,208,132,0.4);
+}
+.loader-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    display: none;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+.processing .loader-spinner {
+    display: block;
+}
+.processing .btn-text {
+    opacity: 0.8;
+}
+`;
+    fs.writeFileSync('styles.css', css);
+}
 
+
+// 2. UPDATE rebuild_site_modern2.js
+let r2 = fs.readFileSync('rebuild_site_modern2.js', 'utf8');
+
+// Replace the donateContent with the new Gateway UI
+const newDonateContent = `const donateContent = \`
     <section class="page-hero fade-in" style="background-image: url('https://images.unsplash.com/photo-1593113565637-682120362481?w=1600&q=80'); padding: 160px 0 100px;">
         <div class="container text-center">
             <span class="section-label" style="color: #fff; background: rgba(0,0,0,0.5); padding: 6px 16px; border-radius: 20px; letter-spacing: 2px;">Global Funding Gateway</span>
@@ -225,54 +376,17 @@
             }, 1500);
         }
     </script>
+\`;`;
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="grid-4">
-                <div>
-                    <h4>Sustainable Humanity Foundation</h4>
-                    <p style="font-size: 0.95rem; margin-top: 16px;">Bringing breakthrough scientific solutions to solve pollution, provide clean energy, and develop sustainable livelihoods for vulnerable communities.</p>
-                </div>
-                <div>
-                    <h4>Quick Links</h4>
-                    <ul style="list-style:none; line-height: 2.2;">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="projects.html">Key Projects</a></li>
-                        <li><a href="financials.html">Financials & Transparency</a></li>
-                        <li><a href="news.html">News & Updates</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact Us</h4>
-                    <ul style="list-style:none; line-height: 2.2; font-size: 0.95rem;">
-                        <li><i class="fa-solid fa-location-dot" style="margin-right:8px; color:var(--color-secondary)"></i> Thu Duc City, HCMC, VN</li>
-                        <li><i class="fa-solid fa-phone" style="margin-right:8px; color:var(--color-secondary)"></i> +84 975 709 643</li>
-                        <li><i class="fa-solid fa-envelope" style="margin-right:8px; color:var(--color-secondary)"></i> contact@sh.fund</li>
-                    </ul>
-                    <div class="social-icons">
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
-                <div>
-                    <h4>Newsletter</h4>
-                    <p style="font-size: 0.9rem; margin-bottom: 16px;">Subscribe to receive our quarterly impact and financial reports.</p>
-                    <form action="https://formsubmit.co/contact@sh.fund" method="POST">
-                        <input type="email" name="email" class="form-control" placeholder="Your Email Address" style="margin-bottom: 12px; border:none;" required>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Subscribe</button>
-                    </form>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p style="margin-bottom: 8px; color: rgba(255,255,255,0.8);"><strong>US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards</strong></p>
-                <p>&copy; 2026 The Sustainable Humanity Foundation. All rights reserved. 501(c)(3) Nonprofit.</p>
-            </div>
-        </div>
-    </footer>
+// Inject into script
+r2 = r2.replace(/const donateContent = `[\s\S]*?`;/g, newDonateContent);
 
-    <!-- Scripts -->
-    <script src="script.js?v=8"></script>
-</body>
-</html>
+r2 = r2.replace(/v=7/g, 'v=8');
+fs.writeFileSync('rebuild_site_modern2.js', r2);
+
+// Also update cache in rebuild_site_modern.js
+let r1 = fs.readFileSync('rebuild_site_modern.js', 'utf8');
+r1 = r1.replace(/v=7/g, 'v=8');
+fs.writeFileSync('rebuild_site_modern.js', r1);
+
+console.log('donate gateway rebuilt');

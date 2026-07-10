@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 `;
@@ -374,7 +374,7 @@ const newsContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div id="news-container">
-                <!-- Filled by script.js?v=7 -->
+                <!-- Filled by script.js?v=8 -->
             </div>
         </div>
     </section>
@@ -388,7 +388,7 @@ const newsDetailContent = `
             <a href="news.html" style="font-weight: 500; color: var(--color-text-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px;"><i class="fa-solid fa-arrow-left"></i> Back to All Reports</a>
             
             <div id="news-detail-container" style="background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-                <!-- Filled by script.js?v=7 -->
+                <!-- Filled by script.js?v=8 -->
                 <p>Loading authoritative report...</p>
             </div>
         </div>
@@ -400,65 +400,193 @@ console.log('Secondary pages generated with deeply expanded content.');
 
 // Donate Page
 const donateContent = `
-    <section class="page-hero fade-in" style="background-image: url('https://images.unsplash.com/photo-1593113565637-682120362481?w=1600&q=80'); padding: 120px 0;">
-        <div class="container">
-            <span class="section-label" style="color: #fff; background: rgba(0,0,0,0.5); padding: 6px 16px; border-radius: 20px; letter-spacing: 2px;">Fund The Future</span>
-            <h1 style="font-size: 3.5rem;">Donate to SHF</h1>
-            <p style="font-size: 1.25rem;">Accelerate the deployment of open-source climate technology to the world's most vulnerable zones.</p>
+    <section class="page-hero fade-in" style="background-image: url('https://images.unsplash.com/photo-1593113565637-682120362481?w=1600&q=80'); padding: 160px 0 100px;">
+        <div class="container text-center">
+            <span class="section-label" style="color: #fff; background: rgba(0,0,0,0.5); padding: 6px 16px; border-radius: 20px; letter-spacing: 2px;">Global Funding Gateway</span>
+            <h1 style="font-size: 3.5rem;">Fund The Future</h1>
+            <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto;">Your capital directly accelerates the deployment of life-saving open-source climate technology.</p>
         </div>
     </section>
 
-    <section class="section bg-light">
+    <section class="section bg-light" style="padding: 60px 0 120px;">
         <div class="container fade-in">
             <div class="grid-2" style="align-items: start; gap: 60px;">
+                <!-- Left: Impact Statement -->
                 <div>
-                    <h2 style="font-size: 2.5rem; margin-bottom: 24px;">How Your Capital Flows</h2>
-                    <p style="color: var(--color-text-light); font-size: 1.15rem; line-height: 1.8; margin-bottom: 30px;">
-                        At the Sustainable Humanity Foundation, we bypass traditional aid bureaucracies. Because our core technologies are open-source and our operational framework is highly automated, your donation goes directly to raw materials, logistics, and field engineer stipends.
+                    <h2 style="font-size: 2.2rem; margin-bottom: 24px;">Your Impact Multiplier</h2>
+                    <p style="color: var(--color-text-light); font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+                        By utilizing open-source hardware and blockchain transparency, SHF eliminates middle-men. <strong>92% of your contribution</strong> goes directly into field hardware and operations.
                     </p>
                     
-                    <div style="background: #fff; padding: 30px; border-radius: var(--radius); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); margin-bottom: 40px;">
-                        <h4 style="color: var(--color-primary); font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-arrow-right-arrow-left" style="color: var(--color-secondary); margin-right: 8px;"></i> Immediate Impact Cycle</h4>
-                        <ul style="list-style: none; color: var(--color-text-light); line-height: 1.8;">
-                            <li style="margin-bottom: 12px;"><strong>1. Contribution:</strong> You donate via Crypto (zero cross-border fees).</li>
-                            <li style="margin-bottom: 12px;"><strong>2. Allocation:</strong> Funds are locked into a smart-contract treasury.</li>
-                            <li style="margin-bottom: 12px;"><strong>3. Deployment:</strong> Capital is released directly to regional manufacturing hubs (e.g. for solar microgrids or biological agents).</li>
-                            <li><strong>4. Reporting:</strong> We publish real-time open ledgers matching project milestones with expenditure.</li>
-                        </ul>
+                    <div style="background: white; padding: 24px; border-radius: var(--radius); border-left: 4px solid var(--color-secondary); box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">$50 = Clean Water for a Family</h4>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem; margin: 0;">Funds the deployment of one UV-C purification unit, securing safe drinking water for a family of 5 for a decade.</p>
                     </div>
-                    
-                    <h2 style="font-size: 2rem; margin-bottom: 20px;">Community Impact</h2>
-                    <p style="color: var(--color-text-light); font-size: 1.1rem; line-height: 1.7; margin-bottom: 20px;">
-                        A single $5,000 contribution fully funds a 25kW solar microgrid for a remote clinic in Sub-Saharan Africa, powering life-saving refrigeration and communications for 15 years. 
-                    </p>
-                    <p style="color: var(--color-text-light); font-size: 1.1rem; line-height: 1.7;">
-                        A $1,500 contribution produces enough RIDES bacterial culture to remediate 5,000 liters of crude oil pollution from a coastal mangrove ecosystem, restoring the primary livelihood of local fishing communities.
-                    </p>
+
+                    <div style="background: white; padding: 24px; border-radius: var(--radius); border-left: 4px solid var(--color-primary); box-shadow: var(--shadow-sm); margin-bottom: 24px;">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">$500 = Empower a Rural Clinic</h4>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem; margin: 0;">Purchases a 2kW solar expansion module, ensuring 24/7 refrigeration for vital vaccines and medicines.</p>
+                    </div>
+
+                    <div style="background: white; padding: 24px; border-radius: var(--radius); border-left: 4px solid #A50064; box-shadow: var(--shadow-sm);">
+                        <h4 style="font-size: 1.2rem; margin-bottom: 8px;">$5,000+ = Ecosystem Restoration</h4>
+                        <p style="color: var(--color-text-light); font-size: 0.95rem; margin: 0;">Initiates a full-scale RIDES biological remediation operation to clear 10,000 liters of crude oil waste.</p>
+                    </div>
                 </div>
                 
+                <!-- Right: Gateway UI -->
                 <div>
-                    <div class="card" style="background: var(--color-primary); color: white; padding: 50px; text-align: center; box-shadow: var(--shadow-lg); position: sticky; top: 120px;">
-                        <div style="width: 80px; height: 80px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 2rem; color: var(--color-secondary);">
-                            <i class="fa-brands fa-ethereum"></i>
-                        </div>
-                        <h3 style="font-size: 2rem; margin-bottom: 16px;">Crypto Contribution</h3>
-                        <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px; font-size: 1.1rem; line-height: 1.6;">We currently accept stablecoin donations via the Polygon network to ensure minimal transaction fees and instant global settlement.</p>
-                        
-                        <div style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 24px; display: inline-block;">
-                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="border-radius: 8px; width: 200px; height: 200px;">
+                    <div class="donate-gateway-wrapper">
+                        <div class="donate-type-toggle">
+                            <div class="donate-type-btn active" onclick="setDonateType(this, 'one-time')">Give Once</div>
+                            <div class="donate-type-btn" onclick="setDonateType(this, 'monthly')">Monthly <span style="font-size:0.75rem; background: var(--color-secondary); color: white; padding: 2px 6px; border-radius: 10px; margin-left: 4px;">Impact</span></div>
                         </div>
                         
-                        <h4 style="margin-bottom: 8px; color: var(--color-secondary);">Network: Polygon (USDT / USDC)</h4>
-                        <div style="background: rgba(0,0,0,0.3); padding: 16px; border-radius: 8px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1);">
-                            <code style="font-family: monospace; font-size: 1.1rem; word-break: break-all; color: #e2e8f0;">0x52b4483e30243a65212adb16d993627534e61d6d</code>
+                        <div style="padding: 40px;">
+                            <h4 style="margin-bottom: 16px; font-size: 1.1rem;">Select Amount</h4>
+                            <div class="amount-grid">
+                                <div class="amount-btn" onclick="setAmount(this, 50)">$50</div>
+                                <div class="amount-btn active" onclick="setAmount(this, 100)">$100</div>
+                                <div class="amount-btn" onclick="setAmount(this, 500)">$500</div>
+                            </div>
+                            <div class="custom-amount" style="margin-bottom: 30px;">
+                                <span>$</span>
+                                <input type="number" id="custom-amount-input" placeholder="Custom Amount" onfocus="clearAmountSelection()">
+                            </div>
+
+                            <h4 style="margin-bottom: 16px; font-size: 1.1rem;">Payment Method</h4>
+                            <div class="payment-tabs">
+                                <div class="payment-tab active" onclick="setPaymentTab(this, 'card')"><i class="fa-solid fa-credit-card"></i> Card</div>
+                                <div class="payment-tab" onclick="setPaymentTab(this, 'crypto')"><i class="fa-brands fa-ethereum"></i> Crypto</div>
+                                <div class="payment-tab" onclick="setPaymentTab(this, 'paypal')"><i class="fa-brands fa-paypal"></i> PayPal</div>
+                                <div class="payment-tab" onclick="setPaymentTab(this, 'wallet')"><i class="fa-solid fa-wallet"></i> Wallets</div>
+                            </div>
+
+                            <div id="panel-card" class="payment-panel active">
+                                <div class="form-group">
+                                    <label>Card Information</label>
+                                    <div style="position: relative;">
+                                        <i class="fa-regular fa-credit-card" style="position: absolute; left: 14px; top: 16px; color: #94a3b8;"></i>
+                                        <input type="text" class="form-input" placeholder="0000 0000 0000 0000" style="padding-left: 40px;">
+                                    </div>
+                                </div>
+                                <div class="card-elements" style="margin-bottom: 24px;">
+                                    <input type="text" class="form-input" placeholder="MM / YY">
+                                    <input type="text" class="form-input" placeholder="CVC">
+                                </div>
+                            </div>
+
+                            <div id="panel-crypto" class="payment-panel">
+                                <div style="text-align: center; margin-bottom: 24px;">
+                                    <div style="background: white; padding: 16px; border: 1px solid var(--color-border); border-radius: 8px; display: inline-block; margin-bottom: 16px;">
+                                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="width: 150px; height: 150px;">
+                                    </div>
+                                    <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 8px;">Network: <strong>Polygon (USDT/USDC)</strong></p>
+                                    <div style="display:flex; background: #f1f5f9; padding: 10px 16px; border-radius: 8px; align-items: center; justify-content: space-between;">
+                                        <code style="font-size: 0.85rem; color: var(--color-primary);">0x52b4483e30243a65212adb16d993627534e61d6d</code>
+                                        <i class="fa-regular fa-copy" style="cursor: pointer; color: var(--color-text-light);" onclick="alert('Address copied!')"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="panel-paypal" class="payment-panel">
+                                <div style="text-align: center; padding: 20px 0 30px;">
+                                    <p style="color: var(--color-text-light); margin-bottom: 20px;">You will be redirected to PayPal to complete your donation securely.</p>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" style="height: 30px;">
+                                </div>
+                            </div>
+
+                            <div id="panel-wallet" class="payment-panel">
+                                <div class="grid-2" style="gap: 12px; margin-bottom: 24px;">
+                                    <div style="border: 2px solid #A50064; padding: 16px; border-radius: 8px; text-align: center; cursor: pointer; color: #A50064; font-weight: 600;">MoMo</div>
+                                    <div style="border: 2px solid #0068FF; padding: 16px; border-radius: 8px; text-align: center; cursor: pointer; color: #0068FF; font-weight: 600;">ZaloPay</div>
+                                </div>
+                            </div>
+
+                            <div class="form-group" style="margin-top: 24px;">
+                                <label>Your Details</label>
+                                <input type="text" class="form-input" placeholder="Full Name" style="margin-bottom: 12px;">
+                                <input type="email" class="form-input" placeholder="Email Address">
+                            </div>
+
+                            <button class="btn-submit-donate" id="donate-submit-btn" onclick="processDonation()">
+                                <div class="loader-spinner"></div>
+                                <span class="btn-text">Donate $100</span>
+                                <i class="fa-solid fa-lock" style="font-size: 0.9rem;"></i>
+                            </button>
+                            <p style="text-align: center; font-size: 0.8rem; color: #94a3b8; margin-top: 16px; margin-bottom: 0;">
+                                <i class="fa-solid fa-shield-halved"></i> 256-bit Secure Encryption
+                            </p>
                         </div>
-                        
-                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.6); margin: 0;">100% Tax Deductible for US Citizens. For wire transfers or large institutional grants, please <a href="contact.html" style="color: var(--color-secondary);">contact our treasury team</a>.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Interactive Gateway Script -->
+    <script>
+        let currentAmount = 100;
+
+        function setDonateType(element, type) {
+            document.querySelectorAll('.donate-type-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        function setAmount(element, amount) {
+            document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+            element.classList.add('active');
+            document.getElementById('custom-amount-input').value = '';
+            currentAmount = amount;
+            updateSubmitButton();
+        }
+
+        function clearAmountSelection() {
+            document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('active'));
+        }
+
+        document.getElementById('custom-amount-input').addEventListener('input', function(e) {
+            currentAmount = e.target.value || 0;
+            updateSubmitButton();
+        });
+
+        function setPaymentTab(element, panelId) {
+            document.querySelectorAll('.payment-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.payment-panel').forEach(p => p.classList.remove('active'));
+            
+            element.classList.add('active');
+            document.getElementById('panel-' + panelId).classList.add('active');
+            
+            const btnText = document.querySelector('#donate-submit-btn .btn-text');
+            if(panelId === 'crypto') {
+                btnText.textContent = "I have transferred Crypto";
+            } else if(panelId === 'paypal') {
+                btnText.textContent = "Continue to PayPal";
+            } else {
+                updateSubmitButton();
+            }
+        }
+
+        function updateSubmitButton() {
+            const activeTab = document.querySelector('.payment-tab.active');
+            if(activeTab && activeTab.textContent.includes('Crypto')) return;
+            if(activeTab && activeTab.textContent.includes('PayPal')) return;
+            
+            const btnText = document.querySelector('#donate-submit-btn .btn-text');
+            btnText.textContent = "Donate $" + currentAmount;
+        }
+
+        function processDonation() {
+            const btn = document.getElementById('donate-submit-btn');
+            btn.classList.add('processing');
+            
+            // Mock processing
+            setTimeout(() => {
+                btn.classList.remove('processing');
+                alert("Thank you! This is a mock interactive UI. In production, this will trigger the real payment gateway (Stripe/PayPal/MoMo).");
+            }, 1500);
+        }
+    </script>
 `;
 fs.writeFileSync('donate.html', head('Donate') + header + donateContent + footerHtml);
 console.log('donate.html generated.');
