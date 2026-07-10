@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=20">
+    <link rel="stylesheet" href="styles.css?v=21">
 </head>
 <body>
 `;
@@ -374,7 +374,7 @@ const newsContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div id="news-container">
-                <!-- Filled by script.js?v=20 -->
+                <!-- Filled by script.js?v=21 -->
             </div>
         </div>
     </section>
@@ -388,7 +388,7 @@ const newsDetailContent = `
             <a href="news.html" style="font-weight: 500; color: var(--color-text-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px;"><i class="fa-solid fa-arrow-left"></i> Back to All Reports</a>
             
             <div id="news-detail-container" style="background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-                <!-- Filled by script.js?v=20 -->
+                <!-- Filled by script.js?v=21 -->
                 <p>Loading authoritative report...</p>
             </div>
         </div>
@@ -446,7 +446,7 @@ const donateContent = `
                             <div class="donate-type-btn" onclick="setDonateType(this, 'monthly')">Monthly <span style="font-size:0.75rem; background: var(--color-secondary); color: white; padding: 2px 6px; border-radius: 10px; margin-left: 4px;">Impact</span></div>
                         </div>
                         
-                        <div style="padding: 40px;">
+                        <div class="donate-gateway-inner">
                             <h4 style="margin-bottom: 16px; font-size: 1.1rem;">Select Amount</h4>
                             <div class="amount-grid">
                                 <div class="amount-btn" onclick="setAmount(this, 50)">$50</div>
@@ -487,7 +487,7 @@ const donateContent = `
                                     </div>
                                     <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 8px;">Network: <strong>Polygon (USDT/USDC)</strong></p>
                                     <div style="display:flex; background: #f1f5f9; padding: 10px 16px; border-radius: 8px; align-items: center; justify-content: space-between;">
-                                        <code style="font-size: 0.85rem; color: var(--color-primary);">0x52b4483e30243a65212adb16d993627534e61d6d</code>
+                                        <code class="address-code" style="font-size: 0.85rem; color: var(--color-primary);">0x52b4483e30243a65212adb16d993627534e61d6d</code>
                                         <i class="fa-regular fa-copy" style="cursor: pointer; color: var(--color-text-light);" onclick="alert('Address copied!')"></i>
                                     </div>
                                 </div>
@@ -626,7 +626,7 @@ const donateContent = `
                 </div>
 
                 <!-- Gold -->
-                <div class="card" style="padding: 40px 30px; text-align: center; border-top: 8px solid #ffd700; display: flex; flex-direction: column; transform: scale(1.05); box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15); z-index: 10;">
+                <div class="card sponsor-gold" style="padding: 40px 30px; text-align: center; border-top: 8px solid #ffd700; display: flex; flex-direction: column;">
                     <div style="font-size: 3.5rem; margin-bottom: 20px; text-shadow: 0 4px 12px rgba(255,215,0,0.4);">🥇</div>
                     <h3 style="font-size: 1.8rem; color: #d4af37; margin-bottom: 8px;">Gold</h3>
                     <div style="font-size: 1.5rem; font-weight: bold; color: var(--color-text); margin-bottom: 24px;">$250,000</div>

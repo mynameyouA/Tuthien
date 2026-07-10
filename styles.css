@@ -749,3 +749,24 @@ a:hover {
     .card-elements { grid-template-columns: 1fr; }
     .main-nav ul { gap: 10px; padding: 10px 0; }
 }
+
+.donate-gateway-inner {
+    padding: 40px;
+}
+.sponsor-gold {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15);
+    z-index: 10;
+}
+.address-code {
+    word-break: break-all;
+}
+
+@media (max-width: 768px) {
+    .donate-gateway-inner {
+        padding: 20px !important;
+    }
+    .sponsor-gold {
+        transform: scale(1) !important;
+    }
+}
