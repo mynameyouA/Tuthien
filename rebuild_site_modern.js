@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=12">
+    <link rel="stylesheet" href="styles.css?v=13">
 </head>
 <body>
 `;
@@ -91,7 +91,7 @@ const footer = `
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=13"></script>
 </body>
 </html>
 `;
@@ -103,7 +103,7 @@ const indexContent = `
         <div class="container">
             <span class="section-label" style="color: #fff; background: var(--color-secondary); padding: 6px 16px; border-radius: 20px; font-size: 0.85rem; letter-spacing: 2px;">Global Environmental Initiative</span>
             <h1 style="font-size: 4.5rem; line-height: 1.1; text-shadow: 0 4px 12px rgba(0,0,0,0.3);">Science for a<br>Sustainable Humanity</h1>
-            <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto 50px; text-shadow: 0 2px 6px rgba(0,0,0,0.3);">We bridge the gap between high-tech scientific innovations and the most vulnerable communities, reversing environmental damage while eradicating energy poverty.</p>
+            <p style="font-size: 1.4rem; max-width: 800px; margin: 0 auto 50px; text-shadow: 0 2px 6px rgba(0,0,0,0.3);">Operating as a 501(c)(3) in Wyoming, we transform royalty-free scientific patents into lifesaving infrastructure—reversing environmental damage while eradicating energy poverty.</p>
             <div style="display: flex; gap: 24px; justify-content: center;">
                 <a href="donate.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">Support Our Mission</a>
                 <a href="about.html" class="btn btn-outline" style="color: #fff; border-color: rgba(255,255,255,0.6); font-size: 1.1rem; padding: 16px 40px; background: rgba(0,0,0,0.2);">Discover Our Work</a>
@@ -197,34 +197,31 @@ const indexContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div style="text-align: center; margin-bottom: 80px;">
-                <span class="section-label">Our Scientific Approach</span>
-                <h2 style="font-size: 2.8rem; max-width: 800px; margin: 0 auto;">Three Pillars of Systemic Change</h2>
-                <p style="font-size: 1.2rem; color: var(--color-text-light); max-width: 700px; margin: 20px auto 0;">We deploy proprietary biological and engineering solutions to reverse ecological damage and build resilient local economies.</p>
+                <span class="section-label" style="background: rgba(0,208,132,0.1); padding: 4px 12px; border-radius: 4px;">Strategic Roadmap (2026 - 2030)</span>
+                <h2 style="font-size: 2.8rem; max-width: 800px; margin: 0 auto;">Three Projects to Change Destinies</h2>
+                <p style="font-size: 1.2rem; color: var(--color-text-light); max-width: 800px; margin: 20px auto 0;">Powered by <strong>100% royalty-free patents</strong> donated by Founder Prof. Dr. Duong Van Sinh, SHF directs all funding directly to field operations without intellectual property costs.</p>
             </div>
             <div class="grid-3">
-                <div class="card" style="padding: 50px 40px;">
-                    <div style="width: 90px; height: 90px; background: rgba(0, 208, 132, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 0 32px; transition: transform 0.3s ease;">
-                        <i class="fa-solid fa-microscope" style="font-size: 2.5rem; color: var(--color-secondary);"></i>
+                <div class="card" style="padding: 50px 40px; border-top: 4px solid var(--color-primary);">
+                    <div style="width: 80px; height: 80px; background: rgba(0, 208, 132, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 0 24px;">
+                        <i class="fa-solid fa-industry" style="font-size: 2.2rem; color: var(--color-secondary);"></i>
                     </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Environmental Restoration</h3>
-                    <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: 24px;">Deploying advanced bio-technologies, including the RIDES microbiological system, to safely metabolize complex hydrocarbon radicals, permanently processing industrial waste and restoring polluted soil.</p>
-                    <a href="projects.html" style="font-weight: 600; color: var(--color-primary); display: inline-flex; align-items: center; gap: 8px;">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 16px; min-height: 56px;">Tan Son Nhat Waste Oil Plant</h3>
+                    <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Deploying continuous vacuum distillation with alternating dual reactors to safely treat hazardous aviation waste oil, protecting the groundwater for millions of urban residents.</p>
                 </div>
-                <div class="card" style="padding: 50px 40px;">
-                    <div style="width: 90px; height: 90px; background: rgba(0, 208, 132, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 0 32px; transition: transform 0.3s ease;">
-                        <i class="fa-solid fa-solar-panel" style="font-size: 2.5rem; color: var(--color-secondary);"></i>
+                <div class="card" style="padding: 50px 40px; border-top: 4px solid var(--color-secondary);">
+                    <div style="width: 80px; height: 80px; background: rgba(0, 208, 132, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 0 24px;">
+                        <i class="fa-solid fa-leaf" style="font-size: 2.2rem; color: var(--color-secondary);"></i>
                     </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Renewable Energy Access</h3>
-                    <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: 24px;">Designing and installing resilient, off-grid solar micro-grids for marginalized communities, electrifying rural schools, mobile medical clinics, and vital community centers.</p>
-                    <a href="projects.html" style="font-weight: 600; color: var(--color-primary); display: inline-flex; align-items: center; gap: 8px;">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 16px; min-height: 56px;">Net-Zero Aquaponics (30-50ha)</h3>
+                    <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Building a large-scale agricultural cooperative using SINH-AQ natural microbes and self-generated biomass. Provides clean land and sustainable income for impoverished farmers with zero emissions.</p>
                 </div>
-                <div class="card" style="padding: 50px 40px;">
-                    <div style="width: 90px; height: 90px; background: rgba(0, 208, 132, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 0 32px; transition: transform 0.3s ease;">
-                        <i class="fa-solid fa-seedling" style="font-size: 2.5rem; color: var(--color-secondary);"></i>
+                <div class="card" style="padding: 50px 40px; border-top: 4px solid #f59e0b;">
+                    <div style="width: 80px; height: 80px; background: rgba(245, 158, 11, 0.1); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 0 24px;">
+                        <i class="fa-solid fa-bolt" style="font-size: 2.2rem; color: #f59e0b;"></i>
                     </div>
-                    <h3 style="font-size: 1.8rem; margin-bottom: 20px;">Circular Livelihoods</h3>
-                    <p style="color: var(--color-text-light); line-height: 1.8; margin-bottom: 24px;">Funding high-yield, closed-loop aquaponics and sustainable agriculture models. We eliminate reliance on chemical fertilizers, ensuring long-term food security and predictable income streams.</p>
-                    <a href="projects.html" style="font-weight: 600; color: var(--color-primary); display: inline-flex; align-items: center; gap: 8px;">Learn more <i class="fa-solid fa-arrow-right"></i></a>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 16px; min-height: 56px;">Smart Flywheel Microgrids</h3>
+                    <p style="color: var(--color-text-light); line-height: 1.7; margin-bottom: 24px; font-size: 0.95rem;">Manufacturing chemical-free, lead-free kinetic energy storage systems (flywheels). Donated freely to clinics and schools in flood zones to guarantee 24/7 life-saving emergency power.</p>
                 </div>
             </div>
         </div>

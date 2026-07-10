@@ -443,7 +443,7 @@ a:hover {
     .news-item img {
         height: 250px !important;
     }
-    .grid-2, .grid-4 {
+    .grid-2, .grid-3, .grid-4 {
         grid-template-columns: 1fr !important;
     }
     .page-hero {
@@ -713,4 +713,10 @@ a:hover {
 }
 .processing .btn-text {
     opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .amount-grid { grid-template-columns: 1fr; }
+    .card-elements { grid-template-columns: 1fr; }
+    .main-nav ul { gap: 10px; padding: 10px 0; }
 }
