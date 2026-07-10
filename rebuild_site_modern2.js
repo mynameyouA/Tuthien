@@ -17,11 +17,7 @@ const head = (title) => `<!DOCTYPE html>
 const header = `
     <!-- Header -->
     <header class="main-header">
-        <div class="top-bar">
-            <div class="container">
-                US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards
-            </div>
-        </div>
+        
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-leaf"></i>

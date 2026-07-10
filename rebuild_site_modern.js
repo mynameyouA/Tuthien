@@ -17,11 +17,7 @@ const head = (title) => `<!DOCTYPE html>
 const header = `
     <!-- Header -->
     <header class="main-header">
-        <div class="top-bar">
-            <div class="container">
-                US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards
-            </div>
-        </div>
+        
         <div class="container header-container">
             <a href="index.html" class="logo">
                 <i class="fa-solid fa-leaf"></i>
@@ -83,6 +79,7 @@ const footer = `
                 </div>
             </div>
             <div class="footer-bottom">
+                <p style="margin-bottom: 8px; color: rgba(255,255,255,0.8);"><strong>US 501(c)(3) Nonprofit - Audited to USAID/GEF Standards</strong></p>
                 <p>&copy; 2026 The Sustainable Humanity Foundation. All rights reserved. 501(c)(3) Nonprofit.</p>
             </div>
         </div>
