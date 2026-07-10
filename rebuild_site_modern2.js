@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=21">
+    <link rel="stylesheet" href="styles.css?v=22">
 </head>
 <body>
 `;
@@ -374,7 +374,7 @@ const newsContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div id="news-container">
-                <!-- Filled by script.js?v=21 -->
+                <!-- Filled by script.js?v=22 -->
             </div>
         </div>
     </section>
@@ -388,7 +388,7 @@ const newsDetailContent = `
             <a href="news.html" style="font-weight: 500; color: var(--color-text-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px;"><i class="fa-solid fa-arrow-left"></i> Back to All Reports</a>
             
             <div id="news-detail-container" style="background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-                <!-- Filled by script.js?v=21 -->
+                <!-- Filled by script.js?v=22 -->
                 <p>Loading authoritative report...</p>
             </div>
         </div>
@@ -651,12 +651,12 @@ const donateContent = `
                 </div>
             </div>
             
-            <div style="text-align: center; margin-top: 60px; background: white; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
+            <div class="donate-gateway-inner" style="text-align: center; margin-top: 60px; background: white; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
                 <h3 style="font-size: 1.8rem; margin-bottom: 16px;">Ready to discuss a strategic partnership?</h3>
                 <p style="color: var(--color-text-light); font-size: 1.1rem; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto;">Our leadership team is available to tailor a sponsorship package that aligns with your organization's CSR and sustainability goals.</p>
                 <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
                     <a href="contact.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 12px 32px; background-color: #1e3a8a;">Contact SHF Leadership</a>
-                    <a href="mailto:partnerships@sustainablehumanity.org" class="btn btn-outline" style="font-size: 1.1rem; padding: 12px 32px;"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> partnerships@sustainablehumanity.org</a>
+                    <a href="mailto:partnerships@sustainablehumanity.org" class="btn btn-outline email-btn" style="font-size: 1.1rem; padding: 12px 32px;"><i class="fa-solid fa-envelope" style="margin-right: 8px;"></i> partnerships@sustainablehumanity.org</a>
                 </div>
             </div>
         </div>

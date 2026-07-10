@@ -770,3 +770,13 @@ a:hover {
         transform: scale(1) !important;
     }
 }
+
+html, body {
+    overflow-x: hidden;
+}
+
+.email-btn {
+    word-break: break-all;
+    white-space: normal;
+    height: auto;
+}
