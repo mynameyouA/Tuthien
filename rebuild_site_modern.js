@@ -9,7 +9,7 @@ const head = (title) => `<!DOCTYPE html>
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=17">
+    <link rel="stylesheet" href="styles.css?v=18">
 </head>
 <body>
 `;
@@ -19,7 +19,7 @@ const header = `
     <header class="main-header">
         
         <div class="container header-container">
-            <div class="logo-and-toggle" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div class="logo-and-toggle" style="display: flex; justify-content: space-between; align-items: center;">
                 <a href="index.html" class="logo">
                     <i class="fa-solid fa-leaf"></i>
                     <div class="logo-text">
@@ -97,7 +97,7 @@ const footer = `
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js?v=17"></script>
+    <script src="script.js?v=18"></script>
 </body>
 </html>
 `;
@@ -277,6 +277,27 @@ const indexContent = `
             </div>
         </div>
     </section>
+
+    
+    <!-- Quick Donate Section -->
+    <section class="section" style="background: var(--color-bg-alt); text-align: center; padding: 80px 20px;">
+        <div class="container fade-in">
+            <span class="section-label" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b; padding: 6px 16px; border-radius: 20px;">Make a Difference</span>
+            <h2 style="font-size: 2.5rem; margin: 20px 0 24px;">Fuel the Next Breakthrough</h2>
+            <p style="color: var(--color-text-light); max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem;">Every contribution goes 100% to field operations and hardware. Join us in ending energy poverty.</p>
+            <div style="background: white; border-radius: 20px; box-shadow: var(--shadow-md); padding: 40px; max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 16px;">
+                    <a href="donate.html" class="btn btn-outline" style="border-radius: 12px; border-color: #e2e8f0; color: var(--color-text); font-weight: bold; font-size: 1.2rem; padding: 16px;">$50</a>
+                    <a href="donate.html" class="btn btn-outline" style="border-radius: 12px; border-color: #e2e8f0; color: var(--color-text); font-weight: bold; font-size: 1.2rem; padding: 16px;">$500</a>
+                    <a href="donate.html" class="btn btn-outline" style="border-radius: 12px; border-color: var(--color-primary); color: var(--color-primary); font-weight: bold; font-size: 1.2rem; background: rgba(0,208,132,0.1); padding: 16px;">$5,000+</a>
+                    <a href="donate.html" class="btn btn-outline" style="border-radius: 12px; border-color: #e2e8f0; color: var(--color-text); font-weight: bold; font-size: 1.2rem; padding: 16px;">Other</a>
+                </div>
+                <a href="donate.html" class="btn btn-primary btn-donate" style="padding: 16px; font-size: 1.2rem; border-radius: 12px; display: block;">Proceed to Secure Donation</a>
+                <p style="font-size: 0.85rem; color: #718096; margin-top: 4px;"><i class="fa-solid fa-lock" style="margin-right: 4px;"></i> Secure payment processed by Stripe / PayPal</p>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Testimonials Carousel -->
     <section class="section" style="background: url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=1600&q=80') center/cover fixed;">
