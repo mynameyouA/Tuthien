@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Back to Top Button
+    const bttBtn = document.createElement('button');
+    bttBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    bttBtn.id = 'back-to-top';
+    bttBtn.setAttribute('aria-label', 'Back to top');
+    bttBtn.style.cssText = 'position:fixed; bottom:30px; right:30px; background:var(--color-secondary); color:white; border:none; border-radius:50%; width:50px; height:50px; font-size:1.2rem; cursor:pointer; opacity:0; visibility:hidden; transition:all 0.3s ease; z-index:999; box-shadow:var(--shadow-md); display:flex; align-items:center; justify-content:center;';
+    document.body.appendChild(bttBtn);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            bttBtn.style.opacity = '1';
+            bttBtn.style.visibility = 'visible';
+        } else {
+            bttBtn.style.opacity = '0';
+            bttBtn.style.visibility = 'hidden';
+        }
+    });
+
+    bttBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
     // Scroll reveal logic
     const observerOptions = {
         root: null,

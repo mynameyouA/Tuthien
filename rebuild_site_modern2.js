@@ -6,10 +6,36 @@ const head = (title) => `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} - Sustainable Humanity Foundation</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="${title} - Sustainable Humanity Foundation">
     <meta name="description" content="The Sustainable Humanity Foundation applies scientific and technological solutions to solve pollution, provide clean energy, and develop sustainable livelihoods.">
+    <meta name="keywords" content="nonprofit, charity, climate change, solar energy, water purification, sustainable development, ESG, philanthropy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tuthien-eight.vercel.app/">
+    <meta property="og:title" content="${title} - Sustainable Humanity Foundation">
+    <meta property="og:description" content="Bringing breakthrough scientific solutions to vulnerable communities. 100% of public donations fund field operations.">
+    <meta property="og:image" content="https://tuthien-eight.vercel.app/hero.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tuthien-eight.vercel.app/">
+    <meta property="twitter:title" content="${title} - Sustainable Humanity Foundation">
+    <meta property="twitter:description" content="Bringing breakthrough scientific solutions to vulnerable communities. 100% of public donations fund field operations.">
+    <meta property="twitter:image" content="https://tuthien-eight.vercel.app/hero.jpg">
+    
+    <!-- Theme & Icons -->
+    <meta name="theme-color" content="#0a2540">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌱</text></svg>">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=24">
+    <link rel="stylesheet" href="styles.css?v=25">
 </head>
 <body>
 `;
@@ -374,7 +400,7 @@ const newsContent = `
     <section class="section bg-light">
         <div class="container fade-in">
             <div id="news-container">
-                <!-- Filled by script.js?v=24 -->
+                <!-- Filled by script.js?v=25 -->
             </div>
         </div>
     </section>
@@ -388,7 +414,7 @@ const newsDetailContent = `
             <a href="news.html" style="font-weight: 500; color: var(--color-text-light); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 40px;"><i class="fa-solid fa-arrow-left"></i> Back to All Reports</a>
             
             <div id="news-detail-container" style="background: #fff; padding: 50px; border-radius: var(--radius); box-shadow: var(--shadow-md); border: 1px solid var(--color-border);">
-                <!-- Filled by script.js?v=24 -->
+                <!-- Filled by script.js?v=25 -->
                 <p>Loading authoritative report...</p>
             </div>
         </div>
@@ -483,7 +509,7 @@ const donateContent = `
                             <div id="panel-crypto" class="payment-panel">
                                 <div style="text-align: center; margin-bottom: 24px;">
                                     <div style="background: white; padding: 16px; border: 1px solid var(--color-border); border-radius: 8px; display: inline-block; margin-bottom: 16px;">
-                                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="width: 150px; height: 150px;">
+                                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=0x52b4483e30243a65212adb16d993627534e61d6d" alt="QR Code" style="width: 150px; height: 150px;" loading="lazy">
                                     </div>
                                     <p style="font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 8px;">Network: <strong>Polygon (USDT/USDC)</strong></p>
                                     <div style="display:flex; background: #f1f5f9; padding: 10px 16px; border-radius: 8px; align-items: center; justify-content: space-between;">
@@ -496,7 +522,7 @@ const donateContent = `
                             <div id="panel-paypal" class="payment-panel">
                                 <div style="text-align: center; padding: 20px 0 30px;">
                                     <p style="color: var(--color-text-light); margin-bottom: 20px;">You will be redirected to PayPal to complete your donation securely.</p>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" style="height: 30px;">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" style="height: 30px;" loading="lazy">
                                 </div>
                             </div>
 
@@ -686,7 +712,7 @@ const applyContent = `
                         Deploying breakthrough technology requires more than just lab research. It requires courageous engineers, logisticians, and community organizers willing to work in off-grid, rugged environments. By joining our field deployment program, you become the bridge between high-tech innovation and real-world survival.
                     </p>
                     
-                    <img src="volunteer_field_work.jpg" alt="Engineers working in the field" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-bottom: 30px; height: 300px; object-fit: cover;">
+                    <img src="volunteer_field_work.jpg" alt="Engineers working in the field" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-bottom: 30px; height: 300px; object-fit: cover;" loading="lazy">
                     
                     <div style="background: #fff; padding: 30px; border-radius: var(--radius); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
                         <h4 style="color: var(--color-primary); font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-clipboard-check" style="color: var(--color-secondary); margin-right: 8px;"></i> What to Expect</h4>
@@ -748,7 +774,7 @@ const proposeContent = `
                         The Sustainable Humanity Foundation partners with forward-thinking corporations, hardware manufacturers, and academic institutions to scale our technological solutions. By co-funding projects or donating hardware, you provide the critical resources needed to bypass bureaucratic delays and deliver immediate relief to vulnerable zones.
                     </p>
                     
-                    <img src="corporate_partnership.jpg" alt="Corporate Executives and Scientists discussing partnership" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-bottom: 30px; height: 300px; object-fit: cover;">
+                    <img src="corporate_partnership.jpg" alt="Corporate Executives and Scientists discussing partnership" style="width: 100%; border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-bottom: 30px; height: 300px; object-fit: cover;" loading="lazy">
                     
                     <div style="background: #fff; padding: 30px; border-radius: var(--radius); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);">
                         <h4 style="color: var(--color-primary); font-size: 1.2rem; margin-bottom: 16px;"><i class="fa-solid fa-handshake-angle" style="color: var(--color-secondary); margin-right: 8px;"></i> Avenues of Collaboration</h4>

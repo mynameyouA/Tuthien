@@ -833,3 +833,21 @@ html, body {
         word-wrap: break-word;
     }
 }
+
+/* Smooth Scrolling & Scrollbar */
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
