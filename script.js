@@ -1,4 +1,46 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // lower is slower for large numbers, but we'll use a fixed duration approach
+
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = +counter.getAttribute('data-target');
+                const start = +counter.innerText;
+                const duration = 2000; // 2 seconds
+                const startTime = performance.now();
+
+                const updateCounter = (currentTime) => {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+                    
+                    // Ease out cubic
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    
+                    let currentNum = start + (target - start) * easeOut;
+                    
+                    if (progress < 1) {
+                        counter.innerText = Math.ceil(currentNum);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                requestAnimationFrame(updateCounter);
+                observer.unobserve(counter);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => {
+        counterObserver.observe(counter);
+    });
+
     // Back to Top Button
     const bttBtn = document.createElement('button');
     bttBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
