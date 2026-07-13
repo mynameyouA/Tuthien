@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Testimonial Auto-scroll
+    const testimonialCarousel = document.querySelector('.testimonial-carousel');
+    if (testimonialCarousel) {
+        let scrollAmount = 0;
+        const scrollStep = testimonialCarousel.clientWidth;
+        
+        setInterval(() => {
+            if (scrollAmount < testimonialCarousel.scrollWidth - scrollStep) {
+                scrollAmount += scrollStep;
+            } else {
+                scrollAmount = 0;
+            }
+            testimonialCarousel.scrollTo({
+                top: 0,
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        }, 5000); // 5 seconds
+    }
+
     // Counter Animation
     const counters = document.querySelectorAll('.counter');
     const speed = 200; // lower is slower for large numbers, but we'll use a fixed duration approach

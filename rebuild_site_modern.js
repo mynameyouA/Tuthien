@@ -35,7 +35,7 @@ const head = (title) => `<!DOCTYPE html>
     <link rel="preconnect" href="https://images.unsplash.com">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css?v=26">
+    <link rel="stylesheet" href="styles.css?v=27">
 </head>
 <body>
 `;
@@ -123,7 +123,7 @@ const footer = `
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js?v=26"></script>
+    <script src="script.js?v=27"></script>
 </body>
 </html>
 `;
