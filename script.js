@@ -180,7 +180,13 @@ function renderNewsDetail(articles) {
             .replace(/^\* (.*$)/gim, '<ul><li>$1</li></ul>')
             .replace(/<\/ul>\n<ul>/gim, '')
             .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
-            .replace(/\n/gim, '<br>');
+            .replace(/\*(.*?)\*/gim, '<em>$1</em>');
+            
+        // Convert paragraphs by splitting on multiple newlines
+        htmlBody = htmlBody.split(/\n\n+/).map(p => {
+            if (p.trim().startsWith('<h') || p.trim().startsWith('<ul')) return p;
+            return '<p style="margin-bottom: 20px;">' + p.replace(/\n/g, '<br>') + '</p>';
+        }).join('\n');
 
         container.innerHTML = `
             <h1>${article.title}</h1>
