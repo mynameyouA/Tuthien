@@ -173,20 +173,32 @@ function renderNewsDetail(articles) {
     
     if (article) {
         // Simple markdown parsing for the body
+        // Cleanly wrap text blocks in paragraphs while respecting block elements
         let htmlBody = article.body
+            // Convert list items first
+            .replace(/^\* (.*$)/gim, '<ul><li>$1</li></ul>')
+            // Merge adjacent list items
+            .replace(/<\/ul>\n<ul>/gim, '')
+            // Convert headings
             .replace(/^### (.*$)/gim, '<h3>$1</h3>')
             .replace(/^## (.*$)/gim, '<h2>$1</h2>')
             .replace(/^# (.*$)/gim, '<h1>$1</h1>')
-            .replace(/^\* (.*$)/gim, '<ul><li>$1</li></ul>')
-            .replace(/<\/ul>\n<ul>/gim, '')
+            // Inline styles
             .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
-            .replace(/\*(.*?)\*/gim, '<em>$1</em>');
-            
-        // Convert paragraphs by splitting on multiple newlines
-        htmlBody = htmlBody.split(/\n\n+/).map(p => {
-            if (p.trim().startsWith('<h') || p.trim().startsWith('<ul')) return p;
-            return '<p style="margin-bottom: 20px;">' + p.replace(/\n/g, '<br>') + '</p>';
-        }).join('\n');
+            .replace(/\*(.*?)\*/gim, '<em>$1</em>')
+            // Split into blocks by double newlines
+            .split(/\n\n+/)
+            .map(block => {
+                // If it's already an HTML block (like heading or list), don't wrap in <p>
+                if (block.match(/^(<h|<ul)/)) {
+                    // But we still need to replace internal single newlines with <br> for text inside these blocks?
+                    // Actually, headings and lists shouldn't have raw newlines.
+                    return block;
+                }
+                // Otherwise, it's a text paragraph
+                return '<p style="margin-bottom: 20px;">' + block.replace(/\n/g, '<br>') + '</p>';
+            })
+            .join('\n');
 
         container.innerHTML = `
             <h1>${article.title}</h1>
